@@ -1438,7 +1438,17 @@
       "Avoid harsh chemicals and abrasive brushes.",
       "For best results, treat spills promptly and cover or store in harsh weather."
     ],
-    "warrantyClarity": "Lifetime structural warranty on frame components."
+    "warrantyClarity": "Lifetime structural warranty on frame components.",
+    "images": {
+      "hero": "/images/products/oris-sectional/oris-sectional-cloud-couch-ivory-hero-01.webp",
+      "thumbnail1": "/images/products/oris-sectional/oris-sectional-modular-sectional-oat-angle-02.webp",
+      "thumbnail2": "/images/products/oris-sectional/oris-sectional-cloud-sectional-stone-lifestyle-03.webp",
+      "thumbnail3": "/images/products/oris-sectional/oris-sectional-modular-sofa-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/oris-sectional/oris-sectional-cloud-couch-slate-seam-05.webp",
+      "thumbnail5": "/images/products/oris-sectional/oris-sectional-modular-sectional-charcoal-detail-06.webp",
+      "comfort1": "/images/products/oris-sectional/oris-sectional-cloud-sectional-sand-room-07.webp",
+      "comfort2": "/images/products/oris-sectional/oris-sectional-modular-sofa-ash-modular-08.webp"
+    }
   },
   "oris-3-seater": {
     "pdpH1": "ARVA Oris Outdoor 3-Seater \u2013 Modular Outdoor Sofa",
@@ -1638,7 +1648,17 @@
       "Avoid harsh chemicals and abrasive brushes.",
       "For best results, treat spills promptly and cover or store in harsh weather."
     ],
-    "warrantyClarity": "Lifetime structural warranty on frame components."
+    "warrantyClarity": "Lifetime structural warranty on frame components.",
+    "images": {
+      "hero": "/images/products/oris-3-seater/oris-3-seater-cloud-sofa-sand-room-07.webp",
+      "thumbnail1": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-charcoal-detail-06.webp",
+      "thumbnail2": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-slate-seam-05.webp",
+      "thumbnail3": "/images/products/oris-3-seater/oris-3-seater-modular-couch-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/oris-3-seater/oris-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+      "thumbnail5": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-oat-angle-02.webp",
+      "comfort1": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-ivory-hero-01.webp",
+      "dimensionsDiagram": "/images/products/oris-3-seater/oris-3-seater-dimensions-diagram.webp"
+    }
   },
   "oris-loveseat": {
     "pdpH1": "ARVA Oris Outdoor Loveseat \u2013 Modular Outdoor Loveseat Sofa",
@@ -1838,7 +1858,15 @@
       "Avoid harsh chemicals and abrasive brushes.",
       "For best results, treat spills promptly and cover or store in harsh weather."
     ],
-    "warrantyClarity": "Lifetime structural warranty on frame components."
+    "warrantyClarity": "Lifetime structural warranty on frame components.",
+    "images": {
+      "hero": "/images/products/oris-loveseat/oris-loveseat-cloud-couch-ivory-hero-01.webp",
+      "thumbnail1": "/images/products/oris-loveseat/oris-loveseat-modular-sofa-oat-angle-02.webp",
+      "thumbnail2": "/images/products/oris-loveseat/oris-loveseat-cloud-sofa-stone-lifestyle-03.webp",
+      "thumbnail3": "/images/products/oris-loveseat/oris-loveseat-modular-couch-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/oris-loveseat/oris-loveseat-cloud-couch-slate-seam-05.webp",
+      "dimensionsDiagram": "/images/products/oris-loveseat/oris-loveseat-dimensions-diagram.webp"
+    }
   },
   "bellini-sectional": {
     "pdpH1": "ARVA Bellini Sectional \u2013 Modular Cloud-Style Sectional Couch",

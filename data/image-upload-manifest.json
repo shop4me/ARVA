@@ -158,5 +158,123 @@
       "filename": "atlas-loveseat-dimensions-diagram.webp",
       "role": "dimensions"
     }
+  ],
+  "oris-sectional": [
+    {
+      "source": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-ivory-hero-01.webp",
+      "output": "/images/products/oris-sectional/oris-sectional-cloud-couch-ivory-hero-01.webp",
+      "filename": "oris-sectional-cloud-couch-ivory-hero-01.webp"
+    },
+    {
+      "source": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-oat-angle-02.webp",
+      "output": "/images/products/oris-sectional/oris-sectional-modular-sectional-oat-angle-02.webp",
+      "filename": "oris-sectional-modular-sectional-oat-angle-02.webp"
+    },
+    {
+      "source": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-stone-lifestyle-03.webp",
+      "output": "/images/products/oris-sectional/oris-sectional-cloud-sectional-stone-lifestyle-03.webp",
+      "filename": "oris-sectional-cloud-sectional-stone-lifestyle-03.webp"
+    },
+    {
+      "source": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-mist-fabric-04.webp",
+      "output": "/images/products/oris-sectional/oris-sectional-modular-sofa-mist-fabric-04.webp",
+      "filename": "oris-sectional-modular-sofa-mist-fabric-04.webp"
+    },
+    {
+      "source": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-seam-05.webp",
+      "output": "/images/products/oris-sectional/oris-sectional-cloud-couch-slate-seam-05.webp",
+      "filename": "oris-sectional-cloud-couch-slate-seam-05.webp"
+    },
+    {
+      "source": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-charcoal-detail-06.webp",
+      "output": "/images/products/oris-sectional/oris-sectional-modular-sectional-charcoal-detail-06.webp",
+      "filename": "oris-sectional-modular-sectional-charcoal-detail-06.webp"
+    },
+    {
+      "source": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-sand-room-07.webp",
+      "output": "/images/products/oris-sectional/oris-sectional-cloud-sectional-sand-room-07.webp",
+      "filename": "oris-sectional-cloud-sectional-sand-room-07.webp"
+    },
+    {
+      "source": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-ash-modular-08.webp",
+      "output": "/images/products/oris-sectional/oris-sectional-modular-sofa-ash-modular-08.webp",
+      "filename": "oris-sectional-modular-sofa-ash-modular-08.webp"
+    }
+  ],
+  "oris-3-seater": [
+    {
+      "source": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-sand-room-07.webp",
+      "output": "/images/products/oris-3-seater/oris-3-seater-cloud-sofa-sand-room-07.webp",
+      "filename": "oris-3-seater-cloud-sofa-sand-room-07.webp"
+    },
+    {
+      "source": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-charcoal-detail-06.webp",
+      "output": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-charcoal-detail-06.webp",
+      "filename": "oris-3-seater-modular-sofa-charcoal-detail-06.webp"
+    },
+    {
+      "source": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-seam-05.webp",
+      "output": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-slate-seam-05.webp",
+      "filename": "oris-3-seater-cloud-couch-slate-seam-05.webp"
+    },
+    {
+      "source": "/images/products/atlas-3-seater/atlas-3-seater-modular-couch-mist-fabric-04.webp",
+      "output": "/images/products/oris-3-seater/oris-3-seater-modular-couch-mist-fabric-04.webp",
+      "filename": "oris-3-seater-modular-couch-mist-fabric-04.webp"
+    },
+    {
+      "source": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+      "output": "/images/products/oris-3-seater/oris-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+      "filename": "oris-3-seater-cloud-sofa-stone-lifestyle-03.webp"
+    },
+    {
+      "source": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-oat-angle-02.webp",
+      "output": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-oat-angle-02.webp",
+      "filename": "oris-3-seater-modular-sofa-oat-angle-02.webp"
+    },
+    {
+      "source": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-ivory-hero-01.webp",
+      "output": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-ivory-hero-01.webp",
+      "filename": "oris-3-seater-cloud-couch-ivory-hero-01.webp"
+    },
+    {
+      "source": "/images/products/atlas-3-seater/atlas-3-seater-dimensions-diagram.webp",
+      "output": "/images/products/oris-3-seater/oris-3-seater-dimensions-diagram.webp",
+      "filename": "oris-3-seater-dimensions-diagram.webp",
+      "role": "dimensions"
+    }
+  ],
+  "oris-loveseat": [
+    {
+      "source": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-ivory-hero-01.webp",
+      "output": "/images/products/oris-loveseat/oris-loveseat-cloud-couch-ivory-hero-01.webp",
+      "filename": "oris-loveseat-cloud-couch-ivory-hero-01.webp"
+    },
+    {
+      "source": "/images/products/atlas-loveseat/atlas-loveseat-modular-sofa-oat-angle-02.webp",
+      "output": "/images/products/oris-loveseat/oris-loveseat-modular-sofa-oat-angle-02.webp",
+      "filename": "oris-loveseat-modular-sofa-oat-angle-02.webp"
+    },
+    {
+      "source": "/images/products/atlas-loveseat/atlas-loveseat-cloud-sofa-stone-lifestyle-03.webp",
+      "output": "/images/products/oris-loveseat/oris-loveseat-cloud-sofa-stone-lifestyle-03.webp",
+      "filename": "oris-loveseat-cloud-sofa-stone-lifestyle-03.webp"
+    },
+    {
+      "source": "/images/products/atlas-loveseat/atlas-loveseat-modular-couch-mist-fabric-04.webp",
+      "output": "/images/products/oris-loveseat/oris-loveseat-modular-couch-mist-fabric-04.webp",
+      "filename": "oris-loveseat-modular-couch-mist-fabric-04.webp"
+    },
+    {
+      "source": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-slate-seam-05.webp",
+      "output": "/images/products/oris-loveseat/oris-loveseat-cloud-couch-slate-seam-05.webp",
+      "filename": "oris-loveseat-cloud-couch-slate-seam-05.webp"
+    },
+    {
+      "source": "/images/products/atlas-loveseat/atlas-loveseat-dimensions-diagram.webp",
+      "output": "/images/products/oris-loveseat/oris-loveseat-dimensions-diagram.webp",
+      "filename": "oris-loveseat-dimensions-diagram.webp",
+      "role": "dimensions"
+    }
   ]
 }
