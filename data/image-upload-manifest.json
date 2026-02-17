@@ -85,29 +85,9 @@
   ],
   "atlas-3-seater": [
     {
-      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_10_59 PM.png",
-      "output": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-ivory-hero-01.webp",
-      "filename": "atlas-3-seater-cloud-couch-ivory-hero-01.webp"
-    },
-    {
-      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_06 PM.png",
-      "output": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-oat-angle-02.webp",
-      "filename": "atlas-3-seater-modular-sofa-oat-angle-02.webp"
-    },
-    {
-      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_09 PM.png",
-      "output": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp",
-      "filename": "atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp"
-    },
-    {
-      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_12 PM.png",
-      "output": "/images/products/atlas-3-seater/atlas-3-seater-modular-couch-mist-fabric-04.webp",
-      "filename": "atlas-3-seater-modular-couch-mist-fabric-04.webp"
-    },
-    {
-      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_16 PM.png",
-      "output": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-seam-05.webp",
-      "filename": "atlas-3-seater-cloud-couch-slate-seam-05.webp"
+      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_23 PM.png",
+      "output": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-sand-room-07.webp",
+      "filename": "atlas-3-seater-cloud-sofa-sand-room-07.webp"
     },
     {
       "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_20 PM.png",
@@ -115,9 +95,29 @@
       "filename": "atlas-3-seater-modular-sofa-charcoal-detail-06.webp"
     },
     {
-      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_23 PM.png",
-      "output": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-sand-room-07.webp",
-      "filename": "atlas-3-seater-cloud-sofa-sand-room-07.webp"
+      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_16 PM.png",
+      "output": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-seam-05.webp",
+      "filename": "atlas-3-seater-cloud-couch-slate-seam-05.webp"
+    },
+    {
+      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_12 PM.png",
+      "output": "/images/products/atlas-3-seater/atlas-3-seater-modular-couch-mist-fabric-04.webp",
+      "filename": "atlas-3-seater-modular-couch-mist-fabric-04.webp"
+    },
+    {
+      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_09 PM.png",
+      "output": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+      "filename": "atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp"
+    },
+    {
+      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_11_06 PM.png",
+      "output": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-oat-angle-02.webp",
+      "filename": "atlas-3-seater-modular-sofa-oat-angle-02.webp"
+    },
+    {
+      "source": "assets/atlas-3-seater/ChatGPT Image Feb 17, 2026, 12_10_59 PM.png",
+      "output": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-ivory-hero-01.webp",
+      "filename": "atlas-3-seater-cloud-couch-ivory-hero-01.webp"
     },
     {
       "source": "assets/atlas-3-seater/dimensions.png",
