@@ -135,7 +135,8 @@ start_tmux_job() {
   JOB_ID="deploy_$(date +%Y%m%d%H%M%S)_${short_sha}"
   log "Starting tmux deploy job: $JOB_ID"
 
-  ssh "$SSH_HOST" "JOB_ID='$JOB_ID' DEPLOY_SHA='$DEPLOY_SHA' SERVER_APP_DIR='$SERVER_APP_DIR' SERVER_LOG_DIR='$SERVER_LOG_DIR' SYSTEMD_SERVICE='$SYSTEMD_SERVICE' HEALTHCHECK_URL='$HEALTHCHECK_URL' bash -s" <<'REMOTE_SCRIPT'
+  ssh "$SSH_HOST" "JOB_ID='$JOB_ID' DEPLOY_SHA='$DEPLOY_SHA' SERVER_APP_DIR='$SERVER_APP_DIR' SERVER_LOG_DIR='$SERVER_LOG_DIR' SYSTEMD_SERVICE='$SYSTEMD_SERVICE' HEALTHCHECK_URL='$HEALTHCHECK_URL'
+SERVER_ENV_FILE='$SERVER_ENV_FILE' bash -s" <<'REMOTE_SCRIPT'
 set -euo pipefail
 
 sudo mkdir -p "$SERVER_LOG_DIR"
@@ -157,6 +158,12 @@ cd "$SERVER_APP_DIR"
 git fetch --all --prune
 git checkout -f "$DEPLOY_SHA"
 echo "$DEPLOY_SHA" > /var/www/arva/REVISION
+
+if [[ -f "$SERVER_ENV_FILE" ]]; then
+  set -a
+  source "$SERVER_ENV_FILE"
+  set +a
+fi
 
 if [[ -f package-lock.json ]]; then npm ci; else npm install; fi
 npm run build
