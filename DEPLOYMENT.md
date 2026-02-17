@@ -7,10 +7,21 @@
 ## Local
 
 - `npm run deploy:prod` — push main, deploy current SHA to server (tmux job)
-- `npm run deploy:prod -- --follow` — deploy and wait for OK/FAIL
+- `npm run deploy:prod -- --follow` — deploy and wait for OK/FAIL (recommended)
 - `npm run deploy:prod -- --bootstrap --follow` — first-time: create fingerprint + log dir, then deploy
 - `npm run deploy:status` — last deploy status
 - `npm run deploy:logs` — last deploy log
+- **`npm run deploy:version`** — show local vs Git vs server SHA; exit 1 if any mismatch (use to confirm all three match)
+
+## Version parity (local = Git = server)
+
+Deploy is designed so **local**, **GitHub main**, and **server** stay at the same commit:
+
+1. **Before deploy:** Script refuses if local is behind `origin/main` (you must pull first). It also refuses uncommitted changes unless you use `--force` or `--auto-commit`.
+2. **Deploy:** Pushes `main`, then on the server runs `git checkout -f <SHA>` and writes that SHA to `/var/www/arva/REVISION`.
+3. **After deploy:** When you use `--follow`, the script verifies server `REVISION` equals the deployed SHA; if not, the deploy is reported as failed.
+
+Check anytime: `npm run deploy:version` — prints all three SHAs and exits with error if they differ.
 
 ## One-time server bootstrap (run on 143.198.99.0)
 

@@ -26,7 +26,7 @@ LOG_JOB_ID=""
 log() { echo "[$(date -Is)] $*"; }
 
 usage() {
-  cat <<EOF
+  cat <<USAGE
 Usage:
   npm run deploy
   npm run deploy -- --follow
@@ -37,7 +37,7 @@ Utilities:
   npm run deploy:status
   npm run deploy:logs [-- --job JOB_ID]
   npm run deploy:version
-EOF
+USAGE
 }
 
 while [[ $# -gt 0 ]]; do
@@ -58,7 +58,10 @@ done
 ensure_branch_and_remote() {
   local cur_branch
   cur_branch="$(git rev-parse --abbrev-ref HEAD)"
-  [[ "$cur_branch" == "$BRANCH" ]] || { echo "ERROR: Must deploy from $BRANCH (current: $cur_branch)"; exit 1; }
+  [[ "$cur_branch" == "$BRANCH" ]] || {
+    echo "ERROR: Must deploy from $BRANCH (current: $cur_branch)"
+    exit 1
+  }
 
   local remote
   remote="$(git remote get-url origin)"
@@ -72,11 +75,11 @@ ensure_branch_and_remote() {
 
 ensure_not_behind_origin() {
   log "Fetching origin/$BRANCH..."
-  git fetch origin "$BRANCH" --prune 2>/dev/null || git fetch origin --prune
+  git fetch origin "$BRANCH" --prune
   LOCAL_SHA="$(git rev-parse HEAD)"
   REMOTE_SHA="$(git rev-parse "origin/$BRANCH")"
 
-  if [[ "$LOCAL_SHA" != "$REMOTE_SHA" ]] && git merge-base --is-ancestor "$LOCAL_SHA" "$REMOTE_SHA" 2>/dev/null; then
+  if [[ "$LOCAL_SHA" != "$REMOTE_SHA" ]] && git merge-base --is-ancestor "$LOCAL_SHA" "$REMOTE_SHA"; then
     echo "ERROR: Local is behind origin/$BRANCH. Pull first so local and GitHub match."
     echo "Local:  $LOCAL_SHA"
     echo "Remote: $REMOTE_SHA"
@@ -107,7 +110,9 @@ push_and_get_sha() {
 }
 
 server_bootstrap_if_needed() {
-  if [[ "$BOOTSTRAP" -eq 0 ]]; then return 0; fi
+  if [[ "$BOOTSTRAP" -eq 0 ]]; then
+    return 0
+  fi
   log "Bootstrapping server fingerprint + log dir..."
   ssh "$SSH_HOST" "sudo mkdir -p '$SERVER_LOG_DIR' && sudo chown -R root:root '$SERVER_LOG_DIR' || true"
   ssh "$SSH_HOST" "echo '$EXPECTED_FINGERPRINT' | sudo tee '$SERVER_FINGERPRINT_FILE' >/dev/null"
@@ -130,46 +135,47 @@ start_tmux_job() {
   JOB_ID="deploy_$(date +%Y%m%d%H%M%S)_${short_sha}"
   log "Starting tmux deploy job: $JOB_ID"
 
-  ssh "$SSH_HOST" "bash -s" << REMOTE_SCRIPT
+  ssh "$SSH_HOST" "JOB_ID='$JOB_ID' DEPLOY_SHA='$DEPLOY_SHA' SERVER_APP_DIR='$SERVER_APP_DIR' SERVER_LOG_DIR='$SERVER_LOG_DIR' SYSTEMD_SERVICE='$SYSTEMD_SERVICE' HEALTHCHECK_URL='$HEALTHCHECK_URL' bash -s" <<'REMOTE_SCRIPT'
 set -euo pipefail
-JOB_ID='$JOB_ID'
-DEPLOY_SHA='$DEPLOY_SHA'
-SERVER_APP_DIR='$SERVER_APP_DIR'
-SERVER_LOG_DIR='$SERVER_LOG_DIR'
-SYSTEMD_SERVICE='$SYSTEMD_SERVICE'
-HEALTHCHECK_URL='$HEALTHCHECK_URL'
 
-sudo mkdir -p "\$SERVER_LOG_DIR"
-LOG_FILE="\$SERVER_LOG_DIR/\$JOB_ID.log"
-STATUS_FILE="\$SERVER_LOG_DIR/\$JOB_ID.status"
-echo RUNNING > "\$STATUS_FILE"
+sudo mkdir -p "$SERVER_LOG_DIR"
+LOG_FILE="$SERVER_LOG_DIR/$JOB_ID.log"
+STATUS_FILE="$SERVER_LOG_DIR/$JOB_ID.status"
+JOB_SCRIPT="/tmp/${JOB_ID}.sh"
 
-tmux new-session -d -s "\$JOB_ID" "bash -lc '
-  set -euo pipefail
-  echo \"=== ARVA deploy $JOB_ID ===\"
-  echo \"SHA: $DEPLOY_SHA\"
-  date -Is
+echo RUNNING > "$STATUS_FILE"
 
-  cd $SERVER_APP_DIR
-  git fetch --all --prune
-  git checkout -f $DEPLOY_SHA
-  echo $DEPLOY_SHA > /var/www/arva/REVISION
+cat > "$JOB_SCRIPT" <<JOB_EOF
+#!/usr/bin/env bash
+set -euo pipefail
 
-  if [[ -f package-lock.json ]]; then npm ci; else npm install; fi
-  npm run build
+echo "=== ARVA deploy $JOB_ID ==="
+echo "SHA: $DEPLOY_SHA"
+date -Is
 
-  sudo systemctl restart $SYSTEMD_SERVICE
-  sleep 3
-  sudo systemctl is-active --quiet $SYSTEMD_SERVICE
-  curl -fsS -o /dev/null $HEALTHCHECK_URL
+cd "$SERVER_APP_DIR"
+git fetch --all --prune
+git checkout -f "$DEPLOY_SHA"
+echo "$DEPLOY_SHA" > /var/www/arva/REVISION
 
-  echo OK > $SERVER_LOG_DIR/$JOB_ID.status
-  echo \"OK\"
-' >> \"\$LOG_FILE\" 2>&1 || {
-  echo FAIL > \"\$STATUS_FILE\"
-  exit 1
-}"
-echo "\$JOB_ID"
+if [[ -f package-lock.json ]]; then npm ci; else npm install; fi
+npm run build
+
+sudo systemctl restart "$SYSTEMD_SERVICE"
+sleep 3
+sudo systemctl is-active --quiet "$SYSTEMD_SERVICE"
+curl -fsS -o /dev/null "$HEALTHCHECK_URL"
+
+echo OK > "$STATUS_FILE"
+echo "OK"
+JOB_EOF
+
+chmod +x "$JOB_SCRIPT"
+
+# Run in tmux detached; write status FAIL on any job error
+tmux new-session -d -s "$JOB_ID" "bash '$JOB_SCRIPT' > '$LOG_FILE' 2>&1 || { echo FAIL > '$STATUS_FILE'; exit 1; }"
+
+echo "$JOB_ID"
 REMOTE_SCRIPT
 }
 
@@ -184,9 +190,7 @@ wait_for_job() {
   while true; do
     status="$(ssh "$SSH_HOST" "cat '$SERVER_LOG_DIR/$JOB_ID.status' 2>/dev/null || true")"
     if [[ "$status" == "OK" ]]; then
-      server_rev="$(ssh "$SSH_HOST" "cat '$SERVER_APP_DIR/REVISION' 2>/dev/null || true")"
-      server_rev="${server_rev//$'\r'/}"
-      server_rev="$(echo "$server_rev" | tr -d '\n')"
+      server_rev="$(ssh "$SSH_HOST" "cat '$SERVER_APP_DIR/REVISION' 2>/dev/null || true" | tr -d '\n\r')"
       if [[ "$server_rev" != "$DEPLOY_SHA" ]]; then
         echo "ERROR: Deploy reported OK but REVISION mismatch."
         echo "Expected: $DEPLOY_SHA"
@@ -229,8 +233,7 @@ cmd_version() {
   git fetch origin "$BRANCH" --prune >/dev/null 2>&1 || true
   local_sha="$(git rev-parse HEAD)"
   git_sha="$(git rev-parse "origin/$BRANCH" 2>/dev/null || echo "<missing>")"
-  server_sha="$(ssh "$SSH_HOST" "cat '$SERVER_APP_DIR/REVISION' 2>/dev/null || echo '<missing>')"
-  server_sha="$(echo "$server_sha" | tr -d '\n')"
+  server_sha="$(ssh "$SSH_HOST" "cat '$SERVER_APP_DIR/REVISION' 2>/dev/null || echo '<missing>'" | tr -d '\n\r')"
 
   echo "local:  $local_sha"
   echo "Git:    $git_sha"
@@ -243,12 +246,10 @@ cmd_version() {
   echo "OK: All three match."
 }
 
-# Utilities
 if [[ "$MODE_STATUS" -eq 1 ]]; then cmd_status; exit 0; fi
 if [[ "$MODE_LOGS" -eq 1 ]]; then cmd_logs; exit 0; fi
 if [[ "$MODE_VERSION" -eq 1 ]]; then cmd_version; exit 0; fi
 
-# Deploy
 ensure_branch_and_remote
 ensure_not_behind_origin
 require_clean_or_override
