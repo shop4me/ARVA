@@ -13,14 +13,38 @@
     ],
     "fabricDefault": "Warm Ivory",
     "fabricOptions": [
-      { "name": "Warm Ivory", "hex": "#f5f0e8" },
-      { "name": "Slate Gray", "hex": "#6b7280" },
-      { "name": "Charcoal", "hex": "#374151" },
-      { "name": "Soft White", "hex": "#fafaf8" },
-      { "name": "Stone", "hex": "#9ca3af" },
-      { "name": "Mist", "hex": "#d1d5db" },
-      { "name": "Oatmeal", "hex": "#e5e0d8" },
-      { "name": "Graphite", "hex": "#4b5563" }
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
     ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
@@ -30,16 +54,54 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": ["Seat depth", "Fabric texture"],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "comparisonTable": {
       "rows": [
-        { "label": "Price", "arva": "$997", "luxury": "$3,000-$8,000", "lowCost": "Varies" },
-        { "label": "Delivery Time", "arva": "2-4 weeks", "luxury": "Months", "lowCost": "Varies" },
-        { "label": "Modular Design", "arva": "Yes", "luxury": "Rarely", "lowCost": "Sometimes" },
-        { "label": "Trial Period", "arva": "100 days", "luxury": "Limited or none", "lowCost": "Varies" },
-        { "label": "Warranty", "arva": "Lifetime structural", "luxury": "Varies", "lowCost": "Limited" },
-        { "label": "Damage-Resistant Shipping", "arva": "Vacuum-packed, boxed", "luxury": "Freight risk", "lowCost": "Varies" },
-        { "label": "Ease of Moving / Reconfiguring", "arva": "Designed for it", "luxury": "Difficult", "lowCost": "Varies" }
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
       ]
     },
     "dimensions": {
@@ -61,21 +123,66 @@
     ],
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
-      { "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.", "location": "Chicago, IL", "verified": true },
-      { "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.", "location": "Austin, TX", "verified": true },
-      { "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.", "location": "Seattle, WA", "verified": true },
-      { "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.", "location": "Denver, CO", "verified": true },
-      { "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)", "location": "Boston, MA", "verified": true },
-      { "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.", "location": "Portland, OR", "verified": true }
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
     ],
     "faq": [
-      { "question": "Is it too firm or too soft?", "answer": "Balanced support — not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look." },
-      { "question": "Will it feel cheap compared to more expensive cloud sofas?", "answer": "ARVA is priced for value, not corners. The difference is markup and logistics — not a 'disposable' build." },
-      { "question": "What if I don't like it after it arrives?", "answer": "Try it at home for 100 days. Returns are a flat $99 pickup fee with carrier assistance. No restocking fees." },
-      { "question": "How does delivery work?", "answer": "Ships in 2–4 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues." },
-      { "question": "How hard is assembly, really?", "answer": "Tool-free assembly in minutes. Modular pieces connect cleanly." },
-      { "question": "Is the fabric safe and durable?", "answer": "OEKO-TEX® certified fabric with a durable, everyday-friendly weave." },
-      { "question": "What does the lifetime warranty cover?", "answer": "Lifetime structural coverage (frame/structural components)." }
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support — not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
+      },
+      {
+        "question": "Will it feel cheap compared to more expensive cloud sofas?",
+        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics — not a 'disposable' build."
+      },
+      {
+        "question": "What if I don't like it after it arrives?",
+        "answer": "Try it at home for 100 days. Returns are a flat $99 pickup fee with carrier assistance. No restocking fees."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in 2–4 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
+      },
+      {
+        "question": "How hard is assembly, really?",
+        "answer": "Tool-free assembly in minutes. Modular pieces connect cleanly."
+      },
+      {
+        "question": "Is the fabric safe and durable?",
+        "answer": "OEKO-TEX® certified fabric with a durable, everyday-friendly weave."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "Lifetime structural coverage (frame/structural components)."
+      }
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
@@ -107,14 +214,38 @@
     ],
     "fabricDefault": "Warm Ivory",
     "fabricOptions": [
-      { "name": "Warm Ivory", "hex": "#f5f0e8" },
-      { "name": "Slate Gray", "hex": "#6b7280" },
-      { "name": "Charcoal", "hex": "#374151" },
-      { "name": "Soft White", "hex": "#fafaf8" },
-      { "name": "Stone", "hex": "#9ca3af" },
-      { "name": "Mist", "hex": "#d1d5db" },
-      { "name": "Oatmeal", "hex": "#e5e0d8" },
-      { "name": "Graphite", "hex": "#4b5563" }
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
     ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
@@ -124,16 +255,54 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": ["Seat depth", "Fabric texture"],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "comparisonTable": {
       "rows": [
-        { "label": "Price", "arva": "$997", "luxury": "$3,000-$8,000", "lowCost": "Varies" },
-        { "label": "Delivery Time", "arva": "2-4 weeks", "luxury": "Months", "lowCost": "Varies" },
-        { "label": "Modular Design", "arva": "Yes", "luxury": "Rarely", "lowCost": "Sometimes" },
-        { "label": "Trial Period", "arva": "100 days", "luxury": "Limited or none", "lowCost": "Varies" },
-        { "label": "Warranty", "arva": "Lifetime structural", "luxury": "Varies", "lowCost": "Limited" },
-        { "label": "Damage-Resistant Shipping", "arva": "Vacuum-packed, boxed", "luxury": "Freight risk", "lowCost": "Varies" },
-        { "label": "Ease of Moving / Reconfiguring", "arva": "Designed for it", "luxury": "Difficult", "lowCost": "Varies" }
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
       ]
     },
     "dimensions": {
@@ -155,25 +324,74 @@
     ],
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
-      { "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.", "location": "Chicago, IL", "verified": true },
-      { "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.", "location": "Austin, TX", "verified": true },
-      { "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.", "location": "Seattle, WA", "verified": true },
-      { "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.", "location": "Denver, CO", "verified": true },
-      { "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)", "location": "Boston, MA", "verified": true },
-      { "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.", "location": "Portland, OR", "verified": true }
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
     ],
     "faq": [
-      { "question": "Is it too firm or too soft?", "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time." },
-      { "question": "How long does assembly take?", "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required." },
-      { "question": "Are the covers removable?", "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details." },
-      { "question": "How does delivery work?", "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door." },
-      { "question": "Is it easy to move later?", "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled." },
-      { "question": "Does it work in larger living spaces?", "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space." },
-      { "question": "What does the lifetime warranty cover?", "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details." }
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": ["3-seater sofa", "Hidden connectors", "Care guide"],
+    "whatsIncluded": [
+      "3-seater sofa",
+      "Hidden connectors",
+      "Care guide"
+    ],
     "careAndDurability": [
       "Designed for everyday use with a durable performance weave.",
       "Spot clean with a damp cloth and mild soap.",
@@ -196,14 +414,38 @@
     ],
     "fabricDefault": "Warm Ivory",
     "fabricOptions": [
-      { "name": "Warm Ivory", "hex": "#f5f0e8" },
-      { "name": "Slate Gray", "hex": "#6b7280" },
-      { "name": "Charcoal", "hex": "#374151" },
-      { "name": "Soft White", "hex": "#fafaf8" },
-      { "name": "Stone", "hex": "#9ca3af" },
-      { "name": "Mist", "hex": "#d1d5db" },
-      { "name": "Oatmeal", "hex": "#e5e0d8" },
-      { "name": "Graphite", "hex": "#4b5563" }
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
     ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
@@ -213,16 +455,54 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": ["Seat depth", "Fabric texture"],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "comparisonTable": {
       "rows": [
-        { "label": "Price", "arva": "$997", "luxury": "$3,000-$8,000", "lowCost": "Varies" },
-        { "label": "Delivery Time", "arva": "2-4 weeks", "luxury": "Months", "lowCost": "Varies" },
-        { "label": "Modular Design", "arva": "Yes", "luxury": "Rarely", "lowCost": "Sometimes" },
-        { "label": "Trial Period", "arva": "100 days", "luxury": "Limited or none", "lowCost": "Varies" },
-        { "label": "Warranty", "arva": "Lifetime structural", "luxury": "Varies", "lowCost": "Limited" },
-        { "label": "Damage-Resistant Shipping", "arva": "Vacuum-packed, boxed", "luxury": "Freight risk", "lowCost": "Varies" },
-        { "label": "Ease of Moving / Reconfiguring", "arva": "Designed for it", "luxury": "Difficult", "lowCost": "Varies" }
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
       ]
     },
     "dimensions": {
@@ -244,25 +524,74 @@
     ],
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
-      { "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.", "location": "Chicago, IL", "verified": true },
-      { "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.", "location": "Austin, TX", "verified": true },
-      { "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.", "location": "Seattle, WA", "verified": true },
-      { "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.", "location": "Denver, CO", "verified": true },
-      { "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)", "location": "Boston, MA", "verified": true },
-      { "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.", "location": "Portland, OR", "verified": true }
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
     ],
     "faq": [
-      { "question": "Is it too firm or too soft?", "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time." },
-      { "question": "How long does assembly take?", "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required." },
-      { "question": "Are the covers removable?", "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details." },
-      { "question": "How does delivery work?", "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door." },
-      { "question": "Is it easy to move later?", "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled." },
-      { "question": "Does it work in larger living spaces?", "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space." },
-      { "question": "What does the lifetime warranty cover?", "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details." }
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": ["Loveseat", "Hidden connectors", "Care guide"],
+    "whatsIncluded": [
+      "Loveseat",
+      "Hidden connectors",
+      "Care guide"
+    ],
     "careAndDurability": [
       "Designed for everyday use with a durable performance weave.",
       "Spot clean with a damp cloth and mild soap.",
@@ -285,14 +614,38 @@
     ],
     "fabricDefault": "Warm Ivory",
     "fabricOptions": [
-      { "name": "Warm Ivory", "hex": "#f5f0e8" },
-      { "name": "Slate Gray", "hex": "#6b7280" },
-      { "name": "Charcoal", "hex": "#374151" },
-      { "name": "Soft White", "hex": "#fafaf8" },
-      { "name": "Stone", "hex": "#9ca3af" },
-      { "name": "Mist", "hex": "#d1d5db" },
-      { "name": "Oatmeal", "hex": "#e5e0d8" },
-      { "name": "Graphite", "hex": "#4b5563" }
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
     ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
@@ -302,16 +655,54 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": ["Seat depth", "Fabric texture"],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "comparisonTable": {
       "rows": [
-        { "label": "Price", "arva": "$997", "luxury": "$3,000-$8,000", "lowCost": "Varies" },
-        { "label": "Delivery Time", "arva": "2-4 weeks", "luxury": "Months", "lowCost": "Varies" },
-        { "label": "Modular Design", "arva": "Yes", "luxury": "Rarely", "lowCost": "Sometimes" },
-        { "label": "Trial Period", "arva": "100 days", "luxury": "Limited or none", "lowCost": "Varies" },
-        { "label": "Warranty", "arva": "Lifetime structural", "luxury": "Varies", "lowCost": "Limited" },
-        { "label": "Damage-Resistant Shipping", "arva": "Vacuum-packed, boxed", "luxury": "Freight risk", "lowCost": "Varies" },
-        { "label": "Ease of Moving / Reconfiguring", "arva": "Designed for it", "luxury": "Difficult", "lowCost": "Varies" }
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
       ]
     },
     "dimensions": {
@@ -333,25 +724,75 @@
     ],
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
-      { "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.", "location": "Chicago, IL", "verified": true },
-      { "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.", "location": "Austin, TX", "verified": true },
-      { "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.", "location": "Seattle, WA", "verified": true },
-      { "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.", "location": "Denver, CO", "verified": true },
-      { "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)", "location": "Boston, MA", "verified": true },
-      { "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.", "location": "Portland, OR", "verified": true }
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
     ],
     "faq": [
-      { "question": "Is it too firm or too soft?", "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time." },
-      { "question": "How long does assembly take?", "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required." },
-      { "question": "Are the covers removable?", "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details." },
-      { "question": "How does delivery work?", "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door." },
-      { "question": "Is it easy to move later?", "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled." },
-      { "question": "Does it work in larger living spaces?", "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space." },
-      { "question": "What does the lifetime warranty cover?", "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details." }
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": ["Modular sectional seating pieces", "Ottoman", "Hidden connectors for secure configuration", "Care guide"],
+    "whatsIncluded": [
+      "Modular sectional seating pieces",
+      "Ottoman",
+      "Hidden connectors for secure configuration",
+      "Care guide"
+    ],
     "careAndDurability": [
       "Designed for everyday use with a durable performance weave.",
       "Spot clean with a damp cloth and mild soap.",
@@ -374,14 +815,38 @@
     ],
     "fabricDefault": "Warm Ivory",
     "fabricOptions": [
-      { "name": "Warm Ivory", "hex": "#f5f0e8" },
-      { "name": "Slate Gray", "hex": "#6b7280" },
-      { "name": "Charcoal", "hex": "#374151" },
-      { "name": "Soft White", "hex": "#fafaf8" },
-      { "name": "Stone", "hex": "#9ca3af" },
-      { "name": "Mist", "hex": "#d1d5db" },
-      { "name": "Oatmeal", "hex": "#e5e0d8" },
-      { "name": "Graphite", "hex": "#4b5563" }
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
     ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
@@ -391,16 +856,54 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": ["Seat depth", "Fabric texture"],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "comparisonTable": {
       "rows": [
-        { "label": "Price", "arva": "$997", "luxury": "$3,000-$8,000", "lowCost": "Varies" },
-        { "label": "Delivery Time", "arva": "2-4 weeks", "luxury": "Months", "lowCost": "Varies" },
-        { "label": "Modular Design", "arva": "Yes", "luxury": "Rarely", "lowCost": "Sometimes" },
-        { "label": "Trial Period", "arva": "100 days", "luxury": "Limited or none", "lowCost": "Varies" },
-        { "label": "Warranty", "arva": "Lifetime structural", "luxury": "Varies", "lowCost": "Limited" },
-        { "label": "Damage-Resistant Shipping", "arva": "Vacuum-packed, boxed", "luxury": "Freight risk", "lowCost": "Varies" },
-        { "label": "Ease of Moving / Reconfiguring", "arva": "Designed for it", "luxury": "Difficult", "lowCost": "Varies" }
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
       ]
     },
     "dimensions": {
@@ -422,25 +925,74 @@
     ],
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
-      { "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.", "location": "Chicago, IL", "verified": true },
-      { "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.", "location": "Austin, TX", "verified": true },
-      { "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.", "location": "Seattle, WA", "verified": true },
-      { "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.", "location": "Denver, CO", "verified": true },
-      { "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)", "location": "Boston, MA", "verified": true },
-      { "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.", "location": "Portland, OR", "verified": true }
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
     ],
     "faq": [
-      { "question": "Is it too firm or too soft?", "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time." },
-      { "question": "How long does assembly take?", "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required." },
-      { "question": "Are the covers removable?", "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details." },
-      { "question": "How does delivery work?", "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door." },
-      { "question": "Is it easy to move later?", "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled." },
-      { "question": "Does it work in larger living spaces?", "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space." },
-      { "question": "What does the lifetime warranty cover?", "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details." }
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": ["3-seater sofa", "Hidden connectors", "Care guide"],
+    "whatsIncluded": [
+      "3-seater sofa",
+      "Hidden connectors",
+      "Care guide"
+    ],
     "careAndDurability": [
       "Designed for everyday use with a durable performance weave.",
       "Spot clean with a damp cloth and mild soap.",
@@ -463,14 +1015,38 @@
     ],
     "fabricDefault": "Warm Ivory",
     "fabricOptions": [
-      { "name": "Warm Ivory", "hex": "#f5f0e8" },
-      { "name": "Slate Gray", "hex": "#6b7280" },
-      { "name": "Charcoal", "hex": "#374151" },
-      { "name": "Soft White", "hex": "#fafaf8" },
-      { "name": "Stone", "hex": "#9ca3af" },
-      { "name": "Mist", "hex": "#d1d5db" },
-      { "name": "Oatmeal", "hex": "#e5e0d8" },
-      { "name": "Graphite", "hex": "#4b5563" }
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
     ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
@@ -480,16 +1056,54 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": ["Seat depth", "Fabric texture"],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "comparisonTable": {
       "rows": [
-        { "label": "Price", "arva": "$997", "luxury": "$3,000-$8,000", "lowCost": "Varies" },
-        { "label": "Delivery Time", "arva": "2-4 weeks", "luxury": "Months", "lowCost": "Varies" },
-        { "label": "Modular Design", "arva": "Yes", "luxury": "Rarely", "lowCost": "Sometimes" },
-        { "label": "Trial Period", "arva": "100 days", "luxury": "Limited or none", "lowCost": "Varies" },
-        { "label": "Warranty", "arva": "Lifetime structural", "luxury": "Varies", "lowCost": "Limited" },
-        { "label": "Damage-Resistant Shipping", "arva": "Vacuum-packed, boxed", "luxury": "Freight risk", "lowCost": "Varies" },
-        { "label": "Ease of Moving / Reconfiguring", "arva": "Designed for it", "luxury": "Difficult", "lowCost": "Varies" }
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
       ]
     },
     "dimensions": {
@@ -511,25 +1125,74 @@
     ],
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
-      { "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.", "location": "Chicago, IL", "verified": true },
-      { "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.", "location": "Austin, TX", "verified": true },
-      { "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.", "location": "Seattle, WA", "verified": true },
-      { "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.", "location": "Denver, CO", "verified": true },
-      { "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)", "location": "Boston, MA", "verified": true },
-      { "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.", "location": "Portland, OR", "verified": true }
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
     ],
     "faq": [
-      { "question": "Is it too firm or too soft?", "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time." },
-      { "question": "How long does assembly take?", "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required." },
-      { "question": "Are the covers removable?", "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details." },
-      { "question": "How does delivery work?", "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door." },
-      { "question": "Is it easy to move later?", "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled." },
-      { "question": "Does it work in larger living spaces?", "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space." },
-      { "question": "What does the lifetime warranty cover?", "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details." }
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": ["Loveseat", "Hidden connectors", "Care guide"],
+    "whatsIncluded": [
+      "Loveseat",
+      "Hidden connectors",
+      "Care guide"
+    ],
     "careAndDurability": [
       "Designed for everyday use with a durable performance weave.",
       "Spot clean with a damp cloth and mild soap.",
@@ -552,14 +1215,38 @@
     ],
     "fabricDefault": "Warm Ivory",
     "fabricOptions": [
-      { "name": "Warm Ivory", "hex": "#f5f0e8" },
-      { "name": "Slate Gray", "hex": "#6b7280" },
-      { "name": "Charcoal", "hex": "#374151" },
-      { "name": "Soft White", "hex": "#fafaf8" },
-      { "name": "Stone", "hex": "#9ca3af" },
-      { "name": "Mist", "hex": "#d1d5db" },
-      { "name": "Oatmeal", "hex": "#e5e0d8" },
-      { "name": "Graphite", "hex": "#4b5563" }
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
     ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
@@ -569,16 +1256,54 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": ["Seat depth", "Fabric texture"],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "comparisonTable": {
       "rows": [
-        { "label": "Price", "arva": "$997", "luxury": "$3,000-$8,000", "lowCost": "Varies" },
-        { "label": "Delivery Time", "arva": "2-4 weeks", "luxury": "Months", "lowCost": "Varies" },
-        { "label": "Modular Design", "arva": "Yes", "luxury": "Rarely", "lowCost": "Sometimes" },
-        { "label": "Trial Period", "arva": "100 days", "luxury": "Limited or none", "lowCost": "Varies" },
-        { "label": "Warranty", "arva": "Lifetime structural", "luxury": "Varies", "lowCost": "Limited" },
-        { "label": "Damage-Resistant Shipping", "arva": "Vacuum-packed, boxed", "luxury": "Freight risk", "lowCost": "Varies" },
-        { "label": "Ease of Moving / Reconfiguring", "arva": "Designed for it", "luxury": "Difficult", "lowCost": "Varies" }
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
       ]
     },
     "dimensions": {
@@ -600,25 +1325,75 @@
     ],
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
-      { "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.", "location": "Chicago, IL", "verified": true },
-      { "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.", "location": "Austin, TX", "verified": true },
-      { "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.", "location": "Seattle, WA", "verified": true },
-      { "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.", "location": "Denver, CO", "verified": true },
-      { "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)", "location": "Boston, MA", "verified": true },
-      { "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.", "location": "Portland, OR", "verified": true }
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
     ],
     "faq": [
-      { "question": "Is it too firm or too soft?", "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time." },
-      { "question": "How long does assembly take?", "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required." },
-      { "question": "Are the covers removable?", "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details." },
-      { "question": "How does delivery work?", "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door." },
-      { "question": "Is it easy to move later?", "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled." },
-      { "question": "Does it work in larger living spaces?", "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space." },
-      { "question": "What does the lifetime warranty cover?", "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details." }
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": ["Modular sectional seating pieces", "Ottoman", "Hidden connectors for secure configuration", "Care guide"],
+    "whatsIncluded": [
+      "Modular sectional seating pieces",
+      "Ottoman",
+      "Hidden connectors for secure configuration",
+      "Care guide"
+    ],
     "careAndDurability": [
       "Weather-resistant fabric designed for outdoor use.",
       "Spot clean with a damp cloth and mild soap.",
@@ -641,14 +1416,38 @@
     ],
     "fabricDefault": "Warm Ivory",
     "fabricOptions": [
-      { "name": "Warm Ivory", "hex": "#f5f0e8" },
-      { "name": "Slate Gray", "hex": "#6b7280" },
-      { "name": "Charcoal", "hex": "#374151" },
-      { "name": "Soft White", "hex": "#fafaf8" },
-      { "name": "Stone", "hex": "#9ca3af" },
-      { "name": "Mist", "hex": "#d1d5db" },
-      { "name": "Oatmeal", "hex": "#e5e0d8" },
-      { "name": "Graphite", "hex": "#4b5563" }
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
     ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
@@ -658,16 +1457,54 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": ["Seat depth", "Fabric texture"],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "comparisonTable": {
       "rows": [
-        { "label": "Price", "arva": "$997", "luxury": "$3,000-$8,000", "lowCost": "Varies" },
-        { "label": "Delivery Time", "arva": "2-4 weeks", "luxury": "Months", "lowCost": "Varies" },
-        { "label": "Modular Design", "arva": "Yes", "luxury": "Rarely", "lowCost": "Sometimes" },
-        { "label": "Trial Period", "arva": "100 days", "luxury": "Limited or none", "lowCost": "Varies" },
-        { "label": "Warranty", "arva": "Lifetime structural", "luxury": "Varies", "lowCost": "Limited" },
-        { "label": "Damage-Resistant Shipping", "arva": "Vacuum-packed, boxed", "luxury": "Freight risk", "lowCost": "Varies" },
-        { "label": "Ease of Moving / Reconfiguring", "arva": "Designed for it", "luxury": "Difficult", "lowCost": "Varies" }
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
       ]
     },
     "dimensions": {
@@ -689,25 +1526,74 @@
     ],
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
-      { "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.", "location": "Chicago, IL", "verified": true },
-      { "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.", "location": "Austin, TX", "verified": true },
-      { "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.", "location": "Seattle, WA", "verified": true },
-      { "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.", "location": "Denver, CO", "verified": true },
-      { "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)", "location": "Boston, MA", "verified": true },
-      { "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.", "location": "Portland, OR", "verified": true }
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
     ],
     "faq": [
-      { "question": "Is it too firm or too soft?", "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time." },
-      { "question": "How long does assembly take?", "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required." },
-      { "question": "Are the covers removable?", "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details." },
-      { "question": "How does delivery work?", "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door." },
-      { "question": "Is it easy to move later?", "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled." },
-      { "question": "Does it work in larger living spaces?", "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space." },
-      { "question": "What does the lifetime warranty cover?", "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details." }
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": ["3-seater sofa", "Hidden connectors", "Care guide"],
+    "whatsIncluded": [
+      "3-seater sofa",
+      "Hidden connectors",
+      "Care guide"
+    ],
     "careAndDurability": [
       "Weather-resistant fabric designed for outdoor use.",
       "Spot clean with a damp cloth and mild soap.",
@@ -730,14 +1616,38 @@
     ],
     "fabricDefault": "Warm Ivory",
     "fabricOptions": [
-      { "name": "Warm Ivory", "hex": "#f5f0e8" },
-      { "name": "Slate Gray", "hex": "#6b7280" },
-      { "name": "Charcoal", "hex": "#374151" },
-      { "name": "Soft White", "hex": "#fafaf8" },
-      { "name": "Stone", "hex": "#9ca3af" },
-      { "name": "Mist", "hex": "#d1d5db" },
-      { "name": "Oatmeal", "hex": "#e5e0d8" },
-      { "name": "Graphite", "hex": "#4b5563" }
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
     ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
@@ -747,16 +1657,54 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": ["Seat depth", "Fabric texture"],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "comparisonTable": {
       "rows": [
-        { "label": "Price", "arva": "$997", "luxury": "$3,000-$8,000", "lowCost": "Varies" },
-        { "label": "Delivery Time", "arva": "2-4 weeks", "luxury": "Months", "lowCost": "Varies" },
-        { "label": "Modular Design", "arva": "Yes", "luxury": "Rarely", "lowCost": "Sometimes" },
-        { "label": "Trial Period", "arva": "100 days", "luxury": "Limited or none", "lowCost": "Varies" },
-        { "label": "Warranty", "arva": "Lifetime structural", "luxury": "Varies", "lowCost": "Limited" },
-        { "label": "Damage-Resistant Shipping", "arva": "Vacuum-packed, boxed", "luxury": "Freight risk", "lowCost": "Varies" },
-        { "label": "Ease of Moving / Reconfiguring", "arva": "Designed for it", "luxury": "Difficult", "lowCost": "Varies" }
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
       ]
     },
     "dimensions": {
@@ -778,25 +1726,74 @@
     ],
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
-      { "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.", "location": "Chicago, IL", "verified": true },
-      { "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.", "location": "Austin, TX", "verified": true },
-      { "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.", "location": "Seattle, WA", "verified": true },
-      { "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.", "location": "Denver, CO", "verified": true },
-      { "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)", "location": "Boston, MA", "verified": true },
-      { "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.", "location": "Portland, OR", "verified": true }
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
     ],
     "faq": [
-      { "question": "Is it too firm or too soft?", "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time." },
-      { "question": "How long does assembly take?", "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required." },
-      { "question": "Are the covers removable?", "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details." },
-      { "question": "How does delivery work?", "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door." },
-      { "question": "Is it easy to move later?", "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled." },
-      { "question": "Does it work in larger living spaces?", "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space." },
-      { "question": "What does the lifetime warranty cover?", "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details." }
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": ["Loveseat", "Hidden connectors", "Care guide"],
+    "whatsIncluded": [
+      "Loveseat",
+      "Hidden connectors",
+      "Care guide"
+    ],
     "careAndDurability": [
       "Weather-resistant fabric designed for outdoor use.",
       "Spot clean with a damp cloth and mild soap.",
@@ -804,5 +1801,606 @@
       "For best results, treat spills promptly and cover or store in harsh weather."
     ],
     "warrantyClarity": "Lifetime structural warranty on frame components."
+  },
+  "bellini-sectional": {
+    "pdpH1": "ARVA Bellini Sectional – Modular Cloud-Style Sectional Couch",
+    "pdpH2": "A modular cloud-style sectional designed for modern living.",
+    "subhead": "Modern modular comfort. Built to last.",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "valueStack": [
+      "Modular design - reconfigure anytime",
+      "OEKO-TEX® certified performance fabric",
+      "Tool-free assembly in minutes",
+      "100-Day Trial with $99 flat return pickup",
+      "Lifetime structural warranty"
+    ],
+    "fabricDefault": "Warm Ivory",
+    "fabricOptions": [
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
+    ],
+    "trustStrip": [
+      "Delivered in 2-4 Weeks",
+      "100-Day Trial",
+      "Tool-Free Assembly",
+      "Lifetime Structural Warranty"
+    ],
+    "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
+    "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
+    "comparisonTable": {
+      "rows": [
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
+      ]
+    },
+    "dimensions": {
+      "width": "102\"",
+      "depth": "37.7\"",
+      "height": "24.8\"",
+      "seatHeight": "15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "maxWeightPerPiece": "1102 lbs"
+    },
+    "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
+    "deliveryHeadline": "Try It at Home. Decide With Confidence.",
+    "deliveryCopy": [
+      "100-day in-home trial.",
+      "Flat $99 pickup fee if returned.",
+      "Third-party carrier assists with repackaging and pickup.",
+      "Returns processed in 2-3 weeks.",
+      "No restocking fees."
+    ],
+    "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
+    "reviews": [
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support — not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
+      },
+      {
+        "question": "Will it feel cheap compared to more expensive cloud sofas?",
+        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics — not a 'disposable' build."
+      },
+      {
+        "question": "What if I don't like it after it arrives?",
+        "answer": "Try it at home for 100 days. Returns are a flat $99 pickup fee with carrier assistance. No restocking fees."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in 2–4 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
+      },
+      {
+        "question": "How hard is assembly, really?",
+        "answer": "Tool-free assembly in minutes. Modular pieces connect cleanly."
+      },
+      {
+        "question": "Is the fabric safe and durable?",
+        "answer": "OEKO-TEX® certified fabric with a durable, everyday-friendly weave."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "Lifetime structural coverage (frame/structural components)."
+      }
+    ],
+    "finalCtaHeadline": "Upgrade Your Living Space.",
+    "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
+    "whatsIncluded": [
+      "Modular sectional modules",
+      "Ottoman",
+      "Connectors/clips (for secure configuration)",
+      "Care guide"
+    ],
+    "careAndDurability": [
+      "Designed for everyday use with a durable performance weave.",
+      "Spot clean with a damp cloth and mild soap.",
+      "Avoid harsh chemicals and abrasive brushes.",
+      "For best results, treat spills promptly."
+    ],
+    "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
+  },
+  "bellini-3-seater": {
+    "pdpH1": "ARVA Bellini 3-Seater – Modular Cloud-Style Sofa",
+    "pdpH2": "Clean architectural design with balanced, everyday comfort.",
+    "subhead": "Modern modular comfort. Built to last.",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "valueStack": [
+      "Modular design - reconfigure anytime",
+      "OEKO-TEX® certified performance fabric",
+      "Tool-free assembly in minutes",
+      "100-Day Trial with $99 flat return pickup",
+      "Lifetime structural warranty"
+    ],
+    "fabricDefault": "Warm Ivory",
+    "fabricOptions": [
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
+    ],
+    "trustStrip": [
+      "Delivered in 2-4 Weeks",
+      "100-Day Trial",
+      "Tool-Free Assembly",
+      "Lifetime Structural Warranty"
+    ],
+    "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
+    "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
+    "comparisonTable": {
+      "rows": [
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
+      ]
+    },
+    "dimensions": {
+      "width": "102\"",
+      "depth": "37.7\"",
+      "height": "24.8\"",
+      "seatHeight": "15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "maxWeightPerPiece": "1102 lbs"
+    },
+    "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
+    "deliveryHeadline": "Try It at Home. Decide With Confidence.",
+    "deliveryCopy": [
+      "100-day in-home trial.",
+      "Flat $99 pickup fee if returned.",
+      "Third-party carrier assists with repackaging and pickup.",
+      "Returns processed in 2-3 weeks.",
+      "No restocking fees."
+    ],
+    "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
+    "reviews": [
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
+    ],
+    "finalCtaHeadline": "Upgrade Your Living Space.",
+    "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
+    "whatsIncluded": [
+      "3-seater sofa",
+      "Hidden connectors",
+      "Care guide"
+    ],
+    "careAndDurability": [
+      "Designed for everyday use with a durable performance weave.",
+      "Spot clean with a damp cloth and mild soap.",
+      "Avoid harsh chemicals and abrasive brushes.",
+      "For best results, treat spills promptly."
+    ],
+    "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
+  },
+  "bellini-loveseat": {
+    "pdpH1": "ARVA Bellini Loveseat – Modular Cloud-Style Loveseat Sofa",
+    "pdpH2": "Compact, structured comfort with a refined modern profile.",
+    "subhead": "Modern modular comfort. Built to last.",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "valueStack": [
+      "Modular design - reconfigure anytime",
+      "OEKO-TEX® certified performance fabric",
+      "Tool-free assembly in minutes",
+      "100-Day Trial with $99 flat return pickup",
+      "Lifetime structural warranty"
+    ],
+    "fabricDefault": "Warm Ivory",
+    "fabricOptions": [
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
+    ],
+    "trustStrip": [
+      "Delivered in 2-4 Weeks",
+      "100-Day Trial",
+      "Tool-Free Assembly",
+      "Lifetime Structural Warranty"
+    ],
+    "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
+    "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
+    "comparisonTable": {
+      "rows": [
+        {
+          "label": "Price",
+          "arva": "$997",
+          "luxury": "$3,000-$8,000",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Delivery Time",
+          "arva": "2-4 weeks",
+          "luxury": "Months",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Modular Design",
+          "arva": "Yes",
+          "luxury": "Rarely",
+          "lowCost": "Sometimes"
+        },
+        {
+          "label": "Trial Period",
+          "arva": "100 days",
+          "luxury": "Limited or none",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Warranty",
+          "arva": "Lifetime structural",
+          "luxury": "Varies",
+          "lowCost": "Limited"
+        },
+        {
+          "label": "Damage-Resistant Shipping",
+          "arva": "Vacuum-packed, boxed",
+          "luxury": "Freight risk",
+          "lowCost": "Varies"
+        },
+        {
+          "label": "Ease of Moving / Reconfiguring",
+          "arva": "Designed for it",
+          "luxury": "Difficult",
+          "lowCost": "Varies"
+        }
+      ]
+    },
+    "dimensions": {
+      "width": "102\"",
+      "depth": "37.7\"",
+      "height": "24.8\"",
+      "seatHeight": "15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "maxWeightPerPiece": "1102 lbs"
+    },
+    "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
+    "deliveryHeadline": "Try It at Home. Decide With Confidence.",
+    "deliveryCopy": [
+      "100-day in-home trial.",
+      "Flat $99 pickup fee if returned.",
+      "Third-party carrier assists with repackaging and pickup.",
+      "Returns processed in 2-3 weeks.",
+      "No restocking fees."
+    ],
+    "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
+    "reviews": [
+      {
+        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "location": "Chicago, IL",
+        "verified": true
+      },
+      {
+        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "location": "Austin, TX",
+        "verified": true
+      },
+      {
+        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "location": "Seattle, WA",
+        "verified": true
+      },
+      {
+        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "location": "Denver, CO",
+        "verified": true
+      },
+      {
+        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "location": "Boston, MA",
+        "verified": true
+      },
+      {
+        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "location": "Portland, OR",
+        "verified": true
+      }
+    ],
+    "faq": [
+      {
+        "question": "Is it too firm or too soft?",
+        "answer": "Balanced support - designed to feel substantial without being stiff. You can lounge for hours without sinking too deep. We avoid the over-soft 'cloud' feel that doesn't hold up over time."
+      },
+      {
+        "question": "How long does assembly take?",
+        "answer": "Most people finish in under 30 minutes. Tool-free - you unbox, unroll the components, and connect them. No special skills required."
+      },
+      {
+        "question": "Are the covers removable?",
+        "answer": "The main fabric is fixed. We're happy to share care instructions for spot cleaning and maintenance. Check the product care guide for details."
+      },
+      {
+        "question": "How does delivery work?",
+        "answer": "Ships in boxes via standard carrier. You'll get tracking and typically receive it within 2-4 weeks. No freight trucks or appointment windows - delivery to your door."
+      },
+      {
+        "question": "Is it easy to move later?",
+        "answer": "Yes. Modular design and vacuum-packed-style packaging make it easier to move or reconfigure than traditional sectionals. Pieces can be broken down and reassembled."
+      },
+      {
+        "question": "Does it work in larger living spaces?",
+        "answer": "Yes. The 102\" width and modular system work in larger rooms. You can add chaises or ottomans to scale the look. Designed to feel substantial without dominating the space."
+      },
+      {
+        "question": "What does the lifetime warranty cover?",
+        "answer": "The frame and structural components are covered for the lifetime of the product under normal household use. If the frame fails, we'll repair or replace it. Fabric and cushions have separate coverage - see our warranty page for details."
+      }
+    ],
+    "finalCtaHeadline": "Upgrade Your Living Space.",
+    "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
+    "whatsIncluded": [
+      "Loveseat",
+      "Hidden connectors",
+      "Care guide"
+    ],
+    "careAndDurability": [
+      "Designed for everyday use with a durable performance weave.",
+      "Spot clean with a damp cloth and mild soap.",
+      "Avoid harsh chemicals and abrasive brushes.",
+      "For best results, treat spills promptly."
+    ],
+    "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
   }
 }

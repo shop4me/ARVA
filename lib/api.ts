@@ -24,7 +24,7 @@ export async function getCollections(): Promise<Collection[]> {
 }
 
 export async function getCollection(slug: string): Promise<Collection | null> {
-  const valid = ["atlas", "alto", "oris"];
+  const valid = ["atlas", "alto", "oris", "bellini"];
   if (!valid.includes(slug)) return null;
   return collections.find((c) => c.slug === slug) ?? null;
 }

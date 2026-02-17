@@ -3,7 +3,7 @@
  * Schema supports collections (Atlas, Alto, Oris) and categories (sectional | three-seater | loveseat).
  */
 
-export type CollectionSlug = "atlas" | "alto" | "oris";
+export type CollectionSlug = "atlas" | "alto" | "oris" | "bellini";
 export type ProductCategory = "sectional" | "three-seater" | "loveseat";
 
 export interface Product {
@@ -71,6 +71,14 @@ export const collections: Collection[] = [
     description: "Oris is built for the outdoors. Weather-resistant fabrics and durable frames for patios, decks, and balconies. Sectional, 3-seater, and loveseat.",
     seoTitle: "ARVA Oris Collection | Outdoor Modular Sofas",
     seoDescription: "Shop the ARVA Oris outdoor collection. Weather-resistant sectionals, 3-seaters, and loveseats. Modular design, 100-day trial, lifetime structural warranty.",
+  },
+  {
+    slug: "bellini",
+    name: "Bellini",
+    tagline: "Contemporary modular collection",
+    description: "Bellini brings the same modular comfort profile in a clean contemporary line. Sectional, 3-seater, and loveseat configurations designed for everyday living.",
+    seoTitle: "ARVA Bellini Collection | Modular Modern Sofas",
+    seoDescription: "Shop the ARVA Bellini collection. Sectional, 3-seater, and loveseat. Modular design, 100-day trial, lifetime structural warranty.",
   },
 ];
 

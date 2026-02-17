@@ -7,7 +7,7 @@ export const revalidate = 300;
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Collections | ARVA Modern Furniture";
-  const description = "Explore ARVA collections: Atlas, Alto, and Oris. Modular sofas for every space.";
+  const description = "Explore ARVA collections: Atlas, Alto, Oris, and Bellini. Modular sofas for every space.";
   const canonical = absoluteUrl("/collections");
   return {
     title,
