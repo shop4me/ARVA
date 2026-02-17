@@ -201,5 +201,5 @@ ensure_branch_and_remote
 require_clean_or_override
 push_and_get_sha
 server_fingerprint_check
-JOB_ID="$(start_tmux_deploy_job)"
+JOB_ID="$(start_tmux_deploy_job | tr -d '\n')"
 follow_job
