@@ -58,8 +58,10 @@ export default function ProductHero({
   );
   const [activeIndex, setActiveIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isDimensionsOpen, setIsDimensionsOpen] = useState(false);
   const touchStartX = useRef<number | null>(null);
   const activeImage = galleryImages[activeIndex];
+  const dimensionsImage = imageSet?.dimensionsDiagram;
 
   useEffect(() => {
     if (activeIndex >= galleryImages.length) {
@@ -214,6 +216,18 @@ export default function ProductHero({
               This is the smart version of the sofa you already want — without the markup or the freight risk.
             </p>
 
+            {dimensionsImage && (
+              <div className="mb-4">
+                <button
+                  type="button"
+                  onClick={() => setIsDimensionsOpen(true)}
+                  className="text-sm underline text-arva-text hover:text-arva-accent transition"
+                >
+                  Dimensions
+                </button>
+              </div>
+            )}
+
             {/* Choose your configuration (Sectional / 3-Seater / Loveseat) */}
             {relatedProducts && relatedProducts.length > 0 && (
               <ConfigSelector
@@ -308,6 +322,34 @@ export default function ProductHero({
               onClick={() => setIsLightboxOpen(false)}
               className="absolute top-2 right-2 sm:top-4 sm:right-4 h-9 w-9 rounded-full bg-black/55 text-white text-lg"
               aria-label="Close gallery"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
+      {isDimensionsOpen && dimensionsImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/55 p-4 flex items-center justify-center"
+          onClick={() => setIsDimensionsOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${product.name} dimensions`}
+        >
+          <div
+            className="relative w-full max-w-2xl rounded-xl bg-white p-4 shadow-arva-soft"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <img
+              src={dimensionsImage}
+              alt={`${product.name} dimensions diagram`}
+              className="w-full max-h-[70vh] object-contain rounded-lg"
+            />
+            <button
+              type="button"
+              onClick={() => setIsDimensionsOpen(false)}
+              className="absolute top-2 right-2 h-8 w-8 rounded-full bg-black/60 text-white text-base"
+              aria-label="Close dimensions"
             >
               ×
             </button>

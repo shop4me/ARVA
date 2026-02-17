@@ -408,7 +408,17 @@
       "Avoid harsh chemicals and abrasive brushes.",
       "For best results, treat spills promptly."
     ],
-    "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
+    "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
+    "images": {
+      "hero": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-ivory-hero-01.webp",
+      "thumbnail1": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-oat-angle-02.webp",
+      "thumbnail2": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+      "thumbnail3": "/images/products/atlas-3-seater/atlas-3-seater-modular-couch-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-seam-05.webp",
+      "thumbnail5": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-charcoal-detail-06.webp",
+      "comfort1": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-sand-room-07.webp",
+      "dimensionsDiagram": "/images/products/atlas-3-seater/atlas-3-seater-dimensions-diagram.webp"
+    }
   },
   "atlas-loveseat": {
     "pdpH1": "ARVA Atlas Loveseat \u2013 Modular Cloud-Style Loveseat Sofa",
