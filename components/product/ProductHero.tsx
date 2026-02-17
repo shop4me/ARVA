@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect, useMemo, useRef, useState, type TouchEvent } from "react";
 import type { Product } from "@/lib/content";
 import type { ProductDetailData } from "@/lib/productDetail";
 import FabricSwatches from "./FabricSwatches";
@@ -41,14 +44,75 @@ export default function ProductHero({
   const IconTrial = TRUST_ITEMS[0].Icon;
   const IconWarranty = TRUST_ITEMS[3].Icon;
   const imageSet = detail.images;
-  const heroImage = imageSet?.hero ?? product.image;
-  const thumbnails = [
+  const imageCandidates = [
+    imageSet?.hero ?? product.image,
     imageSet?.thumbnail1,
     imageSet?.thumbnail2,
     imageSet?.thumbnail3,
     imageSet?.thumbnail4,
     imageSet?.thumbnail5,
   ];
+  const galleryImages = useMemo(
+    () => imageCandidates.filter((img): img is string => Boolean(img)),
+    [imageSet?.hero, product.image, imageSet?.thumbnail1, imageSet?.thumbnail2, imageSet?.thumbnail3, imageSet?.thumbnail4, imageSet?.thumbnail5]
+  );
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const touchStartX = useRef<number | null>(null);
+  const activeImage = galleryImages[activeIndex];
+
+  useEffect(() => {
+    if (activeIndex >= galleryImages.length) {
+      setActiveIndex(0);
+    }
+  }, [activeIndex, galleryImages.length]);
+
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsLightboxOpen(false);
+      if (event.key === "ArrowRight" && galleryImages.length > 1) {
+        setActiveIndex((prev) => (prev + 1) % galleryImages.length);
+      }
+      if (event.key === "ArrowLeft" && galleryImages.length > 1) {
+        setActiveIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+      }
+    };
+
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      window.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isLightboxOpen, galleryImages.length]);
+
+  const goNext = () => {
+    if (galleryImages.length < 2) return;
+    setActiveIndex((prev) => (prev + 1) % galleryImages.length);
+  };
+
+  const goPrev = () => {
+    if (galleryImages.length < 2) return;
+    setActiveIndex((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+  };
+
+  const onLightboxTouchStart = (event: TouchEvent<HTMLDivElement>) => {
+    touchStartX.current = event.changedTouches[0]?.clientX ?? null;
+  };
+
+  const onLightboxTouchEnd = (event: TouchEvent<HTMLDivElement>) => {
+    if (touchStartX.current === null) return;
+    const endX = event.changedTouches[0]?.clientX ?? touchStartX.current;
+    const deltaX = endX - touchStartX.current;
+    touchStartX.current = null;
+    if (Math.abs(deltaX) < 40) return;
+    if (deltaX < 0) goNext();
+    else goPrev();
+  };
 
   return (
     <section className="border-b border-arva-border/80 bg-arva-bg">
@@ -57,14 +121,17 @@ export default function ProductHero({
           {/* Left — Product images (hierarchy: hero then thumbnails in order) */}
           <div className="order-2 lg:order-1 space-y-4">
             {/* Hero: pure white background */}
-            <div
+            <button
+              type="button"
               className="aspect-[4/3] rounded-xl bg-white border border-arva-border shadow-arva-soft overflow-hidden flex items-center justify-center"
               style={{ minHeight: 320 }}
+              onClick={() => activeImage && setIsLightboxOpen(true)}
+              aria-label={`Open ${product.name} image gallery`}
             >
-              {heroImage ? (
+              {activeImage ? (
                 <img
-                  src={heroImage}
-                  alt={`${product.name} hero`}
+                  src={activeImage}
+                  alt={`${product.name} image ${activeIndex + 1}`}
                   className="w-full h-full object-cover"
                   loading="eager"
                 />
@@ -73,25 +140,28 @@ export default function ProductHero({
                   {product.name} — Hero
                 </span>
               )}
-            </div>
+            </button>
             {/* Thumbnails — manual click only, no autoplay */}
-            <div className="grid grid-cols-5 gap-2">
-              {THUMBNAIL_LABELS.map((label, i) => (
+            <div className="grid grid-cols-5 sm:grid-cols-6 gap-2">
+              {galleryImages.map((thumb, i) => (
                 <button
                   key={i}
                   type="button"
-                  className="aspect-square rounded-lg bg-white border border-arva-border shadow-arva flex items-center justify-center text-arva-text-muted text-xs p-1 hover:border-arva-accent/30 transition"
+                  onClick={() => setActiveIndex(i)}
+                  className={`aspect-square rounded-lg bg-white border shadow-arva flex items-center justify-center text-arva-text-muted text-xs p-1 transition ${
+                    i === activeIndex
+                      ? "border-arva-accent"
+                      : "border-arva-border hover:border-arva-accent/30"
+                  }`}
+                  aria-label={`Show image ${i + 1} for ${product.name}`}
+                  aria-pressed={i === activeIndex}
                 >
-                  {thumbnails[i] ? (
-                    <img
-                      src={thumbnails[i]}
-                      alt={`${product.name} ${label}`}
-                      className="w-full h-full object-cover rounded-lg"
-                      loading="lazy"
-                    />
-                  ) : (
-                    label
-                  )}
+                  <img
+                    src={thumb}
+                    alt={`${product.name} ${THUMBNAIL_LABELS[i - 1] ?? "gallery view"}`}
+                    className="w-full h-full object-cover rounded-lg"
+                    loading="lazy"
+                  />
                 </button>
               ))}
             </div>
@@ -194,6 +264,56 @@ export default function ProductHero({
           </div>
         </div>
       </div>
+      {isLightboxOpen && activeImage && (
+        <div
+          className="fixed inset-0 z-50 bg-black/80 p-4 sm:p-8 flex items-center justify-center"
+          onClick={() => setIsLightboxOpen(false)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${product.name} image gallery`}
+        >
+          <div
+            className="relative w-full max-w-6xl"
+            onClick={(event) => event.stopPropagation()}
+            onTouchStart={onLightboxTouchStart}
+            onTouchEnd={onLightboxTouchEnd}
+          >
+            <img
+              src={activeImage}
+              alt={`${product.name} zoomed image ${activeIndex + 1}`}
+              className="w-full max-h-[85vh] object-contain rounded-lg"
+            />
+            {galleryImages.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={goPrev}
+                  className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/55 text-white text-xl"
+                  aria-label="Previous image"
+                >
+                  ‹
+                </button>
+                <button
+                  type="button"
+                  onClick={goNext}
+                  className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/55 text-white text-xl"
+                  aria-label="Next image"
+                >
+                  ›
+                </button>
+              </>
+            )}
+            <button
+              type="button"
+              onClick={() => setIsLightboxOpen(false)}
+              className="absolute top-2 right-2 sm:top-4 sm:right-4 h-9 w-9 rounded-full bg-black/55 text-white text-lg"
+              aria-label="Close gallery"
+            >
+              ×
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
