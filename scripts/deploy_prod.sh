@@ -99,7 +99,7 @@ server_fingerprint_check() {
     [[ "$remote_fp" == "$EXPECTED_FINGERPRINT" ]] || {
       echo "ERROR: Fingerprint mismatch."
       exit 1
-    fi
+    }
   fi
 }
 
