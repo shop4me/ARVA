@@ -24,9 +24,10 @@ BOOTSTRAP=0
 MODE_DEPLOY=1
 MODE_STATUS=0
 MODE_LOGS=0
+MODE_VERSION=0
 LOG_JOB_ID=""
 
-usage() { echo "Use npm run deploy:prod / deploy:status / deploy:logs"; }
+usage() { echo "Use npm run deploy:prod / deploy:status / deploy:logs / deploy:version"; }
 
 log() { echo "[$(date -Is)] $*"; }
 
@@ -38,6 +39,7 @@ while [[ $# -gt 0 ]]; do
     --auto-commit) AUTO_COMMIT_MSG="${2:-}"; shift 2 ;;
     --status) MODE_DEPLOY=0; MODE_STATUS=1; shift ;;
     --logs) MODE_DEPLOY=0; MODE_LOGS=1; shift ;;
+    --version) MODE_DEPLOY=0; MODE_VERSION=1; shift ;;
     --job) LOG_JOB_ID="${2:-}"; shift 2 ;;
     *) echo "Unknown arg: $1"; exit 1 ;;
   esac
@@ -58,6 +60,19 @@ ensure_branch_and_remote() {
   }
 }
 
+ensure_not_behind_origin() {
+  log "Fetching origin..."
+  git fetch origin main --quiet 2>/dev/null || git fetch origin --quiet
+  LOCAL_SHA="$(git rev-parse HEAD)"
+  REMOTE_SHA="$(git rev-parse origin/$BRANCH)"
+  if [[ "$LOCAL_SHA" != "$REMOTE_SHA" ]]; then
+    if git merge-base --is-ancestor "$LOCAL_SHA" "$REMOTE_SHA" 2>/dev/null; then
+      echo "ERROR: Local is behind origin/main. Pull first so local and GitHub match."
+      exit 1
+    fi
+  fi
+}
+
 require_clean_or_override() {
   if ! git diff --quiet || ! git diff --cached --quiet; then
     if [[ -n "$AUTO_COMMIT_MSG" ]]; then
@@ -74,10 +89,11 @@ require_clean_or_override() {
 }
 
 push_and_get_sha() {
+  ensure_not_behind_origin
   log "Pushing $BRANCH..."
   git push origin "$BRANCH"
-  LOCAL_SHA="$(git rev-parse HEAD)"
-  log "SHA to deploy: $LOCAL_SHA"
+  DEPLOY_SHA="$(git rev-parse HEAD)"
+  log "SHA to deploy: $DEPLOY_SHA"
 }
 
 server_fingerprint_check() {
@@ -124,14 +140,14 @@ show_logs() {
 }
 
 start_tmux_deploy_job() {
-  short_sha="${LOCAL_SHA:0:7}"
+  short_sha="${DEPLOY_SHA:0:7}"
   JOB_ID="deploy_$(date +%Y%m%d%H%M%S)_${short_sha}"
   log "Starting tmux job: $JOB_ID"
 
   ssh "$SSH_HOST" "bash -s" << REMOTE_SCRIPT
 set -euo pipefail
 JOB_ID='$JOB_ID'
-LOCAL_SHA='$LOCAL_SHA'
+DEPLOY_SHA='$DEPLOY_SHA'
 SERVER_APP_DIR='$SERVER_APP_DIR'
 SERVER_LOG_DIR='$SERVER_LOG_DIR'
 SYSTEMD_SERVICE='$SYSTEMD_SERVICE'
@@ -145,13 +161,13 @@ echo RUNNING > "\$STATUS_FILE"
 tmux new-session -d -s "\$JOB_ID" "bash -lc '
   set -euo pipefail
   echo \"=== ARVA deploy $JOB_ID ===\"
-  echo \"SHA: $LOCAL_SHA\"
+  echo \"SHA: $DEPLOY_SHA\"
   date -Is
 
   cd $SERVER_APP_DIR
   git fetch --all --prune
-  git checkout -f $LOCAL_SHA
-  echo $LOCAL_SHA > REVISION
+  git checkout -f $DEPLOY_SHA
+  echo $DEPLOY_SHA > /var/www/arva/REVISION
 
   if [[ -f package-lock.json ]]; then npm ci; else npm install; fi
   npm run build
@@ -182,7 +198,8 @@ follow_job() {
   while true; do
     status="$(ssh "$SSH_HOST" "cat '$SERVER_LOG_DIR/$JOB_ID.status' 2>/dev/null || true")"
     if [[ "$status" == "OK" ]]; then
-      log "Deploy OK ✅ ($JOB_ID)"
+      verify_revision_on_server || return 1
+      log "OK: local, Git, and server all at $DEPLOY_SHA"
       return 0
     elif [[ "$status" == "FAIL" ]]; then
       log "Deploy FAIL ❌ ($JOB_ID)"
@@ -194,8 +211,35 @@ follow_job() {
   done
 }
 
+verify_revision_on_server() {
+  local server_rev
+  server_rev="$(ssh "$SSH_HOST" "cat '$SERVER_APP_DIR/REVISION' 2>/dev/null" | tr -d '\n')"
+  if [[ -z "$server_rev" || "$server_rev" != "$DEPLOY_SHA" ]]; then
+    log "ERROR: Server REVISION ($server_rev) does not match deployed SHA ($DEPLOY_SHA)"
+    return 1
+  fi
+}
+
+show_version() {
+  log "Fetching origin..."
+  git fetch origin --quiet 2>/dev/null || true
+  local local_sha origin_sha server_sha
+  local_sha="$(git rev-parse HEAD)"
+  origin_sha="$(git rev-parse origin/$BRANCH 2>/dev/null || echo "?")"
+  server_sha="$(ssh "$SSH_HOST" "cat $SERVER_APP_DIR/REVISION 2>/dev/null" | tr -d '\n' || echo "?")"
+  echo "  local:  $local_sha"
+  echo "  Git:    $origin_sha (origin/$BRANCH)"
+  echo "  server: $server_sha ($SERVER_APP_DIR/REVISION)"
+  if [[ "$local_sha" != "$origin_sha" || "$origin_sha" != "$server_sha" || "$local_sha" != "$server_sha" ]]; then
+    echo "MISMATCH"
+    exit 1
+  fi
+  echo "OK: All three match."
+}
+
 if [[ "$MODE_STATUS" -eq 1 ]]; then show_status; exit 0; fi
 if [[ "$MODE_LOGS" -eq 1 ]]; then show_logs; exit 0; fi
+if [[ "$MODE_VERSION" -eq 1 ]]; then show_version; exit 0; fi
 
 ensure_branch_and_remote
 require_clean_or_override
