@@ -263,5 +263,5 @@ require_clean_or_override
 push_and_get_sha
 server_bootstrap_if_needed
 server_fingerprint_check
-JOB_ID="$(start_tmux_job | tr -d '\n')"
+JOB_ID="$(start_tmux_job | tail -n 1 | tr -d '\n')"
 wait_for_job
