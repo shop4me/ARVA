@@ -158,7 +158,11 @@ git fetch --all --prune
 git checkout -f "$DEPLOY_SHA"
 echo "$DEPLOY_SHA" > /var/www/arva/REVISION
 
-if [[ -f package-lock.json ]]; then npm ci --include=dev; else npm install --include=dev; fi
+if [[ -f package-lock.json ]]; then
+  npm ci --include=dev || npm install --include=dev
+else
+  npm install --include=dev
+fi
 
 if [[ -f "$SERVER_ENV_FILE" ]]; then
   set -a
