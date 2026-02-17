@@ -40,6 +40,15 @@ export default function ProductHero({
   const IconDelivery = TRUST_ITEMS[4].Icon;
   const IconTrial = TRUST_ITEMS[0].Icon;
   const IconWarranty = TRUST_ITEMS[3].Icon;
+  const imageSet = detail.images;
+  const heroImage = imageSet?.hero ?? product.image;
+  const thumbnails = [
+    imageSet?.thumbnail1,
+    imageSet?.thumbnail2,
+    imageSet?.thumbnail3,
+    imageSet?.thumbnail4,
+    imageSet?.thumbnail5,
+  ];
 
   return (
     <section className="border-b border-arva-border/80 bg-arva-bg">
@@ -52,9 +61,18 @@ export default function ProductHero({
               className="aspect-[4/3] rounded-xl bg-white border border-arva-border shadow-arva-soft overflow-hidden flex items-center justify-center"
               style={{ minHeight: 320 }}
             >
-              <span className="text-arva-text-muted text-sm">
-                {product.name} — Hero
-              </span>
+              {heroImage ? (
+                <img
+                  src={heroImage}
+                  alt={`${product.name} hero`}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                />
+              ) : (
+                <span className="text-arva-text-muted text-sm">
+                  {product.name} — Hero
+                </span>
+              )}
             </div>
             {/* Thumbnails — manual click only, no autoplay */}
             <div className="grid grid-cols-5 gap-2">
@@ -64,7 +82,16 @@ export default function ProductHero({
                   type="button"
                   className="aspect-square rounded-lg bg-white border border-arva-border shadow-arva flex items-center justify-center text-arva-text-muted text-xs p-1 hover:border-arva-accent/30 transition"
                 >
-                  {label}
+                  {thumbnails[i] ? (
+                    <img
+                      src={thumbnails[i]}
+                      alt={`${product.name} ${label}`}
+                      className="w-full h-full object-cover rounded-lg"
+                      loading="lazy"
+                    />
+                  ) : (
+                    label
+                  )}
                 </button>
               ))}
             </div>
