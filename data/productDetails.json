@@ -1,12 +1,12 @@
 {
   "atlas-sectional": {
-    "pdpH1": "ARVA Atlas Sectional – Modular Cloud-Style Sectional Couch",
+    "pdpH1": "ARVA Atlas Sectional \u2013 Modular Cloud-Style Sectional Couch",
     "pdpH2": "A modular cloud-style sectional designed for modern living, priced under $1,000.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -109,7 +109,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -157,11 +157,11 @@
     "faq": [
       {
         "question": "Is it too firm or too soft?",
-        "answer": "Balanced support — not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
+        "answer": "Balanced support \u2014 not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
       },
       {
         "question": "Will it feel cheap compared to more expensive cloud sofas?",
-        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics — not a 'disposable' build."
+        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics \u2014 not a 'disposable' build."
       },
       {
         "question": "What if I don't like it after it arrives?",
@@ -169,7 +169,7 @@
       },
       {
         "question": "How does delivery work?",
-        "answer": "Ships in 2–4 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
+        "answer": "Ships in 2\u20134 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
       },
       {
         "question": "How hard is assembly, really?",
@@ -177,7 +177,7 @@
       },
       {
         "question": "Is the fabric safe and durable?",
-        "answer": "OEKO-TEX® certified fabric with a durable, everyday-friendly weave."
+        "answer": "OEKO-TEX\u00ae certified fabric with a durable, everyday-friendly weave."
       },
       {
         "question": "What does the lifetime warranty cover?",
@@ -198,16 +198,26 @@
       "Avoid harsh chemicals and abrasive brushes.",
       "For best results, treat spills promptly."
     ],
-    "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
+    "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
+    "images": {
+      "hero": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-ivory-hero-01.webp",
+      "thumbnail1": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-oat-angle-02.webp",
+      "thumbnail2": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-stone-lifestyle-03.webp",
+      "thumbnail3": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-seam-05.webp",
+      "thumbnail5": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-charcoal-detail-06.webp",
+      "comfort1": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-sand-room-07.webp",
+      "comfort2": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-ash-modular-08.webp"
+    }
   },
   "atlas-3-seater": {
-    "pdpH1": "ARVA Atlas 3-Seater – Modular Cloud-Style Sofa",
+    "pdpH1": "ARVA Atlas 3-Seater \u2013 Modular Cloud-Style Sofa",
     "pdpH2": "Clean architectural design with balanced, everyday comfort.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -310,7 +320,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -401,13 +411,13 @@
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
   },
   "atlas-loveseat": {
-    "pdpH1": "ARVA Atlas Loveseat – Modular Cloud-Style Loveseat Sofa",
+    "pdpH1": "ARVA Atlas Loveseat \u2013 Modular Cloud-Style Loveseat Sofa",
     "pdpH2": "Compact, structured comfort with a refined modern profile.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -510,7 +520,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -601,13 +611,13 @@
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
   },
   "alto-sectional": {
-    "pdpH1": "ARVA Alto Sectional – Modern Cloud-Style Modular Sofa",
+    "pdpH1": "ARVA Alto Sectional \u2013 Modern Cloud-Style Modular Sofa",
     "pdpH2": "A softer, sculptural approach to modular comfort.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -710,7 +720,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -802,13 +812,13 @@
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
   },
   "alto-3-seater": {
-    "pdpH1": "ARVA Alto 3-Seater – Modern Cloud-Style Sofa",
+    "pdpH1": "ARVA Alto 3-Seater \u2013 Modern Cloud-Style Sofa",
     "pdpH2": "Relaxed silhouette with confident, lasting support.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -911,7 +921,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -999,16 +1009,26 @@
       "Avoid harsh chemicals and abrasive brushes.",
       "For best results, treat spills promptly."
     ],
-    "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
+    "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
+    "images": {
+      "hero": "/images/products/alto-3-seater/alto-3-seater-cloud-couch-ivory-hero-01.webp",
+      "thumbnail1": "/images/products/alto-3-seater/alto-3-seater-modular-sofa-oat-angle-02.webp",
+      "thumbnail2": "/images/products/alto-3-seater/alto-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+      "thumbnail3": "/images/products/alto-3-seater/alto-3-seater-modular-couch-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/alto-3-seater/alto-3-seater-cloud-couch-slate-seam-05.webp",
+      "thumbnail5": "/images/products/alto-3-seater/alto-3-seater-modular-sofa-charcoal-detail-06.webp",
+      "comfort1": "/images/products/alto-3-seater/alto-3-seater-cloud-sofa-sand-room-07.webp",
+      "comfort2": "/images/products/alto-3-seater/alto-3-seater-modular-couch-ash-modular-08.webp"
+    }
   },
   "alto-loveseat": {
-    "pdpH1": "ARVA Alto Loveseat – Modern Cloud-Style Loveseat Sofa",
+    "pdpH1": "ARVA Alto Loveseat \u2013 Modern Cloud-Style Loveseat Sofa",
     "pdpH2": "Refined proportions designed for flexible living spaces.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1111,7 +1131,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -1202,13 +1222,13 @@
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
   },
   "oris-sectional": {
-    "pdpH1": "ARVA Oris Outdoor Sectional – Modular Outdoor Sectional Sofa",
+    "pdpH1": "ARVA Oris Outdoor Sectional \u2013 Modular Outdoor Sectional Sofa",
     "pdpH2": "Refined outdoor seating designed for lasting comfort.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1311,7 +1331,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -1403,13 +1423,13 @@
     "warrantyClarity": "Lifetime structural warranty on frame components."
   },
   "oris-3-seater": {
-    "pdpH1": "ARVA Oris Outdoor 3-Seater – Modular Outdoor Sofa",
+    "pdpH1": "ARVA Oris Outdoor 3-Seater \u2013 Modular Outdoor Sofa",
     "pdpH2": "Clean-lined outdoor comfort with durable construction.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1512,7 +1532,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -1603,13 +1623,13 @@
     "warrantyClarity": "Lifetime structural warranty on frame components."
   },
   "oris-loveseat": {
-    "pdpH1": "ARVA Oris Outdoor Loveseat – Modular Outdoor Loveseat Sofa",
+    "pdpH1": "ARVA Oris Outdoor Loveseat \u2013 Modular Outdoor Loveseat Sofa",
     "pdpH2": "Compact outdoor seating with modern architectural design.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1712,7 +1732,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -1803,13 +1823,13 @@
     "warrantyClarity": "Lifetime structural warranty on frame components."
   },
   "bellini-sectional": {
-    "pdpH1": "ARVA Bellini Sectional – Modular Cloud-Style Sectional Couch",
+    "pdpH1": "ARVA Bellini Sectional \u2013 Modular Cloud-Style Sectional Couch",
     "pdpH2": "A modular cloud-style sectional designed for modern living.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1912,7 +1932,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -1960,11 +1980,11 @@
     "faq": [
       {
         "question": "Is it too firm or too soft?",
-        "answer": "Balanced support — not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
+        "answer": "Balanced support \u2014 not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
       },
       {
         "question": "Will it feel cheap compared to more expensive cloud sofas?",
-        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics — not a 'disposable' build."
+        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics \u2014 not a 'disposable' build."
       },
       {
         "question": "What if I don't like it after it arrives?",
@@ -1972,7 +1992,7 @@
       },
       {
         "question": "How does delivery work?",
-        "answer": "Ships in 2–4 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
+        "answer": "Ships in 2\u20134 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
       },
       {
         "question": "How hard is assembly, really?",
@@ -1980,7 +2000,7 @@
       },
       {
         "question": "Is the fabric safe and durable?",
-        "answer": "OEKO-TEX® certified fabric with a durable, everyday-friendly weave."
+        "answer": "OEKO-TEX\u00ae certified fabric with a durable, everyday-friendly weave."
       },
       {
         "question": "What does the lifetime warranty cover?",
@@ -2004,13 +2024,13 @@
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
   },
   "bellini-3-seater": {
-    "pdpH1": "ARVA Bellini 3-Seater – Modular Cloud-Style Sofa",
+    "pdpH1": "ARVA Bellini 3-Seater \u2013 Modular Cloud-Style Sofa",
     "pdpH2": "Clean architectural design with balanced, everyday comfort.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -2113,7 +2133,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -2204,13 +2224,13 @@
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
   },
   "bellini-loveseat": {
-    "pdpH1": "ARVA Bellini Loveseat – Modular Cloud-Style Loveseat Sofa",
+    "pdpH1": "ARVA Bellini Loveseat \u2013 Modular Cloud-Style Loveseat Sofa",
     "pdpH2": "Compact, structured comfort with a refined modern profile.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
+      "OEKO-TEX\u00ae certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -2313,7 +2333,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
+      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
