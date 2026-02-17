@@ -125,5 +125,38 @@
       "filename": "atlas-3-seater-dimensions-diagram.webp",
       "role": "dimensions"
     }
+  ],
+  "atlas-loveseat": [
+    {
+      "source": "assets/ret/ChatGPT Image Feb 17, 2026, 12_46_50 PM.png",
+      "output": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-ivory-hero-01.webp",
+      "filename": "atlas-loveseat-cloud-couch-ivory-hero-01.webp"
+    },
+    {
+      "source": "assets/ret/ChatGPT Image Feb 17, 2026, 12_46_46 PM.png",
+      "output": "/images/products/atlas-loveseat/atlas-loveseat-modular-sofa-oat-angle-02.webp",
+      "filename": "atlas-loveseat-modular-sofa-oat-angle-02.webp"
+    },
+    {
+      "source": "assets/ret/ChatGPT Image Feb 17, 2026, 12_11_16 PM.png",
+      "output": "/images/products/atlas-loveseat/atlas-loveseat-cloud-sofa-stone-lifestyle-03.webp",
+      "filename": "atlas-loveseat-cloud-sofa-stone-lifestyle-03.webp"
+    },
+    {
+      "source": "assets/ret/ChatGPT Image Feb 17, 2026, 12_11_12 PM.png",
+      "output": "/images/products/atlas-loveseat/atlas-loveseat-modular-couch-mist-fabric-04.webp",
+      "filename": "atlas-loveseat-modular-couch-mist-fabric-04.webp"
+    },
+    {
+      "source": "assets/ret/ChatGPT Image Feb 17, 2026, 12_11_09 PM.png",
+      "output": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-slate-seam-05.webp",
+      "filename": "atlas-loveseat-cloud-couch-slate-seam-05.webp"
+    },
+    {
+      "source": "assets/ret/dimensions.png",
+      "output": "/images/products/atlas-loveseat/atlas-loveseat-dimensions-diagram.webp",
+      "filename": "atlas-loveseat-dimensions-diagram.webp",
+      "role": "dimensions"
+    }
   ]
 }
