@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   openGraph: {
     siteName: "ARVA",
   },
+  verification: {
+    google: "sFq_qF0-h7j27gLNyHfFKvbVqmr-JdF5mYnnYglHZIQ",
+  },
 };
 
 export default function RootLayout({
