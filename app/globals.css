@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --arva-bg: #FAFAF8;
+    --arva-text: #1a1a1a;
+    --arva-text-muted: #525252;
+    --arva-accent: #1e2a3a;
+    --arva-border: #e5e5e5;
+    --arva-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --arva-shadow-soft: 0 4px 24px rgba(0, 0, 0, 0.06);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply antialiased;
+    background-color: var(--arva-bg);
+    color: var(--arva-text);
+  }
+
+  /* Stripe Payment Element: ensure iframe and container can render at full size */
+  .checkout-payment-element-wrapper {
+    min-height: 300px;
+  }
+  .checkout-payment-element-wrapper iframe {
+    min-height: 250px !important;
+    width: 100% !important;
+  }
+
+  /* Top bar marquee: pause on hover */
+  .top-bar-marquee-pause:hover .top-bar-marquee-inner {
+    animation-play-state: paused;
+  }
+}

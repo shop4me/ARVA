@@ -1,0 +1,28 @@
+---
+description: ARVA copy and positioning — avoid apartment-only language
+globs: lib/homepage.ts,**/home/*.tsx,lib/content.ts
+alwaysApply: true
+---
+
+# ARVA Copy & Positioning
+
+Avoid positioning ARVA as **apartment-only** furniture. Use language that includes apartments *and* homes without excluding either.
+
+## Prefer
+
+- "Modern living" / "real spaces" / "real living"
+- "Thoughtfully sized" / "thoughtfully balanced dimensions"
+- "Easy delivery" / "simple delivery and setup"
+- "Designed for real living"
+- "Scales from apartments to full homes"
+
+## Avoid
+
+- "Apartment-only" or "for apartments"
+- "Small spaces" / "small rooms" as the main frame
+- "Apartment doorways" / "elevator-friendly" as lead messaging
+- Anything that implies temporary or budget furniture
+
+## Why
+
+Homeowners should not feel excluded; apartment buyers should still feel "this fits my life." The product should feel **permanent** and premium, not temporary or niche.

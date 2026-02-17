@@ -1,0 +1,64 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import Link from "next/link";
+import { getCollection, getProductsByCollection } from "@/lib/api";
+import { absoluteUrl } from "@/lib/seo";
+import ProductCard from "@/components/ProductCard";
+
+export const revalidate = 300; // 5 minutes
+
+type Props = { params: Promise<{ collection: string }> };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { collection: slug } = await params;
+  const collection = await getCollection(slug);
+  if (!collection) return { title: "Collection Not Found" };
+
+  const title = collection.seoTitle;
+  const description = collection.seoDescription;
+  const canonical = absoluteUrl(`/collections/${slug}`);
+
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+    },
+    twitter: {
+      title,
+      description,
+    },
+  };
+}
+
+export default async function CollectionPage({ params }: Props) {
+  const { collection: slug } = await params;
+  const collection = await getCollection(slug);
+  if (!collection) notFound();
+
+  const products = await getProductsByCollection(slug);
+
+  return (
+    <article className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <header className="mb-12">
+        <h1 className="text-3xl font-semibold text-arva-text mb-2">
+          {collection.name}
+        </h1>
+        <p className="text-lg text-arva-text-muted mb-2">{collection.tagline}</p>
+        <p className="text-arva-text-muted leading-relaxed max-w-2xl">
+          {collection.description}
+        </p>
+      </header>
+      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {products.map((product) => (
+          <li key={product.slug}>
+            <ProductCard product={product} />
+          </li>
+        ))}
+      </ul>
+    </article>
+  );
+}

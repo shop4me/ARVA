@@ -1,0 +1,14 @@
+---
+description: After making code changes - restart dev server and provide localhost URL
+alwaysApply: true
+---
+
+# After Making Changes: Restart & Give URL
+
+Whenever you make any code or config changes to the ARVA project:
+
+1. **Rebuild** (if needed): run `npm run build` to ensure the project compiles.
+2. **Restart the dev server**: stop any existing `next dev` process, then run `npm run dev` in the project root.
+3. **Give the user the exact localhost URL**: read the terminal output to get the port (e.g. 3000, 3001, 3002…) and reply with the full URL, e.g. **http://localhost:3004**.
+
+Do this automatically at the end of any turn where you edited files. The user expects to open the app immediately at the URL you provide.
