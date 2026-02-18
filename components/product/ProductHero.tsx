@@ -62,6 +62,11 @@ export default function ProductHero({
   const touchStartX = useRef<number | null>(null);
   const activeImage = galleryImages[activeIndex];
   const dimensionsImage = imageSet?.dimensionsDiagram;
+  const reviewsCount = detail.reviews?.length ?? 0;
+  const averageRating = reviewsCount
+    ? detail.reviews.reduce((sum, review) => sum + (review.rating ?? 5), 0) / reviewsCount
+    : 5;
+  const roundedRating = Math.round(averageRating);
 
   useEffect(() => {
     if (activeIndex >= galleryImages.length) {
@@ -171,6 +176,31 @@ export default function ProductHero({
 
           {/* Right on desktop, below images on mobile */}
           <div className="order-2 lg:sticky lg:top-24 min-w-0">
+            {reviewsCount > 0 && (
+              <div className="mb-3">
+                <div className="inline-flex items-center gap-2 rounded-full border border-arva-border bg-white/85 px-3 py-1 text-xs sm:text-sm">
+                  <div
+                    className="flex items-center gap-0.5"
+                    aria-label={`${averageRating.toFixed(1)} out of 5 stars`}
+                  >
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <span
+                        key={index}
+                        className={index < roundedRating ? "text-amber-500" : "text-neutral-300"}
+                        aria-hidden
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  <span className="font-medium text-arva-text">{averageRating.toFixed(1)}</span>
+                  <span className="text-arva-text-muted" aria-hidden>
+                    ·
+                  </span>
+                  <span className="text-arva-text-muted">{reviewsCount} reviews</span>
+                </div>
+              </div>
+            )}
             <h1 className="text-2xl sm:text-3xl font-semibold text-arva-text mb-1 break-words">
               {detail.pdpH1 ?? product.name}
             </h1>
