@@ -62,6 +62,111 @@ const WHY_ARVA_TILES: WhyArvaTile[] = [
       </svg>
     ),
   },
+  {
+    image: "/assets/4.webp",
+    headline: "Easy to Clean",
+    tagline: "Designed for real life, not babying",
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M6 16h12M8 13h8M10 10h4" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    image: "/assets/5.webp",
+    headline: "Pet Friendly",
+    tagline: "Handles fur, paws, and daily wear",
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M8 7.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM16 7.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM6 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3ZM18 11a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z" fill="white" />
+        <path d="M8.5 18c0-2 1.6-3.5 3.5-3.5s3.5 1.5 3.5 3.5-1.4 2.5-3.5 2.5S8.5 20 8.5 18Z" fill="white" />
+      </svg>
+    ),
+  },
+  {
+    image: "/assets/6.webp",
+    headline: "Spill Resistant",
+    tagline: "Liquids bead up, cleanup stays easy",
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M12 4c2.8 3.8 5.5 6.2 5.5 9.1a5.5 5.5 0 1 1-11 0C6.5 10.2 9.2 7.8 12 4Z" stroke="white" strokeWidth="1.8" />
+      </svg>
+    ),
+  },
+  {
+    image: "/assets/7.webp",
+    headline: "Comfort That Doesn’t Collapse",
+    tagline: "Holds its shape over time",
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M5 15h14v4H5v-4Z" stroke="white" strokeWidth="1.8" />
+        <path d="M7 11h10v4H7v-4Z" stroke="white" strokeWidth="1.8" />
+      </svg>
+    ),
+  },
+  {
+    image: "/assets/8.webp",
+    headline: "True-to-Scale Design",
+    tagline: "Honest sizing that fits your space",
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M4 7h16M4 17h16M7 4v3M12 4v3M17 4v3M7 17v3M12 17v3M17 17v3" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    image: "/assets/9.webp",
+    headline: "Built to Match",
+    tagline: "Every seam lines up. Every seat feels the same.",
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M5 7h14v10H5V7Z" stroke="white" strokeWidth="1.8" />
+        <path d="M12 7v10M5 12h14" stroke="white" strokeWidth="1.8" />
+      </svg>
+    ),
+  },
 ];
 
 export default function WhyArvaVisual() {
