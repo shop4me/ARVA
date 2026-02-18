@@ -43,44 +43,35 @@
   ],
   "alto-3-seater": [
     {
-      "source": "assets/ARVA Alto 3-Seater /ChatGPT Image Feb 16, 2026, 11_33_12 PM.png",
+      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_37_24 PM.png",
       "output": "/images/products/alto-3-seater/alto-3-seater-cloud-couch-ivory-hero-01.webp",
       "filename": "alto-3-seater-cloud-couch-ivory-hero-01.webp"
     },
     {
-      "source": "assets/ARVA Alto 3-Seater /ChatGPT Image Feb 16, 2026, 11_34_10 PM(1).png",
+      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_37_21 PM.png",
       "output": "/images/products/alto-3-seater/alto-3-seater-modular-sofa-oat-angle-02.webp",
       "filename": "alto-3-seater-modular-sofa-oat-angle-02.webp"
     },
     {
-      "source": "assets/ARVA Alto 3-Seater /ChatGPT Image Feb 16, 2026, 11_34_10 PM.png",
+      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_37_18 PM.png",
       "output": "/images/products/alto-3-seater/alto-3-seater-cloud-sofa-stone-lifestyle-03.webp",
       "filename": "alto-3-seater-cloud-sofa-stone-lifestyle-03.webp"
     },
     {
-      "source": "assets/ARVA Alto 3-Seater /ChatGPT Image Feb 16, 2026, 11_37_02 PM.png",
+      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_16_50 PM.png",
       "output": "/images/products/alto-3-seater/alto-3-seater-modular-couch-mist-fabric-04.webp",
       "filename": "alto-3-seater-modular-couch-mist-fabric-04.webp"
     },
     {
-      "source": "assets/ARVA Alto 3-Seater /ChatGPT Image Feb 16, 2026, 11_37_18 PM.png",
+      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_12_05 PM.png",
       "output": "/images/products/alto-3-seater/alto-3-seater-cloud-couch-slate-seam-05.webp",
       "filename": "alto-3-seater-cloud-couch-slate-seam-05.webp"
     },
     {
-      "source": "assets/ARVA Alto 3-Seater /ChatGPT Image Feb 16, 2026, 11_37_21 PM.png",
-      "output": "/images/products/alto-3-seater/alto-3-seater-modular-sofa-charcoal-detail-06.webp",
-      "filename": "alto-3-seater-modular-sofa-charcoal-detail-06.webp"
-    },
-    {
-      "source": "assets/ARVA Alto 3-Seater /ChatGPT Image Feb 16, 2026, 11_37_24 PM.png",
-      "output": "/images/products/alto-3-seater/alto-3-seater-cloud-sofa-sand-room-07.webp",
-      "filename": "alto-3-seater-cloud-sofa-sand-room-07.webp"
-    },
-    {
-      "source": "assets/ARVA Alto 3-Seater /ChatGPT Image Feb 16, 2026, 11_37_29 PM.png",
-      "output": "/images/products/alto-3-seater/alto-3-seater-modular-couch-ash-modular-08.webp",
-      "filename": "alto-3-seater-modular-couch-ash-modular-08.webp"
+      "source": "assets/alto-3-seater/dimensions.png",
+      "output": "/images/products/alto-3-seater/alto-3-seater-dimensions-diagram.webp",
+      "filename": "alto-3-seater-dimensions-diagram.webp",
+      "role": "dimensions"
     }
   ],
   "atlas-3-seater": [
