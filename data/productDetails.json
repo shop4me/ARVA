@@ -827,7 +827,17 @@
       "Avoid harsh chemicals and abrasive brushes.",
       "For best results, treat spills promptly."
     ],
-    "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
+    "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
+    "images": {
+      "hero": "/images/products/alto-sectional/alto-sectional-cloud-couch-ivory-hero-01.webp",
+      "thumbnail1": "/images/products/alto-sectional/alto-sectional-modular-sectional-oat-angle-02.webp",
+      "thumbnail2": "/images/products/alto-sectional/alto-sectional-cloud-sectional-stone-lifestyle-03.webp",
+      "thumbnail3": "/images/products/alto-sectional/alto-sectional-modular-sofa-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/alto-sectional/alto-sectional-cloud-couch-slate-seam-05.webp",
+      "thumbnail5": "/images/products/alto-sectional/alto-sectional-modular-sectional-charcoal-detail-06.webp",
+      "comfort1": "/images/products/alto-sectional/alto-sectional-cloud-sectional-sand-room-07.webp",
+      "dimensionsDiagram": "/images/products/alto-sectional/alto-sectional-dimensions-diagram.webp"
+    }
   },
   "alto-3-seater": {
     "pdpH1": "ARVA Alto 3-Seater \u2013 Modern Cloud-Style Sofa",

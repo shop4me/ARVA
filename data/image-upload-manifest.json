@@ -276,5 +276,48 @@
       "filename": "oris-loveseat-dimensions-diagram.webp",
       "role": "dimensions"
     }
+  ],
+  "alto-sectional": [
+    {
+      "source": "assets/alto-sectional/ChatGPT Image Feb 17, 2026, 04_08_59 PM.png",
+      "output": "/images/products/alto-sectional/alto-sectional-cloud-couch-ivory-hero-01.webp",
+      "filename": "alto-sectional-cloud-couch-ivory-hero-01.webp"
+    },
+    {
+      "source": "assets/alto-sectional/ChatGPT Image Feb 17, 2026, 04_08_56 PM.png",
+      "output": "/images/products/alto-sectional/alto-sectional-modular-sectional-oat-angle-02.webp",
+      "filename": "alto-sectional-modular-sectional-oat-angle-02.webp"
+    },
+    {
+      "source": "assets/alto-sectional/ChatGPT Image Feb 17, 2026, 04_08_53 PM.png",
+      "output": "/images/products/alto-sectional/alto-sectional-cloud-sectional-stone-lifestyle-03.webp",
+      "filename": "alto-sectional-cloud-sectional-stone-lifestyle-03.webp"
+    },
+    {
+      "source": "assets/alto-sectional/ChatGPT Image Feb 17, 2026, 04_08_51 PM.png",
+      "output": "/images/products/alto-sectional/alto-sectional-modular-sofa-mist-fabric-04.webp",
+      "filename": "alto-sectional-modular-sofa-mist-fabric-04.webp"
+    },
+    {
+      "source": "assets/alto-sectional/ChatGPT Image Feb 17, 2026, 04_08_48 PM.png",
+      "output": "/images/products/alto-sectional/alto-sectional-cloud-couch-slate-seam-05.webp",
+      "filename": "alto-sectional-cloud-couch-slate-seam-05.webp"
+    },
+    {
+      "source": "assets/alto-sectional/ChatGPT Image Feb 17, 2026, 04_08_40 PM.png",
+      "output": "/images/products/alto-sectional/alto-sectional-modular-sectional-charcoal-detail-06.webp",
+      "filename": "alto-sectional-modular-sectional-charcoal-detail-06.webp"
+    },
+    {
+      "source": "assets/alto-sectional/ChatGPT Image Feb 17, 2026, 04_08_37 PM.png",
+      "output": "/images/products/alto-sectional/alto-sectional-cloud-sectional-sand-room-07.webp",
+      "filename": "alto-sectional-cloud-sectional-sand-room-07.webp"
+    },
+    {
+      "source": "assets/alto-sectional/dimensions.png",
+      "output": "/images/products/alto-sectional/alto-sectional-dimensions-diagram.webp",
+      "filename": "alto-sectional-dimensions-diagram.webp",
+      "role": "dimensions"
+    }
   ]
 }
