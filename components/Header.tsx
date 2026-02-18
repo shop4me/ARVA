@@ -44,6 +44,14 @@ export default function Header() {
               Blog
             </Link>
           </li>
+          <li>
+            <Link
+              href="/contact"
+              className="text-sm font-medium text-arva-text-muted hover:text-arva-text transition"
+            >
+              Contact
+            </Link>
+          </li>
           <li className="ml-auto flex items-center gap-2">
             <HeaderCartIcon />
             <Link
@@ -93,6 +101,14 @@ export default function Header() {
                 className="block py-2 text-sm font-medium text-arva-text-muted hover:text-arva-text transition"
               >
                 Blog
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/contact"
+                className="block py-2 text-sm font-medium text-arva-text-muted hover:text-arva-text transition"
+              >
+                Contact
               </Link>
             </li>
             <li>

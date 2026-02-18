@@ -8,7 +8,7 @@ export default function Footer() {
           <Link href="/" className="font-semibold text-arva-text hover:opacity-80 transition">
             ARVA
           </Link>
-          <ul className="flex gap-8 text-sm text-arva-text-muted">
+          <ul className="flex flex-wrap gap-6 sm:gap-8 text-sm text-arva-text-muted">
             <li>
               <Link href="/products" className="hover:text-arva-text transition">
                 Products
@@ -17,6 +17,31 @@ export default function Footer() {
             <li>
               <Link href="/blog" className="hover:text-arva-text transition">
                 Blog
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className="hover:text-arva-text transition">
+                Contact
+              </Link>
+            </li>
+            <li>
+              <Link href="/terms" className="hover:text-arva-text transition">
+                Terms of use
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy" className="hover:text-arva-text transition">
+                Privacy policy
+              </Link>
+            </li>
+            <li>
+              <Link href="/return-policy" className="hover:text-arva-text transition">
+                Shipping and returns
+              </Link>
+            </li>
+            <li>
+              <Link href="/return-policy#warranty" className="hover:text-arva-text transition">
+                Warranty
               </Link>
             </li>
           </ul>

@@ -36,6 +36,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.6,
   }));
 
+  const legalPages = ["/privacy", "/terms", "/return-policy", "/contact"].map((path) => ({
+    url: absoluteUrl(path),
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.6,
+  }));
+
   return [
     {
       url: absoluteUrl("/"),
@@ -55,6 +62,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "weekly",
       priority: 0.9,
     },
+    ...legalPages,
     collectionIndex,
     ...collectionEntries,
     ...productEntries,
