@@ -13,7 +13,7 @@ import { absoluteUrl } from "../lib/seo";
 async function main() {
   const products = await getProducts();
   const baseUrl = absoluteUrl("");
-  const items = buildMerchantItems(products, baseUrl);
+  const items = await buildMerchantItems(products, baseUrl);
 
   const outDir = path.join(process.cwd(), "public", "merchant");
   await fs.mkdir(outDir, { recursive: true });

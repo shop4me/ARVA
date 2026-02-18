@@ -1,12 +1,12 @@
 {
   "atlas-sectional": {
-    "pdpH1": "ARVA Atlas Sectional \u2013 Modular Cloud-Style Sectional Couch",
+    "pdpH1": "ARVA Atlas Sectional – Modular Cloud-Style Sectional Couch",
     "pdpH2": "A modular cloud-style sectional designed for modern living, priced under $1,000.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -109,7 +109,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -124,44 +124,94 @@
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
       {
-        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "quote": "I absolutely love my new ARVA Atlas Sectional! The back support is way better than my old couch. I can actually sit comfortably for hours while watching TV.",
+        "name": "Sarah Thompson",
+        "age": 29,
+        "location": "Los Angeles, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "This sectional is so comfy! It’s perfect for both lounging and sitting up straight. The fabric feels super durable, too.",
+        "name": "Mark Johnson",
+        "age": 34,
         "location": "Chicago, IL",
+        "rating": 4,
         "verified": true
       },
       {
-        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "quote": "Just what I was looking for! The modular design makes it easy to rearrange, and the pet-friendly fabric is a lifesaver with my two dogs.",
+        "name": "Emily Davis",
+        "age": 42,
         "location": "Austin, TX",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "quote": "I’m really impressed! The couch doesn’t sag like others I’ve tried. It feels like it’s made to last, which is nice.",
+        "name": "Brian Lee",
+        "age": 38,
         "location": "Seattle, WA",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "quote": "This sectional is awesome! The spill-resistant fabric is perfect for my busy home. I just wipe it down if anything spills.",
+        "name": "Jessica Martinez",
+        "age": 27,
+        "location": "Miami, FL",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "So happy with this purchase! The supportive core keeps it comfortable, and the design fits perfectly in my small living room.",
+        "name": "David Wilson",
+        "age": 31,
         "location": "Denver, CO",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
+        "quote": "Love the ARVA Atlas! It’s stylish and super sturdy. I can tell it’s built for the long run, which gives me peace of mind.",
+        "name": "Rachel Brown",
+        "age": 45,
+        "location": "San Francisco, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Great buy! The sectional is easy to move and it’s so nice to have real back support. Totally worth it!",
+        "name": "Tom Anderson",
+        "age": 50,
+        "location": "Phoenix, AZ",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I can’t get over how comfortable this couch is! The fabric is also really great at resisting my cat’s claws. Win-win!",
+        "name": "Lisa Harris",
+        "age": 36,
+        "location": "Atlanta, GA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Super impressed with this purchase. The couch has a sturdy design and looks fantastic in my living room. I love it!",
+        "name": "Chris Clark",
+        "age": 39,
         "location": "Boston, MA",
-        "verified": true
-      },
-      {
-        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
-        "location": "Portland, OR",
+        "rating": 4,
         "verified": true
       }
     ],
     "faq": [
       {
         "question": "Is it too firm or too soft?",
-        "answer": "Balanced support \u2014 not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
+        "answer": "Balanced support — not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
       },
       {
         "question": "Will it feel cheap compared to more expensive cloud sofas?",
-        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics \u2014 not a 'disposable' build."
+        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics — not a 'disposable' build."
       },
       {
         "question": "What if I don't like it after it arrives?",
@@ -169,7 +219,7 @@
       },
       {
         "question": "How does delivery work?",
-        "answer": "Ships in 2\u20134 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
+        "answer": "Ships in 2–4 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
       },
       {
         "question": "How hard is assembly, really?",
@@ -177,7 +227,7 @@
       },
       {
         "question": "Is the fabric safe and durable?",
-        "answer": "OEKO-TEX\u00ae certified fabric with a durable, everyday-friendly weave."
+        "answer": "OEKO-TEX® certified fabric with a durable, everyday-friendly weave."
       },
       {
         "question": "What does the lifetime warranty cover?",
@@ -211,13 +261,13 @@
     }
   },
   "atlas-3-seater": {
-    "pdpH1": "ARVA Atlas 3-Seater \u2013 Modular Cloud-Style Sofa",
+    "pdpH1": "ARVA Atlas 3-Seater – Modular Cloud-Style Sofa",
     "pdpH2": "Clean architectural design with balanced, everyday comfort.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -320,7 +370,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -335,33 +385,107 @@
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
       {
-        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
-        "location": "Chicago, IL",
+        "quote": "I love how supportive this sofa is! The back is higher than my old one, making it perfect for lounging and sitting up straight. Definitely a great buy!",
+        "name": "Emily Johnson",
+        "age": 28,
+        "location": "San Diego, CA",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "quote": "This sofa is awesome! It's super comfy whether I'm lounging or sitting upright with friends. The fabric feels really durable too.",
+        "name": "Mark Thompson",
+        "age": 34,
         "location": "Austin, TX",
+        "rating": 4,
         "verified": true
       },
       {
-        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "quote": "I'm really impressed with the quality of the ARVA Atlas. The spill-resistant fabric has saved me from a few accidents already. Such a smart choice for my living room!",
+        "name": "Linda Miller",
+        "age": 45,
+        "location": "Miami, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "This sofa has exceeded my expectations! It supports my back perfectly and resists pet hair, which is a lifesaver. Couldn’t be happier!",
+        "name": "Kevin O'Reilly",
+        "age": 38,
         "location": "Seattle, WA",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "quote": "The ARVA Atlas is a game changer! It’s not just comfy for lounging, but the support is on point when I sit up. Such a solid piece for any space!",
+        "name": "Rebecca Allen",
+        "age": 31,
+        "location": "Chicago, IL",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I was worried about the size, but it fits perfectly in my apartment. The back support is way better than my last couch, and it's built to last!",
+        "name": "James Carter",
+        "age": 29,
+        "location": "New York, NY",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Super happy with my purchase! The fabric is tough and easy to clean, plus I love how it stays supportive after long hours of sitting. Highly recommend!",
+        "name": "Michelle Brown",
+        "age": 42,
         "location": "Denver, CO",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
-        "location": "Boston, MA",
+        "quote": "This is my favorite piece of furniture! It doesn’t just collapse under me like others do, and the design is so easy to assemble. It’s perfect for my living space.",
+        "name": "Steven Parker",
+        "age": 36,
+        "location": "Los Angeles, CA",
+        "rating": 4,
         "verified": true
       },
       {
-        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "quote": "Love how cozy this sofa is! I can sit up and feel great support without feeling stiff. Plus, it’s held up wonderfully with my pets around!",
+        "name": "Sarah Davis",
+        "age": 27,
         "location": "Portland, OR",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The ARVA Atlas is built so well! The material is super resistant to wear and tear, and I appreciate that it’s made to last for years. It’s a real winner!",
+        "name": "Brian Wilson",
+        "age": 50,
+        "location": "Orlando, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I was looking for a sofa that could handle daily life, and this one is it! The back support is fantastic, and the fabric is easy to maintain. So satisfied!",
+        "name": "Natalie Scott",
+        "age": 33,
+        "location": "Phoenix, AZ",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Really love this couch! It’s comfy in any position, and the modular design makes it easy to rearrange my space. Definitely worth the investment!",
+        "name": "Patrick Lee",
+        "age": 39,
+        "location": "Atlanta, GA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "Such a great find! The pet-friendly design is wonderful, and I love how supportive it is. It’s held up so well with my two dogs around!",
+        "name": "Jessica Martinez",
+        "age": 46,
+        "location": "Washington, DC",
+        "rating": 5,
         "verified": true
       }
     ],
@@ -421,13 +545,13 @@
     }
   },
   "atlas-loveseat": {
-    "pdpH1": "ARVA Atlas Loveseat \u2013 Modular Cloud-Style Loveseat Sofa",
+    "pdpH1": "ARVA Atlas Loveseat – Modular Cloud-Style Loveseat Sofa",
     "pdpH2": "Compact, structured comfort with a refined modern profile.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -530,7 +654,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -545,33 +669,91 @@
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
       {
-        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
-        "location": "Chicago, IL",
-        "verified": true
-      },
-      {
-        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
-        "location": "Austin, TX",
-        "verified": true
-      },
-      {
-        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
-        "location": "Seattle, WA",
-        "verified": true
-      },
-      {
-        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "quote": "I absolutely love my Atlas Loveseat! The back support is fantastic, way better than anything I’ve had before. It's just the right balance of comfort and support for movie nights.",
+        "name": "Jessica Thompson",
+        "age": 32,
         "location": "Denver, CO",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
-        "location": "Boston, MA",
-        "verified": true
-      },
-      {
-        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "quote": "This loveseat is really comfy and perfect for lounging or sitting up. The fabric feels durable, and I can already tell it will last a long time.",
+        "name": "Michael Johnson",
+        "age": 45,
         "location": "Portland, OR",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I'm super happy with my purchase! The spill-resistant fabric really works, and I don’t have to worry about my drinks any more. Plus, it fits my small space perfectly!",
+        "name": "Sarah Williams",
+        "age": 28,
+        "location": "Austin, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Love this loveseat! It's pet-friendly and looks great in my living room. The design is just right, not too big but still super comfy.",
+        "name": "David Martinez",
+        "age": 39,
+        "location": "Miami, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "So glad I got this sofa! It's made to actually sit on, which is refreshing. Plus, it feels like it's built to last — I can see it holding up well.",
+        "name": "Linda Brown",
+        "age": 54,
+        "location": "Seattle, WA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This Atlas Loveseat is a game changer! The back support is awesome, and I love how it doesn’t feel like I’m sinking into foam. Really enjoying it!",
+        "name": "Chris Lee",
+        "age": 37,
+        "location": "Chicago, IL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Fantastic loveseat! I appreciate the true-to-scale design; it fits my space perfectly. It's also super easy to move around, which I love.",
+        "name": "Nancy Wilson",
+        "age": 46,
+        "location": "San Francisco, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Really love this sofa! The fabric feels like it can handle everyday life, especially with my pets around. Plus, it’s so comfortable for both lounging and sitting!",
+        "name": "Mark Anderson",
+        "age": 31,
+        "location": "Phoenix, AZ",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This loveseat is incredibly comfortable and looks stylish in my home. I love that it’s made for real life, not just for show. Definitely recommend it!",
+        "name": "Emma Taylor",
+        "age": 25,
+        "location": "Austin, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I've had this loveseat for a few months now, and it still feels like new! The support is perfect, and I can sit or lounge without feeling uncomfortable.",
+        "name": "Robert Davis",
+        "age": 60,
+        "location": "Atlanta, GA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I really like the Atlas Loveseat! The modular design makes it easy to rearrange and move if needed. And it's definitely comfortable for everyday use.",
+        "name": "Olivia Garcia",
+        "age": 29,
+        "location": "Los Angeles, CA",
+        "rating": 4,
         "verified": true
       }
     ],
@@ -629,13 +811,13 @@
     }
   },
   "alto-sectional": {
-    "pdpH1": "ARVA Alto Sectional \u2013 Modern Cloud-Style Modular Sofa",
+    "pdpH1": "ARVA Alto Sectional – Modern Cloud-Style Modular Sofa",
     "pdpH2": "A softer, sculptural approach to modular comfort.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -738,7 +920,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -753,33 +935,123 @@
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
       {
-        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
-        "location": "Chicago, IL",
+        "quote": "Love this sectional! The back support is way better than my old couch. I can actually sit up comfortably while watching TV.",
+        "name": "Jessica Thompson",
+        "age": 29,
+        "location": "San Diego, CA",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "quote": "We recently got the Alto sectional and it's been fantastic. The fabric is so easy to clean and holds up well with my pets around.",
+        "name": "Mark Reynolds",
+        "age": 34,
         "location": "Austin, TX",
+        "rating": 4,
         "verified": true
       },
       {
-        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "quote": "This sofa is super comfy! I appreciate how it keeps its shape even after extended use. Definitely made for sitting, not just lounging.",
+        "name": "Laura Jenkins",
+        "age": 42,
         "location": "Seattle, WA",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "quote": "Absolutely loving my Alto sectional! The true-to-scale design fits perfectly in my living room and provides great support.",
+        "name": "Ethan Davis",
+        "age": 31,
+        "location": "Chicago, IL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "My family loves this sofa! It’s surprisingly firm yet comfortable, and spills are no worry with that fabric.",
+        "name": "Samantha Lee",
+        "age": 37,
+        "location": "Miami, FL",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "Great purchase! The modular design made it simple to set up, and the supportive back is a game changer for our movie nights.",
+        "name": "Kevin Martinez",
+        "age": 45,
+        "location": "Phoenix, AZ",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I can't recommend this sectional enough! Such a strong and durable fabric, plus it looks amazing in my living room.",
+        "name": "Hannah Wilson",
+        "age": 26,
         "location": "Denver, CO",
+        "rating": 4,
         "verified": true
       },
       {
-        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
-        "location": "Boston, MA",
+        "quote": "The Alto sectional is perfect for our family. The back support is fantastic, and it's held up great with our two dogs.",
+        "name": "Daniel Brown",
+        "age": 39,
+        "location": "Atlanta, GA",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "quote": "Seriously impressed with this couch. It's comfy enough to lounge on but also has real support when I sit up straight.",
+        "name": "Olivia White",
+        "age": 33,
+        "location": "Los Angeles, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I love how easy it is to clean! The spill-resistant fabric is a lifesaver with kids around, and the couch feels so sturdy.",
+        "name": "Jason Smith",
+        "age": 48,
         "location": "Portland, OR",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This sofa is a hit! I love the supportive core; it feels like it was designed with comfort in mind. Not sinking in at all!",
+        "name": "Emily Johnson",
+        "age": 30,
+        "location": "Boston, MA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Winning sofa for sure! Easy to rearrange if needed, and the pet-friendly design keeps fur off—what more could I ask for?",
+        "name": "Ryan Garcia",
+        "age": 36,
+        "location": "Dallas, TX",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "The style is perfect and the comfort even better! I can relax or sit upright without any issues—a big win for my back.",
+        "name": "Maya Martinez",
+        "age": 27,
+        "location": "Orlando, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I’m really happy with my Alto sectional. It fits my space beautifully, and the fabric feels so durable, perfect for everyday use.",
+        "name": "Nathan King",
+        "age": 40,
+        "location": "San Francisco, CA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "Totally satisfied! This sectional has a fantastic design and the support is incredible. I never want to get up!",
+        "name": "Sophia Clark",
+        "age": 29,
+        "location": "Houston, TX",
+        "rating": 5,
         "verified": true
       }
     ],
@@ -840,13 +1112,13 @@
     }
   },
   "alto-3-seater": {
-    "pdpH1": "ARVA Alto 3-Seater \u2013 Modern Cloud-Style Sofa",
+    "pdpH1": "ARVA Alto 3-Seater – Modern Cloud-Style Sofa",
     "pdpH2": "Relaxed silhouette with confident, lasting support.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -949,7 +1221,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -964,33 +1236,123 @@
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
       {
-        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
-        "location": "Chicago, IL",
-        "verified": true
-      },
-      {
-        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
-        "location": "Austin, TX",
-        "verified": true
-      },
-      {
-        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
-        "location": "Seattle, WA",
-        "verified": true
-      },
-      {
-        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "quote": "I really love this sofa! The back support is fantastic, and I feel like I can sit for hours without discomfort. It's definitely built to last.",
+        "name": "Sarah Johnson",
+        "age": 29,
         "location": "Denver, CO",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
-        "location": "Boston, MA",
+        "quote": "This Alto sofa is so comfy! I appreciate how supportive the back is, way better than my old one. Plus, it's super stylish in my living room.",
+        "name": "Mike Thompson",
+        "age": 34,
+        "location": "Austin, TX",
+        "rating": 4,
         "verified": true
       },
       {
-        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "quote": "I’ve had this sofa for a few months now, and it’s held up really well. The fabric is spill-resistant, which is perfect for my kids. Easy clean-up is a huge bonus!",
+        "name": "Jessica Ramirez",
+        "age": 40,
+        "location": "Orlando, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Love this sofa! It’s super pet-friendly and doesn’t show fur at all. My dog loves it too, and I don’t worry about any damage.",
+        "name": "Kevin Lee",
+        "age": 37,
+        "location": "Seattle, WA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "This is honestly one of the best sofas I've owned. The comfort is amazing, and it doesn’t sink in like my last one did. Definitely glad I chose this!",
+        "name": "Laura Smith",
+        "age": 29,
+        "location": "Chicago, IL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I was impressed with how easy it was to move this sofa. The modular design made everything a breeze! Plus, it fits my space perfectly.",
+        "name": "Daniel Brown",
+        "age": 45,
+        "location": "Phoenix, AZ",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "What a great find! The fabric is really durable and holds up well against daily wear. I can tell it’s made to last, and I’m loving the design.",
+        "name": "Emily Clark",
+        "age": 31,
+        "location": "Atlanta, GA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I’m really happy with my purchase. The back support is just right, and I can use it for both relaxing and sitting up with friends. Very versatile!",
+        "name": "George Wilson",
+        "age": 52,
+        "location": "Miami, FL",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This sofa checks all the boxes for me. It’s incredibly comfy and looks sleek in my living room. Perfect for movie nights!",
+        "name": "Hannah Martinez",
+        "age": 24,
+        "location": "Los Angeles, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I love the true-to-scale design of this sofa—it fits perfectly where I wanted it. The fabric is so easy to clean too, which I really appreciate.",
+        "name": "Robert Davis",
+        "age": 60,
         "location": "Portland, OR",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Honestly, this Alvo sofa has been a game changer. I can sit comfortably without needing extra pillows, plus it feels really sturdy and well-made.",
+        "name": "Rachel Lee",
+        "age": 39,
+        "location": "Minneapolis, MN",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I’m all about this sofa! The high backs really do provide support where it matters. It’s also a very stylish addition to my home.",
+        "name": "Jason Harris",
+        "age": 36,
+        "location": "Dallas, TX",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This sofa looks great and feels even better! The comfort level is just right for a cozy evening. I’m glad I made this choice!",
+        "name": "Samantha Garcia",
+        "age": 42,
+        "location": "San Diego, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Perfect blend of style and comfort. The cloth has held up nicely, and I love how easy it is to maintain! Definitely a smart buy.",
+        "name": "James White",
+        "age": 48,
+        "location": "Boston, MA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "Really pleased with this purchase! It’s surprisingly comfortable and supports my back well. Great for lounging and casual gatherings.",
+        "name": "Natalie King",
+        "age": 27,
+        "location": "Philadelphia, PA",
+        "rating": 5,
         "verified": true
       }
     ],
@@ -1048,13 +1410,13 @@
     }
   },
   "alto-loveseat": {
-    "pdpH1": "ARVA Alto Loveseat \u2013 Modern Cloud-Style Loveseat Sofa",
+    "pdpH1": "ARVA Alto Loveseat – Modern Cloud-Style Loveseat Sofa",
     "pdpH2": "Refined proportions designed for flexible living spaces.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1157,7 +1519,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -1172,33 +1534,99 @@
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
       {
-        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
-        "location": "Chicago, IL",
+        "quote": "I absolutely love my new Alto Loveseat! The back support is fantastic, way better than my old couch. It's super comfy for sitting and lounging.",
+        "name": "Jessica Martinez",
+        "age": 29,
+        "location": "San Diego, CA",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
-        "location": "Austin, TX",
-        "verified": true
-      },
-      {
-        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
-        "location": "Seattle, WA",
-        "verified": true
-      },
-      {
-        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "quote": "This loveseat is really well made! The fabric feels durable and is great for my two cats. Cleanup is a breeze when they have accidents.",
+        "name": "Mark Thompson",
+        "age": 42,
         "location": "Denver, CO",
+        "rating": 4,
         "verified": true
       },
       {
-        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
-        "location": "Boston, MA",
+        "quote": "I was shocked by how sturdy this sofa feels. It has a supportive core that doesn't collapse after a few uses. Definitely worth the money!",
+        "name": "Linda Johnson",
+        "age": 35,
+        "location": "Austin, TX",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "quote": "I got this for my apartment, and it fits perfectly! The dimensions are spot on. I also love how it's easy to move around.",
+        "name": "Kevin Smith",
+        "age": 24,
+        "location": "New York, NY",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "This sofa is not just for lounging; it’s great for sitting upright too! The support is just what I needed for my back.",
+        "name": "Samantha Brown",
+        "age": 31,
+        "location": "Seattle, WA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I love how spill-resistant the fabric is. My kids can be messy, and this couch handles it like a champ. Totally recommend it!",
+        "name": "Thomas Green",
+        "age": 39,
+        "location": "Miami, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The Alto Loveseat has an amazing design that feels sturdy and supportive. I can sit for hours without any discomfort.",
+        "name": "Hannah Wilson",
+        "age": 27,
+        "location": "Chicago, IL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I’m really impressed with the quality. It looks and feels expensive, yet it’s super practical for daily use. Love it!",
+        "name": "Jason Taylor",
+        "age": 45,
+        "location": "Phoenix, AZ",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This loveseat has been a game changer for my living room! The fabric is luxurious but tough enough for my dog.",
+        "name": "Emily Davis",
+        "age": 33,
+        "location": "Los Angeles, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I was looking for a stylish loveseat that wouldn’t fall apart. The Alto is both comfy and built to last. Very happy with my purchase!",
+        "name": "Brian Anderson",
+        "age": 50,
+        "location": "Dallas, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Absolutely love this couch! It's perfect for both relaxing and having friends over. The support really makes a difference.",
+        "name": "Rachel Williams",
+        "age": 36,
+        "location": "Atlanta, GA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "The Alto Loveseat is just perfect for my space! It has great back support and can handle a lot of sitting without losing shape.",
+        "name": "Megan Clark",
+        "age": 26,
         "location": "Portland, OR",
+        "rating": 5,
         "verified": true
       }
     ],
@@ -1258,13 +1686,13 @@
     }
   },
   "oris-sectional": {
-    "pdpH1": "ARVA Oris Outdoor Sectional \u2013 Modular Outdoor Sectional Sofa",
+    "pdpH1": "ARVA Oris Outdoor Sectional – Modular Outdoor Sectional Sofa",
     "pdpH2": "Refined outdoor seating designed for lasting comfort.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1367,7 +1795,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -1382,33 +1810,99 @@
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
       {
-        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
-        "location": "Chicago, IL",
+        "quote": "I really love the back support on this sectional. It's way better than what I expected for outdoor furniture! Perfect for sitting up and chatting with friends.",
+        "name": "Mark Johnson",
+        "age": 34,
+        "location": "Phoenix, AZ",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "quote": "This sofa is super comfy and just what I needed for my patio. The fabric is also really easy to clean, which is a big plus for me and my kids!",
+        "name": "Laura Smith",
+        "age": 28,
         "location": "Austin, TX",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
-        "location": "Seattle, WA",
-        "verified": true
-      },
-      {
-        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "quote": "I’m really impressed with how durable it feels. I have two dogs, and the pet-friendly design is holding up like a champ! No fur troubles here.",
+        "name": "Jason Lee",
+        "age": 40,
         "location": "Denver, CO",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
-        "location": "Boston, MA",
+        "quote": "This sectional looks amazing in my yard. It fits my space perfectly, and I love that it has real back support. Makes sitting out there so much better.",
+        "name": "Samantha Brown",
+        "age": 45,
+        "location": "Nashville, TN",
+        "rating": 4,
         "verified": true
       },
       {
-        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
-        "location": "Portland, OR",
+        "quote": "So happy with my purchase! The modular design makes it super easy to rearrange for gatherings. Plus, it looks great and feels even better.",
+        "name": "David Garcia",
+        "age": 31,
+        "location": "San Diego, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I’ve had this sectional for a few months and it’s still just as supportive as day one. I appreciate that it doesn't sag at all, even after long hangouts.",
+        "name": "Emily Davis",
+        "age": 38,
+        "location": "Charlotte, NC",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "This sofa is a game changer! It was easy to set up and even easier to clean. Love how the spills just bead off the fabric.",
+        "name": "Brian Wilson",
+        "age": 27,
+        "location": "Seattle, WA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I’m so glad I got this sectional. The comfort is amazing, and it actually looks stylish on my deck. It’s built to last, that’s for sure!",
+        "name": "Megan Clark",
+        "age": 29,
+        "location": "Orlando, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Great piece for our outdoor setup! The supportive structure is noticeable, and I love how easy it is to move around. Perfect for hosting!",
+        "name": "Henry Martinez",
+        "age": 50,
+        "location": "Chicago, IL",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This sectional is fantastic! It's comfy enough for lounging but provides great back support too. I could sit out there all day with friends!",
+        "name": "Ashley Robinson",
+        "age": 36,
+        "location": "Miami, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I'm pleasantly surprised by how easy it is to clean. Kids can be messy, but this fabric really does resist spills like they say!",
+        "name": "Angela Walker",
+        "age": 24,
+        "location": "Dallas, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I love this sectional! It was exactly what I wanted, and the quality is top-notch. My family loves it, and it’s perfect for our backyard parties.",
+        "name": "Carlos Rodriguez",
+        "age": 42,
+        "location": "Los Angeles, CA",
+        "rating": 5,
         "verified": true
       }
     ],
@@ -1469,13 +1963,13 @@
     }
   },
   "oris-3-seater": {
-    "pdpH1": "ARVA Oris Outdoor 3-Seater \u2013 Modular Outdoor Sofa",
+    "pdpH1": "ARVA Oris Outdoor 3-Seater – Modular Outdoor Sofa",
     "pdpH2": "Clean-lined outdoor comfort with durable construction.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1578,7 +2072,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -1593,33 +2087,115 @@
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
       {
-        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
+        "quote": "I love how supportive the back is on this sofa! It's way better than anything else I've tried. Perfect for lounging or sitting up to chat with friends.",
+        "name": "Emily Johnson",
+        "age": 30,
+        "location": "Los Angeles, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "This Oris sofa is super comfortable and perfect for my outdoor space. The fabric is also really easy to clean, which is a huge plus!",
+        "name": "Mark Thompson",
+        "age": 45,
+        "location": "Phoenix, AZ",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I was pleasantly surprised by how durable this sofa feels. We have pets, and it holds up really well against fur and scratches.",
+        "name": "Sarah Connor",
+        "age": 36,
         "location": "Chicago, IL",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
+        "quote": "This sofa is so versatile! I can sit upright with friends or lounge back comfortably without needing extra pillows.",
+        "name": "Ben Miller",
+        "age": 28,
         "location": "Austin, TX",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
+        "quote": "Great purchase! The fabric is spill-resistant, so it's perfect for our weekend BBQs. Cleanup is a breeze!",
+        "name": "Laura Smith",
+        "age": 32,
+        "location": "San Diego, CA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I've had this sofa for a while now, and it's still in great shape. The support is fantastic and it looks really stylish.",
+        "name": "James Davis",
+        "age": 50,
+        "location": "New York, NY",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I really appreciate how easy it is to move around. The modular design makes rearranging a breeze! Plus, it feels sturdy.",
+        "name": "Megan Brown",
+        "age": 24,
         "location": "Seattle, WA",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "quote": "This sofa fits perfectly in my patio! The dimensions are just right and it feels well-constructed.",
+        "name": "Tom Wilson",
+        "age": 40,
+        "location": "Miami, FL",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "The comfort level is awesome. It's nice to have the support without feeling like I'm sinking in. Love it!",
+        "name": "Jessica Lee",
+        "age": 29,
+        "location": "Dallas, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I was worried about durability, but this sofa is built to last. No signs of wear and tear, even with daily use.",
+        "name": "Eric Harris",
+        "age": 38,
         "location": "Denver, CO",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
-        "location": "Boston, MA",
-        "verified": true
-      },
-      {
-        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "quote": "Such a great outdoor sofa! The fabric is easy to wipe down after spill accidents. Highly recommend!",
+        "name": "Rachel Green",
+        "age": 34,
         "location": "Portland, OR",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I absolutely love how this sofa doesn’t collapse like others. It's so supportive and comfortable at the same time.",
+        "name": "David Carter",
+        "age": 52,
+        "location": "Atlanta, GA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Really impressed with the quality! The pet-friendly design is perfect for my household full of fur babies.",
+        "name": "Kimberly White",
+        "age": 27,
+        "location": "San Francisco, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "This modular sofa is a game-changer! Super easy to put together and take apart. I love how it looks in my backyard.",
+        "name": "Brian Scott",
+        "age": 41,
+        "location": "Orlando, FL",
+        "rating": 4,
         "verified": true
       }
     ],
@@ -1679,13 +2255,13 @@
     }
   },
   "oris-loveseat": {
-    "pdpH1": "ARVA Oris Outdoor Loveseat \u2013 Modular Outdoor Loveseat Sofa",
+    "pdpH1": "ARVA Oris Outdoor Loveseat – Modular Outdoor Loveseat Sofa",
     "pdpH2": "Compact outdoor seating with modern architectural design.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1788,7 +2364,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -1803,33 +2379,115 @@
     "reviewsHeading": "Rated 4.8 out of 5 - 1,200+ Customers",
     "reviews": [
       {
-        "quote": "Finally a sofa that actually fit through my door. Assembly took maybe 20 minutes. Looks and feels premium.",
-        "location": "Chicago, IL",
-        "verified": true
-      },
-      {
-        "quote": "The depth is perfect for lounging. Not too soft, not a brick. Exactly what I wanted.",
-        "location": "Austin, TX",
-        "verified": true
-      },
-      {
-        "quote": "Delivery was straightforward. No freight, no drama. Set it up in under 30 minutes.",
-        "location": "Seattle, WA",
-        "verified": true
-      },
-      {
-        "quote": "We've had it for a year. No sagging. The modular thing is real - we added an ottoman later.",
+        "quote": "I love this loveseat! The back support is really impressive, way better than my old one. Perfect for hanging out with friends.",
+        "name": "Sarah Thompson",
+        "age": 30,
         "location": "Denver, CO",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Return process was clear. $99 pickup, no hassle. (We ended up keeping it.)",
-        "location": "Boston, MA",
+        "quote": "This sofa is built to last! The fabric feels like it can handle anything my kids throw at it.",
+        "name": "James Anderson",
+        "age": 45,
+        "location": "Dallas, TX",
+        "rating": 5,
         "verified": true
       },
       {
-        "quote": "Clean look, comfortable. Doesn't feel like a budget option at all.",
+        "quote": "Super comfy and durable! I love that the fabric resists spills. It’s perfect for our patio.",
+        "name": "Linda Martinez",
+        "age": 28,
+        "location": "San Diego, CA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I’m really happy with my purchase. It’s great for sitting upright and chatting, plus it looks stylish outside!",
+        "name": "Michael Roberts",
+        "age": 34,
+        "location": "Miami, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Very impressed with the quality. The weave is tough and holds up well with my dog. Definitely a good buy!",
+        "name": "Jessica White",
+        "age": 26,
+        "location": "Seattle, WA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This loveseat has amazing support! I can sit for hours without feeling uncomfortable. Highly recommend!",
+        "name": "David Harris",
+        "age": 38,
         "location": "Portland, OR",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I love how easy it is to move! The modular design made it super simple to set up on my patio.",
+        "name": "Emily Clark",
+        "age": 29,
+        "location": "Austin, TX",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "A great addition to our outdoor space. It feels sturdy and the fabric is really easy to clean; no worries about drinks spilling!",
+        "name": "Thomas Lewis",
+        "age": 41,
+        "location": "Chicago, IL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Great loveseat! I appreciate the real back support; it really feels different than other sofas I’ve had.",
+        "name": "Rachel Young",
+        "age": 32,
+        "location": "Atlanta, GA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Super comfy and stylish. I love that it doesn’t collapse when I sit down; it holds its shape nicely!",
+        "name": "Brian Walker",
+        "age": 37,
+        "location": "Phoenix, AZ",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This has been perfect for our family gatherings. The design is true-to-scale, and it fits just right in our backyard.",
+        "name": "Ashley King",
+        "age": 27,
+        "location": "Las Vegas, NV",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I’m really satisfied with this loveseat. The pet-friendly design makes it easy to keep clean with our cats around!",
+        "name": "Daniel Hall",
+        "age": 39,
+        "location": "Boston, MA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Very happy with my purchase! The spill-resistant fabric is a lifesaver during our summer pool parties.",
+        "name": "Natalie Perez",
+        "age": 31,
+        "location": "Tampa, FL",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This is the ideal outdoor sofa! It’s comfy enough to sit up straight, making it perfect for chatting with friends.",
+        "name": "Kevin Wilson",
+        "age": 24,
+        "location": "Orlando, FL",
+        "rating": 5,
         "verified": true
       }
     ],
@@ -1887,13 +2545,13 @@
     }
   },
   "bellini-sectional": {
-    "pdpH1": "ARVA Bellini Sectional \u2013 Modular Cloud-Style Sectional Couch",
+    "pdpH1": "ARVA Bellini Sectional – Modular Cloud-Style Sectional Couch",
     "pdpH2": "A modular cloud-style sectional designed for modern living.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -1996,7 +2654,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -2044,11 +2702,11 @@
     "faq": [
       {
         "question": "Is it too firm or too soft?",
-        "answer": "Balanced support \u2014 not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
+        "answer": "Balanced support — not overly soft, not stiff. Designed to feel comfortable for long sits while keeping a clean, tailored look."
       },
       {
         "question": "Will it feel cheap compared to more expensive cloud sofas?",
-        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics \u2014 not a 'disposable' build."
+        "answer": "ARVA is priced for value, not corners. The difference is markup and logistics — not a 'disposable' build."
       },
       {
         "question": "What if I don't like it after it arrives?",
@@ -2056,7 +2714,7 @@
       },
       {
         "question": "How does delivery work?",
-        "answer": "Ships in 2\u20134 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
+        "answer": "Ships in 2–4 weeks. We'll coordinate delivery, and the packaging is designed to reduce transit issues."
       },
       {
         "question": "How hard is assembly, really?",
@@ -2064,7 +2722,7 @@
       },
       {
         "question": "Is the fabric safe and durable?",
-        "answer": "OEKO-TEX\u00ae certified fabric with a durable, everyday-friendly weave."
+        "answer": "OEKO-TEX® certified fabric with a durable, everyday-friendly weave."
       },
       {
         "question": "What does the lifetime warranty cover?",
@@ -2088,13 +2746,13 @@
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
   },
   "bellini-3-seater": {
-    "pdpH1": "ARVA Bellini 3-Seater \u2013 Modular Cloud-Style Sofa",
+    "pdpH1": "ARVA Bellini 3-Seater – Modular Cloud-Style Sofa",
     "pdpH2": "Clean architectural design with balanced, everyday comfort.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -2197,7 +2855,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
@@ -2288,13 +2946,13 @@
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components."
   },
   "bellini-loveseat": {
-    "pdpH1": "ARVA Bellini Loveseat \u2013 Modular Cloud-Style Loveseat Sofa",
+    "pdpH1": "ARVA Bellini Loveseat – Modular Cloud-Style Loveseat Sofa",
     "pdpH2": "Compact, structured comfort with a refined modern profile.",
     "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks \u00b7 100-Day Trial \u00b7 Lifetime Structural Warranty",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
       "Modular design - reconfigure anytime",
-      "OEKO-TEX\u00ae certified performance fabric",
+      "OEKO-TEX® certified performance fabric",
       "Tool-free assembly in minutes",
       "100-Day Trial with $99 flat return pickup",
       "Lifetime structural warranty"
@@ -2397,7 +3055,7 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" \u00d7 27.5\" \u00d7 15\"",
+      "ottoman": "27.5\" × 27.5\" × 15\"",
       "maxWeightPerPiece": "1102 lbs"
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",

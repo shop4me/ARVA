@@ -4,6 +4,12 @@ import { getProductBySlug, getProductDetail, getProductsByCollection } from "@/l
 import { getEstimatedArrivalRange } from "@/lib/shippingEstimate";
 import { absoluteUrl, productJsonLd } from "@/lib/seo";
 import type { ProductCategory } from "@/lib/content";
+import {
+  buildMerchantDescription,
+  buildMerchantTitle,
+  getMerchantHeroImagePath,
+  loadSelectedKeywords,
+} from "@/lib/merchantFeed";
 import ProductHero from "@/components/product/ProductHero";
 import TrustStrip from "@/components/product/TrustStrip";
 import PdpJumpLinks from "@/components/product/PdpJumpLinks";
@@ -29,8 +35,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = await getProductBySlug(slug);
   if (!product) return { title: "Product Not Found" };
 
-  const title = product.shoppingTitle ?? product.seoTitle;
-  const description = product.shoppingDescription ?? product.seoDescription;
+  const keywords = await loadSelectedKeywords();
+  const title = buildMerchantTitle(product, keywords);
+  const description = buildMerchantDescription(product, keywords);
   const canonical = absoluteUrl(`/products/${slug}`);
 
   return {
@@ -56,13 +63,16 @@ export default async function ProductPage({ params }: Props) {
 
   const detail = await getProductDetail(slug);
   const priceForSchema = detail?.displayPrice ?? product.price;
-  const nameForSchema = detail?.pdpH1 ?? product.shoppingTitle ?? product.name;
+  const keywords = await loadSelectedKeywords();
+  const nameForSchema = buildMerchantTitle(product, keywords);
+  const descriptionForSchema = buildMerchantDescription(product, keywords);
+  const imageForSchema = getMerchantHeroImagePath(product.slug) ?? product.image;
   const jsonLd = productJsonLd({
     name: nameForSchema,
-    description: product.shoppingDescription ?? product.description,
+    description: descriptionForSchema,
     shoppingTitle: undefined,
     shoppingDescription: undefined,
-    image: product.image,
+    image: imageForSchema,
     price: priceForSchema,
     currency: product.currency,
     slug: product.slug,

@@ -1,10 +1,73 @@
-id,title,description,link,image_link,additional_image_link,availability,price,condition,brand,mpn,product_type,google_product_category,shipping,material
-atlas-sectional,"Cloud Sectional Couch Modular – Under $1,000 | ARVA Atlas","Modular cloud sectional couch designed for modern living. Balanced comfort, clean lines, OEKO-TEX® certified performance fabric, and tool-free assembly. Flexible configuration with included ottoman. Delivered in 2–4 weeks with free shipping. 100-day trial and lifetime structural warranty.",https://livearva.com/products/atlas-sectional,https://livearva.com/images/placeholder-product.jpg,,in_stock,2499.00 USD,new,ARVA,ARVA-ATLAS-SECTIONAL,Furniture > Sofas > Sectionals,Home & Garden > Furniture > Sofas,US:Standard:0 USD,performance fabric
-atlas-3-seater,Cloud Sofa 3-Seater – Modular Modern Couch | ARVA Atlas,Cloud-style 3-seater modular sofa with balanced comfort and clean architectural lines. OEKO-TEX® certified performance fabric and tool-free assembly. Delivered in 2–4 weeks with free shipping. 100-day trial and lifetime structural warranty.,https://livearva.com/products/atlas-3-seater,https://livearva.com/images/placeholder-product.jpg,,in_stock,1899.00 USD,new,ARVA,ARVA-ATLAS-3SEATER,Furniture > Sofas > Standard Sofas,Home & Garden > Furniture > Sofas,US:Standard:0 USD,performance fabric
-atlas-loveseat,Cloud Loveseat Modular Sofa – Modern Compact Couch | ARVA Atlas,Modular cloud loveseat sofa with supportive comfort and clean lines. OEKO-TEX® certified performance fabric and tool-free assembly. Delivered in 2–4 weeks with free shipping. 100-day trial and lifetime structural warranty.,https://livearva.com/products/atlas-loveseat,https://livearva.com/images/placeholder-product.jpg,,in_stock,1299.00 USD,new,ARVA,ARVA-ATLAS-LOVESEAT,Furniture > Sofas > Loveseats,Home & Garden > Furniture > Sofas,US:Standard:0 USD,performance fabric
-alto-sectional,Modern Cloud Sectional Sofa – Deep Seat Modular | ARVA Alto,Modern deep-seat cloud sectional sofa with modular flexibility and relaxed comfort. OEKO-TEX® certified fabric and tool-free assembly. Delivered in 2–4 weeks with free shipping. 100-day trial and lifetime structural warranty.,https://livearva.com/products/alto-sectional,https://livearva.com/images/placeholder-product.jpg,,in_stock,2799.00 USD,new,ARVA,ARVA-ALTO-SECTIONAL,Furniture > Sofas > Sectionals,Home & Garden > Furniture > Sofas,US:Standard:0 USD,performance fabric
-alto-3-seater,Modern Cloud Sofa 3-Seater – Deep Seat Couch | ARVA Alto,Deep-seat modern cloud-style 3-seater sofa with modular construction and OEKO-TEX® certified fabric. Tool-free assembly. Delivered in 2–4 weeks with free shipping. 100-day trial and lifetime structural warranty.,https://livearva.com/products/alto-3-seater,https://livearva.com/images/placeholder-product.jpg,,in_stock,2099.00 USD,new,ARVA,ARVA-ALTO-3SEATER,Furniture > Sofas > Standard Sofas,Home & Garden > Furniture > Sofas,US:Standard:0 USD,performance fabric
-alto-loveseat,Modern Cloud Loveseat – Deep Seat Modular Sofa | ARVA Alto,Deep-seat modern cloud loveseat with modular construction and OEKO-TEX® certified fabric. Tool-free assembly. Delivered in 2–4 weeks with free shipping. 100-day trial and lifetime structural warranty.,https://livearva.com/products/alto-loveseat,https://livearva.com/images/placeholder-product.jpg,,in_stock,1499.00 USD,new,ARVA,ARVA-ALTO-LOVESEAT,Furniture > Sofas > Loveseats,Home & Garden > Furniture > Sofas,US:Standard:0 USD,performance fabric
-oris-sectional,Outdoor Modular Sectional Sofa – Weather Resistant | ARVA Oris,Modular outdoor sectional sofa with weather-resistant performance fabric and durable frame construction. Flexible patio seating configuration. Delivered in 2–4 weeks with free shipping. Lifetime structural warranty.,https://livearva.com/products/oris-sectional,https://livearva.com/images/placeholder-product.jpg,,in_stock,2699.00 USD,new,ARVA,ARVA-ORIS-SECTIONAL,Furniture > Outdoor Furniture > Outdoor Sofas,Home & Garden > Furniture > Sofas,US:Standard:0 USD,weather-resistant performance fabric
-oris-3-seater,Outdoor 3-Seater Sofa – Modular Patio Couch | ARVA Oris,Weather-resistant modular outdoor 3-seater sofa designed for patios and terraces. Durable construction and clean modern lines. Delivered in 2–4 weeks with free shipping. Lifetime structural warranty.,https://livearva.com/products/oris-3-seater,https://livearva.com/images/placeholder-product.jpg,,in_stock,1999.00 USD,new,ARVA,ARVA-ORIS-3SEATER,Furniture > Outdoor Furniture > Outdoor Sofas,Home & Garden > Furniture > Sofas,US:Standard:0 USD,weather-resistant performance fabric
-oris-loveseat,Outdoor Loveseat Sofa – Modular Patio Seating | ARVA Oris,Modular outdoor loveseat with weather-resistant performance fabric and durable construction. Ideal for patios and smaller outdoor spaces. Delivered in 2–4 weeks with free shipping. Lifetime structural warranty.,https://livearva.com/products/oris-loveseat,https://livearva.com/images/placeholder-product.jpg,,in_stock,1399.00 USD,new,ARVA,ARVA-ORIS-LOVESEAT,Furniture > Outdoor Furniture > Outdoor Sofas,Home & Garden > Furniture > Sofas,US:Standard:0 USD,weather-resistant performance fabric
+id,title,description,link,image_link,additional_image_link,availability,price,condition,brand,mpn,product_type,google_product_category,material
+atlas-sectional,ARVA Atlas Sectional Cloud-Style Sofa - Modular Cloud Sectional Comfort (cloud sectional),"Atlas Sectional is built for buyers searching for a cloud sectional look, but with better long-term support and structure than typical sink-in cloud couches.
+
+Highlights:
+- Real back support with structured comfort for daily sitting
+- Performance-weave fabric designed for spill resistance and pet friendliness
+- Durable construction that holds shape over time
+- Tool-free modular setup with cleaner fit-and-finish
+- Built as a better-built cloud-style sofa for real-life use",https://livearva.com/products/atlas-sectional,https://livearva.com/images/merchant/atlas-sectional-hero.jpg,,in_stock,2499.00 USD,new,ARVA,ARVA-ATLAS-SECTIONAL,Furniture > Sofas > Sectionals,2740,performance weave fabric
+atlas-3-seater,ARVA Atlas 3-Seater Cloud-Style Sofa - Structured Everyday Support (cloud couch),"Atlas 3-Seater is built for buyers searching for a cloud couch look, but with better long-term support and structure than typical sink-in cloud couches.
+
+Highlights:
+- Real back support with structured comfort for daily sitting
+- Performance-weave fabric designed for spill resistance and pet friendliness
+- Durable construction that holds shape over time
+- Tool-free modular setup with cleaner fit-and-finish
+- Built as a better-built cloud-style sofa for real-life use",https://livearva.com/products/atlas-3-seater,https://livearva.com/images/merchant/atlas-3-seater-hero.jpg,,in_stock,1899.00 USD,new,ARVA,ARVA-ATLAS-3SEATER,Furniture > Sofas > Standard Sofas,2740,performance weave fabric
+atlas-loveseat,ARVA Atlas Loveseat Cloud-Style Sofa - Compact Structured Comfort (cloud modular couch),"Atlas Loveseat is built for buyers searching for a cloud modular couch look, but with better long-term support and structure than typical sink-in cloud couches.
+
+Highlights:
+- Real back support with structured comfort for daily sitting
+- Performance-weave fabric designed for spill resistance and pet friendliness
+- Durable construction that holds shape over time
+- Tool-free modular setup with cleaner fit-and-finish
+- Built as a better-built cloud-style sofa for real-life use",https://livearva.com/products/atlas-loveseat,https://livearva.com/images/merchant/atlas-loveseat-hero.jpg,,in_stock,1299.00 USD,new,ARVA,ARVA-ATLAS-LOVESEAT,Furniture > Sofas > Loveseats,2740,performance weave fabric
+alto-sectional,ARVA Alto Sectional Cloud-Style Sofa - Modular Cloud Sectional Comfort (cloud sectional),"Alto Sectional is built for buyers searching for a cloud sectional look, but with better long-term support and structure than typical sink-in cloud couches.
+
+Highlights:
+- Real back support with structured comfort for daily sitting
+- Performance-weave fabric designed for spill resistance and pet friendliness
+- Durable construction that holds shape over time
+- Tool-free modular setup with cleaner fit-and-finish
+- Built as a better-built cloud-style sofa for real-life use",https://livearva.com/products/alto-sectional,https://livearva.com/images/merchant/alto-sectional-hero.jpg,,in_stock,2799.00 USD,new,ARVA,ARVA-ALTO-SECTIONAL,Furniture > Sofas > Sectionals,2740,performance weave fabric
+alto-3-seater,ARVA Alto 3-Seater Cloud-Style Sofa - Structured Everyday Support (cloud couch),"Alto 3-Seater is built for buyers searching for a cloud couch look, but with better long-term support and structure than typical sink-in cloud couches.
+
+Highlights:
+- Real back support with structured comfort for daily sitting
+- Performance-weave fabric designed for spill resistance and pet friendliness
+- Durable construction that holds shape over time
+- Tool-free modular setup with cleaner fit-and-finish
+- Built as a better-built cloud-style sofa for real-life use",https://livearva.com/products/alto-3-seater,https://livearva.com/images/merchant/alto-3-seater-hero.jpg,,in_stock,2099.00 USD,new,ARVA,ARVA-ALTO-3SEATER,Furniture > Sofas > Standard Sofas,2740,performance weave fabric
+alto-loveseat,ARVA Alto Loveseat Cloud-Style Sofa - Compact Structured Comfort (cloud modular couch),"Alto Loveseat is built for buyers searching for a cloud modular couch look, but with better long-term support and structure than typical sink-in cloud couches.
+
+Highlights:
+- Real back support with structured comfort for daily sitting
+- Performance-weave fabric designed for spill resistance and pet friendliness
+- Durable construction that holds shape over time
+- Tool-free modular setup with cleaner fit-and-finish
+- Built as a better-built cloud-style sofa for real-life use",https://livearva.com/products/alto-loveseat,https://livearva.com/images/merchant/alto-loveseat-hero.jpg,,in_stock,1499.00 USD,new,ARVA,ARVA-ALTO-LOVESEAT,Furniture > Sofas > Loveseats,2740,performance weave fabric
+oris-sectional,ARVA Oris Sectional Cloud-Style Sofa - Modular Cloud Sectional Comfort (cloud sectional),"Oris Sectional is built for buyers searching for a cloud sectional look, but with better long-term support and structure than typical sink-in cloud couches.
+
+Highlights:
+- Real back support with structured comfort for daily sitting
+- Performance-weave fabric designed for spill resistance and pet friendliness
+- Durable construction that holds shape over time
+- Tool-free modular setup with cleaner fit-and-finish
+- Built as a better-built cloud-style sofa for real-life use",https://livearva.com/products/oris-sectional,https://livearva.com/images/merchant/oris-sectional-hero.jpg,,in_stock,2699.00 USD,new,ARVA,ARVA-ORIS-SECTIONAL,Furniture > Outdoor Furniture > Outdoor Sofas,2740,weather-resistant performance weave fabric
+oris-3-seater,ARVA Oris 3-Seater Cloud-Style Sofa - Structured Everyday Support (cloud couch),"Oris 3-Seater is built for buyers searching for a cloud couch look, but with better long-term support and structure than typical sink-in cloud couches.
+
+Highlights:
+- Real back support with structured comfort for daily sitting
+- Performance-weave fabric designed for spill resistance and pet friendliness
+- Durable construction that holds shape over time
+- Tool-free modular setup with cleaner fit-and-finish
+- Built as a better-built cloud-style sofa for real-life use",https://livearva.com/products/oris-3-seater,https://livearva.com/images/merchant/oris-3-seater-hero.jpg,,in_stock,1999.00 USD,new,ARVA,ARVA-ORIS-3SEATER,Furniture > Outdoor Furniture > Outdoor Sofas,2740,weather-resistant performance weave fabric
+oris-loveseat,ARVA Oris Loveseat Cloud-Style Sofa - Compact Structured Comfort (cloud modular couch),"Oris Loveseat is built for buyers searching for a cloud modular couch look, but with better long-term support and structure than typical sink-in cloud couches.
+
+Highlights:
+- Real back support with structured comfort for daily sitting
+- Performance-weave fabric designed for spill resistance and pet friendliness
+- Durable construction that holds shape over time
+- Tool-free modular setup with cleaner fit-and-finish
+- Built as a better-built cloud-style sofa for real-life use",https://livearva.com/products/oris-loveseat,https://livearva.com/images/merchant/oris-loveseat-hero.jpg,,in_stock,1399.00 USD,new,ARVA,ARVA-ORIS-LOVESEAT,Furniture > Outdoor Furniture > Outdoor Sofas,2740,weather-resistant performance weave fabric

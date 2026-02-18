@@ -13,9 +13,15 @@ export default function ProductReviews({ detail }: { detail: ProductDetailData }
               key={i}
               className="p-6 rounded-xl border border-arva-border bg-white shadow-arva"
             >
+              <div className="mb-3 text-amber-500" aria-label={`${r.rating ?? 5} out of 5 stars`}>
+                {"★".repeat(r.rating ?? 5)}
+              </div>
               <p className="text-arva-text leading-relaxed mb-4">&ldquo;{r.quote}&rdquo;</p>
               <footer className="flex flex-wrap items-center gap-2 text-sm">
-                <cite className="not-italic font-medium text-arva-text">{r.location}</cite>
+                <cite className="not-italic font-medium text-arva-text">
+                  {r.name ? `${r.name}${r.age ? `, ${r.age}` : ""}` : r.location}
+                </cite>
+                {r.name && <span className="text-arva-text-muted">{r.location}</span>}
                 {r.verified && (
                   <span className="text-arva-text-muted">Verified Customer</span>
                 )}

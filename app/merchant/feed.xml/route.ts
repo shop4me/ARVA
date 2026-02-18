@@ -10,7 +10,7 @@ export const revalidate = 0;
 export async function GET() {
   const products = await getProducts();
   const baseUrl = absoluteUrl("");
-  const items = buildMerchantItems(products, baseUrl);
+  const items = await buildMerchantItems(products, baseUrl);
   const xml = toMerchantXml(items, baseUrl);
 
   return new NextResponse(xml, {

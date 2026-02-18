@@ -51,7 +51,14 @@ export interface ProductDetailData {
   deliveryHeadline: string;
   deliveryCopy: string[];
   reviewsHeading: string;
-  reviews: { quote: string; location: string; verified?: boolean }[];
+  reviews: {
+    quote: string;
+    location: string;
+    name?: string;
+    age?: number;
+    rating?: 4 | 5;
+    verified?: boolean;
+  }[];
   faq: { question: string; answer: string }[];
   finalCtaHeadline: string;
   finalCtaSubhead: string;
