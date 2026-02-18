@@ -1,7 +1,10 @@
+import type { ReactNode } from "react";
+
 type WhyArvaTile = {
   image: string;
   headline: string;
   tagline: string;
+  icon: ReactNode;
 };
 
 const WHY_ARVA_TILES: WhyArvaTile[] = [
@@ -9,16 +12,53 @@ const WHY_ARVA_TILES: WhyArvaTile[] = [
     image: "/assets/1.webp",
     headline: "Made to Sit",
     tagline: "More back support than similar sofas",
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M6 5h12v7H6V5Z" stroke="white" strokeWidth="1.8" />
+        <path d="M4 14h16v5H4v-5Z" stroke="white" strokeWidth="1.8" />
+      </svg>
+    ),
   },
   {
     image: "/assets/2.webp",
     headline: "Built to Last",
     tagline: "High rub count for real daily use",
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M12 3l7 3v5c0 4.2-2.6 7.8-7 10-4.4-2.2-7-5.8-7-10V6l7-3Z" stroke="white" strokeWidth="1.8" />
+      </svg>
+    ),
   },
   {
     image: "/assets/3.webp",
     headline: "Spill-Resistant",
     tagline: "Easy cleanup for real life",
+    icon: (
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+        <path d="M12 3c3 4 6 6.8 6 10a6 6 0 1 1-12 0c0-3.2 3-6 6-10Z" stroke="white" strokeWidth="1.8" />
+      </svg>
+    ),
   },
 ];
 
@@ -61,16 +101,7 @@ export default function WhyArvaVisual() {
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent" />
               <div className="absolute left-4 right-4 bottom-4 z-10">
                 <p className="inline-flex items-center gap-2 text-white font-semibold text-xl leading-tight">
-                  <svg
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <circle cx="12" cy="12" r="4" fill="white" />
-                  </svg>
+                  {tile.icon}
                   {tile.headline}
                 </p>
                 <p className="mt-1 text-white/95 text-sm sm:text-base leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
