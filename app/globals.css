@@ -15,12 +15,16 @@
 
   html {
     scroll-behavior: smooth;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   body {
     @apply antialiased;
     background-color: var(--arva-bg);
     color: var(--arva-text);
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   /* Stripe Payment Element: ensure iframe and container can render at full size */

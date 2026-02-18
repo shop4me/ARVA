@@ -44,9 +44,9 @@ export default function TopBar() {
         </div>
       </div>
       {/* Countdown row — taller, different color */}
-      <div className="bg-arva-topbar text-white flex items-center justify-center gap-3 py-4">
-        <span className="font-semibold tabular-nums text-3xl">{countdown}</span>
-        <span className="text-white/90 text-xl">Sale ends today</span>
+      <div className="bg-arva-topbar text-white flex flex-wrap items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 px-4 text-center">
+        <span className="font-semibold tabular-nums text-2xl sm:text-3xl">{countdown}</span>
+        <span className="text-white/90 text-sm sm:text-xl">Sale ends today</span>
       </div>
     </div>
   );
