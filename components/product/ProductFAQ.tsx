@@ -24,14 +24,14 @@ function AccordionItem({
         className="w-full py-5 flex items-center justify-between text-left gap-4 focus:outline-none"
         aria-expanded={isOpen}
       >
-        <span className="font-medium text-arva-text">{item.question}</span>
+        <span className="font-medium text-arva-text min-w-0 break-words">{item.question}</span>
         <span className="shrink-0 w-6 h-6 flex items-center justify-center text-arva-text-muted" aria-hidden>
           {isOpen ? "−" : "+"}
         </span>
       </button>
       {isOpen && (
         <div className="pb-5 pr-10">
-          <p className="text-arva-text-muted text-sm leading-relaxed">{item.answer}</p>
+          <p className="text-arva-text-muted text-sm leading-relaxed break-words">{item.answer}</p>
         </div>
       )}
     </div>

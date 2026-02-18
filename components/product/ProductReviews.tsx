@@ -16,8 +16,8 @@ export default function ProductReviews({ detail }: { detail: ProductDetailData }
               <div className="mb-3 text-amber-500" aria-label={`${r.rating ?? 5} out of 5 stars`}>
                 {"★".repeat(r.rating ?? 5)}
               </div>
-              <p className="text-arva-text leading-relaxed mb-4">&ldquo;{r.quote}&rdquo;</p>
-              <footer className="flex flex-wrap items-center gap-2 text-sm">
+              <p className="text-arva-text leading-relaxed mb-4 break-words">&ldquo;{r.quote}&rdquo;</p>
+              <footer className="flex flex-wrap items-center gap-2 text-sm min-w-0">
                 <cite className="not-italic font-medium text-arva-text">
                   {r.name ? `${r.name}${r.age ? `, ${r.age}` : ""}` : r.location}
                 </cite>

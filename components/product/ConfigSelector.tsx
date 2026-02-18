@@ -23,7 +23,7 @@ export default function ConfigSelector({
       <p className="text-xs font-medium text-arva-text-muted uppercase tracking-wide mb-3">
         Choose your configuration
       </p>
-      <div className="grid grid-cols-3 gap-2 sm:gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 sm:gap-3">
         {relatedProducts.map((p) => {
           const isCurrent = p.slug === currentProduct.slug;
           const bestFor = BEST_FOR[p.category] ?? "Modular design";
@@ -35,7 +35,7 @@ export default function ConfigSelector({
                 key={p.slug}
                 className="rounded-lg border-2 border-arva-accent bg-arva-accent/5 p-3 sm:p-4"
               >
-                <p className="font-medium text-arva-text text-sm sm:text-base">
+                <p className="font-medium text-arva-text text-sm sm:text-base break-words">
                   {p.category === "three-seater" ? "3-Seater" : p.category === "sectional" ? "Sectional" : "Loveseat"}
                 </p>
                 <p className="text-arva-text font-semibold mt-0.5">${price.toLocaleString()}</p>
@@ -54,7 +54,7 @@ export default function ConfigSelector({
                 {p.category === "three-seater" ? "3-Seater" : p.category === "sectional" ? "Sectional" : "Loveseat"}
               </p>
               <p className="text-arva-text font-semibold mt-0.5">${price.toLocaleString()}</p>
-              <p className="text-arva-text-muted text-xs mt-1">{bestFor}</p>
+              <p className="text-arva-text-muted text-xs mt-1 break-words">{bestFor}</p>
             </Link>
           );
         })}

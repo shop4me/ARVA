@@ -92,7 +92,7 @@ export default async function ProductPage({ params }: Props) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <article className="pb-24 sm:pb-28">
+        <article className="pb-24 sm:pb-28 overflow-x-hidden">
           <ProductHero
             product={product}
             detail={detail}

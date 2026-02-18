@@ -117,7 +117,7 @@ export default function ProductHero({
   };
 
   return (
-    <section className="border-b border-arva-border/80 bg-arva-bg">
+    <section className="border-b border-arva-border/80 bg-arva-bg overflow-x-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
           {/* Left on desktop, first on mobile */}
@@ -170,11 +170,11 @@ export default function ProductHero({
           </div>
 
           {/* Right on desktop, below images on mobile */}
-          <div className="order-2 lg:sticky lg:top-24">
-            <h1 className="text-2xl sm:text-3xl font-semibold text-arva-text mb-1">
+          <div className="order-2 lg:sticky lg:top-24 min-w-0">
+            <h1 className="text-2xl sm:text-3xl font-semibold text-arva-text mb-1 break-words">
               {detail.pdpH1 ?? product.name}
             </h1>
-            <h2 className="text-lg font-normal text-arva-text-muted mb-4">
+            <h2 className="text-lg font-normal text-arva-text-muted mb-4 break-words">
               {detail.pdpH2 ?? detail.subhead}
             </h2>
             <p className="text-2xl font-semibold text-arva-text mb-1">
@@ -212,7 +212,7 @@ export default function ProductHero({
               ))}
             </ul>
 
-            <p className="text-sm text-arva-text-muted mb-6">
+            <p className="text-sm text-arva-text-muted mb-6 break-words">
               This is the smart version of the sofa you already want — without the markup or the freight risk.
             </p>
 

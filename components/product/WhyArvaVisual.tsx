@@ -207,9 +207,11 @@ export default function WhyArvaVisual() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/20 to-transparent" />
               <div className="absolute left-4 right-4 bottom-4 z-10">
-                <p className="inline-flex items-center gap-2 text-white font-semibold text-xl leading-tight">
-                  {tile.icon}
-                  {tile.headline}
+                <p className="text-white font-semibold text-xl leading-tight break-words">
+                  <span className="inline-flex items-center gap-2">
+                    {tile.icon}
+                    <span>{tile.headline}</span>
+                  </span>
                 </p>
                 <p className="mt-1 text-white/95 text-sm sm:text-base leading-relaxed drop-shadow-[0_1px_1px_rgba(0,0,0,0.5)]">
                   {tile.tagline}
