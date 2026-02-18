@@ -41,3 +41,32 @@
     animation-play-state: paused;
   }
 }
+
+@layer utilities {
+  .fade-in-section {
+    transition: opacity 650ms ease, transform 650ms ease;
+    will-change: opacity, transform;
+  }
+
+  .fade-in-hidden {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  .fade-in-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in-section {
+      transition: none;
+    }
+
+    .fade-in-hidden,
+    .fade-in-visible {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
