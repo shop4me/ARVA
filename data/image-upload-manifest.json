@@ -314,43 +314,43 @@
   "alto-loveseat": [
     {
       "source": "assets/alto-loveseat/1.png",
-      "output": "/images/products/alto-loveseat/alto-loveseat-cloud-couch-ivory-hero-01.webp",
-      "filename": "alto-loveseat-cloud-couch-ivory-hero-01.webp"
+      "output": "/images/products/alto-loveseat/alto-loveseat-v2-cloud-couch-ivory-hero-01.webp",
+      "filename": "alto-loveseat-v2-cloud-couch-ivory-hero-01.webp"
     },
     {
       "source": "assets/alto-loveseat/2.png",
-      "output": "/images/products/alto-loveseat/alto-loveseat-modular-sofa-oat-angle-02.webp",
-      "filename": "alto-loveseat-modular-sofa-oat-angle-02.webp"
+      "output": "/images/products/alto-loveseat/alto-loveseat-v2-modular-sofa-oat-angle-02.webp",
+      "filename": "alto-loveseat-v2-modular-sofa-oat-angle-02.webp"
     },
     {
       "source": "assets/alto-loveseat/3.png",
-      "output": "/images/products/alto-loveseat/alto-loveseat-cloud-sofa-stone-lifestyle-03.webp",
-      "filename": "alto-loveseat-cloud-sofa-stone-lifestyle-03.webp"
+      "output": "/images/products/alto-loveseat/alto-loveseat-v2-cloud-sofa-stone-lifestyle-03.webp",
+      "filename": "alto-loveseat-v2-cloud-sofa-stone-lifestyle-03.webp"
     },
     {
       "source": "assets/alto-loveseat/4.png",
-      "output": "/images/products/alto-loveseat/alto-loveseat-modular-couch-mist-fabric-04.webp",
-      "filename": "alto-loveseat-modular-couch-mist-fabric-04.webp"
+      "output": "/images/products/alto-loveseat/alto-loveseat-v2-modular-couch-mist-fabric-04.webp",
+      "filename": "alto-loveseat-v2-modular-couch-mist-fabric-04.webp"
     },
     {
       "source": "assets/alto-loveseat/5.png",
-      "output": "/images/products/alto-loveseat/alto-loveseat-cloud-couch-slate-seam-05.webp",
-      "filename": "alto-loveseat-cloud-couch-slate-seam-05.webp"
+      "output": "/images/products/alto-loveseat/alto-loveseat-v2-cloud-couch-slate-seam-05.webp",
+      "filename": "alto-loveseat-v2-cloud-couch-slate-seam-05.webp"
     },
     {
       "source": "assets/alto-loveseat/6.png",
-      "output": "/images/products/alto-loveseat/alto-loveseat-modular-sofa-charcoal-detail-06.webp",
-      "filename": "alto-loveseat-modular-sofa-charcoal-detail-06.webp"
+      "output": "/images/products/alto-loveseat/alto-loveseat-v2-modular-sofa-charcoal-detail-06.webp",
+      "filename": "alto-loveseat-v2-modular-sofa-charcoal-detail-06.webp"
     },
     {
       "source": "assets/alto-loveseat/7.png",
-      "output": "/images/products/alto-loveseat/alto-loveseat-cloud-sofa-sand-room-07.webp",
-      "filename": "alto-loveseat-cloud-sofa-sand-room-07.webp"
+      "output": "/images/products/alto-loveseat/alto-loveseat-v2-cloud-sofa-sand-room-07.webp",
+      "filename": "alto-loveseat-v2-cloud-sofa-sand-room-07.webp"
     },
     {
       "source": "assets/alto-loveseat/dimensions.png",
-      "output": "/images/products/alto-loveseat/alto-loveseat-dimensions-diagram.webp",
-      "filename": "alto-loveseat-dimensions-diagram.webp",
+      "output": "/images/products/alto-loveseat/alto-loveseat-v2-dimensions-diagram.webp",
+      "filename": "alto-loveseat-v2-dimensions-diagram.webp",
       "role": "dimensions"
     }
   ]
