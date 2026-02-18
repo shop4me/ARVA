@@ -46,6 +46,7 @@ export interface Post {
   body: string;
   publishedAt?: string;
   author?: string;
+  heroImage?: string;
 }
 
 export const collections: Collection[] = [

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getPost } from "@/lib/api";
 import { absoluteUrl } from "@/lib/seo";
 import Markdown from "@/components/Markdown";
+import Image from "next/image";
 
 export const revalidate = 3600; // 1 hour
 
@@ -33,6 +34,18 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <article className="max-w-3xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      {post.heroImage && (
+        <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden border border-arva-border bg-arva-bg mb-8">
+          <Image
+            src={post.heroImage}
+            alt={`${post.title} hero`}
+            fill
+            sizes="(max-width: 768px) 100vw, 768px"
+            className="object-cover"
+            priority
+          />
+        </div>
+      )}
       <h1 className="text-3xl font-semibold text-arva-text mb-4">
         {post.title}
       </h1>

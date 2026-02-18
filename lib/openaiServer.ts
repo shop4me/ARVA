@@ -73,7 +73,7 @@ export async function openAiChatJson<T>(opts: {
 
 let cachedKey: string | null | undefined;
 
-async function getOpenAiApiKey(): Promise<string | null> {
+export async function getOpenAiApiKey(): Promise<string | null> {
   if (cachedKey !== undefined) return cachedKey;
   if (process.env.OPENAI_API_KEY) {
     cachedKey = process.env.OPENAI_API_KEY;

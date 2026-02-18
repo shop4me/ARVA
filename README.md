@@ -41,6 +41,16 @@ To update existing posts instead of skipping:
 npm run blog -- generate --update
 ```
 
+## Blog rewrite and hero images
+
+Rewrite the existing five posts in place and generate a lifestyle hero image for each post:
+
+```bash
+npm run blog rewrite
+```
+
+Hero images are saved to `public/blog/hero/<slug>.webp` and referenced from `data/posts.json` as `heroImage`.
+
 ## Where to plug in the backend
 
 - **Data layer:** `lib/api.ts`. Replace the current in-memory reads with `fetch(`${API_URL}/api/products`)`, `fetch(`${API_URL}/api/products/${slug}`)`, etc. Keep the same function names and return shapes so pages need no changes.
