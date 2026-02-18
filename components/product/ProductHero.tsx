@@ -277,6 +277,7 @@ export default function ProductHero({
             </div>
         </div>
       </div>
+      </div>
       {isLightboxOpen && activeImage && (
         <div
           className="fixed inset-0 z-50 bg-black/80 p-4 sm:p-8 flex items-center justify-center"
