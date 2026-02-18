@@ -22,7 +22,24 @@ Open [http://localhost:3000](http://localhost:3000) (or 3001 if 3000 is in use).
 
 ## Where to edit content
 
-- **Static content (until backend is live):** `lib/content.ts` — edit `products` and `posts` arrays.
+- **Products and PDP details:** `data/products.json` and `data/productDetails.json`
+- **Blog posts:** `data/posts.json`
+
+## Blog generator
+
+Generate and publish the five ARVA blog articles via OpenAI (server only).
+
+```bash
+npm run blog -- generate
+```
+
+Idempotent default behavior is to skip existing slugs.
+
+To update existing posts instead of skipping:
+
+```bash
+npm run blog -- generate --update
+```
 
 ## Where to plug in the backend
 

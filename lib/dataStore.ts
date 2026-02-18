@@ -5,12 +5,13 @@
 
 import { promises as fs } from "fs";
 import path from "path";
-import type { Product } from "./content";
+import type { Product, Post } from "./content";
 import type { ProductDetailData } from "./productDetail";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const PRODUCTS_PATH = path.join(DATA_DIR, "products.json");
 const DETAILS_PATH = path.join(DATA_DIR, "productDetails.json");
+const POSTS_PATH = path.join(DATA_DIR, "posts.json");
 
 async function readJsonStrict<T>(filePath: string): Promise<T> {
   const raw = await fs.readFile(filePath, "utf-8");
@@ -41,4 +42,12 @@ export async function writeProductDetails(details: Record<string, ProductDetailD
 export async function getProductDetailFromStore(slug: string): Promise<ProductDetailData | null> {
   const details = await readProductDetails();
   return details[slug] ?? null;
+}
+
+export async function readPosts(): Promise<Post[]> {
+  return readJsonStrict<Post[]>(POSTS_PATH);
+}
+
+export async function writePosts(posts: Post[]): Promise<void> {
+  return writeJson(POSTS_PATH, posts);
 }

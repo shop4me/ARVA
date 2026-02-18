@@ -2,8 +2,8 @@
  * Server-side data layer. Single source of truth: data store (data/*.json).
  */
 
-import { posts, collections, type Product, type Post, type Collection } from "./content";
-import { readProducts, getProductDetailFromStore, readProductDetails } from "./dataStore";
+import { collections, type Product, type Post, type Collection } from "./content";
+import { readProducts, getProductDetailFromStore, readProductDetails, readPosts } from "./dataStore";
 
 const DISABLED_PRODUCT_SLUGS = new Set([
   "bellini-sectional",
@@ -24,7 +24,10 @@ export async function getProducts(): Promise<Product[]> {
 
 export async function getProduct(slug: string): Promise<Product | null> {
   const list = await readProducts();
-  return list.find((p) => p.slug === slug && isProductActive(p)) ?? null;
+  const direct = list.find((p) => p.slug === slug && isProductActive(p));
+  if (direct) return direct;
+  const normalized = slug.replace(/-/g, "");
+  return list.find((p) => p.slug.replace(/-/g, "") === normalized && isProductActive(p)) ?? null;
 }
 
 /** Alias for getProduct; use for product-by-slug in dynamic route. */
@@ -49,15 +52,20 @@ export async function getProductsByCollection(collectionSlug: string): Promise<P
 }
 
 export async function getPosts(): Promise<Post[]> {
-  return posts;
+  return readPosts();
 }
 
 export async function getPost(slug: string): Promise<Post | null> {
-  return posts.find((p) => p.slug === slug) ?? null;
+  const list = await readPosts();
+  return list.find((p) => p.slug === slug) ?? null;
 }
 
 export async function getProductDetail(slug: string): Promise<import("./productDetail").ProductDetailData | null> {
-  return getProductDetailFromStore(slug);
+  const direct = await getProductDetailFromStore(slug);
+  if (direct) return direct;
+  const product = await getProduct(slug);
+  if (!product) return null;
+  return getProductDetailFromStore(product.slug);
 }
 
 export type ReviewSummary = { count: number; rating: number };

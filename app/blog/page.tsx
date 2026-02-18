@@ -39,6 +39,10 @@ export default async function BlogPage() {
               <h2 className="text-xl font-semibold text-arva-text group-hover:underline">
                 {post.title}
               </h2>
+              <p className="text-sm text-arva-text-muted mt-1">
+                {post.publishedAt ? post.publishedAt : " "}
+                {post.author ? ` · ${post.author}` : ""}
+              </p>
               <p className="text-arva-text-muted mt-1">{post.excerpt}</p>
             </Link>
           </li>

@@ -45,6 +45,7 @@ export interface Post {
   excerpt: string;
   body: string;
   publishedAt?: string;
+  author?: string;
 }
 
 export const collections: Collection[] = [

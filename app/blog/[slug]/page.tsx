@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getPost } from "@/lib/api";
 import { absoluteUrl } from "@/lib/seo";
+import Markdown from "@/components/Markdown";
 
 export const revalidate = 3600; // 1 hour
 
@@ -35,10 +36,12 @@ export default async function BlogPostPage({ params }: Props) {
       <h1 className="text-3xl font-semibold text-arva-text mb-4">
         {post.title}
       </h1>
-      <p className="text-arva-text-muted mb-8">{post.excerpt}</p>
-      <div className="prose prose-neutral max-w-none">
-        <p className="text-arva-text-muted leading-relaxed">{post.body}</p>
+      <div className="text-sm text-arva-text-muted mb-6">
+        {post.publishedAt ? <span>{post.publishedAt}</span> : null}
+        {post.author ? <span>{post.publishedAt ? " · " : ""}{post.author}</span> : null}
       </div>
+      <p className="text-arva-text-muted mb-8">{post.excerpt}</p>
+      <Markdown content={post.body} />
     </article>
   );
 }
