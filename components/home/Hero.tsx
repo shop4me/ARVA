@@ -1,7 +1,17 @@
 import Link from "next/link";
 import { hero } from "@/lib/homepage";
+import { getProducts } from "@/lib/api";
 
-export default function Hero() {
+const HERO_PRODUCTS = [
+  { slug: "atlas-loveseat", label: "Atlas Loveseat" },
+  { slug: "atlas-3-seater", label: "Atlas 3-Seater" },
+  { slug: "atlas-sectional", label: "Atlas Sectional" },
+] as const;
+
+export default async function Hero() {
+  const products = await getProducts();
+  const imageBySlug = new Map(products.map((product) => [product.slug, product.image]));
+
   return (
     <section className="border-b border-arva-border/80 bg-arva-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
@@ -36,30 +46,29 @@ export default function Hero() {
           </div>
           {/* Right: product image area — three thumbnails, no slider */}
           <div className="order-1 lg:order-2 flex flex-col sm:flex-row lg:flex-col gap-4">
-            <Link
-              href="/products/atlas-loveseat"
-              className="block flex-1 min-h-[200px] sm:min-h-[240px] rounded-lg bg-white border border-arva-border shadow-arva overflow-hidden focus:outline-none focus:ring-2 focus:ring-arva-accent/20"
-            >
-              <div className="w-full h-full bg-neutral-100 flex items-center justify-center text-arva-text-muted text-sm">
-                Atlas Loveseat
-              </div>
-            </Link>
-            <Link
-              href="/products/atlas-3-seater"
-              className="block flex-1 min-h-[200px] sm:min-h-[240px] rounded-lg bg-white border border-arva-border shadow-arva overflow-hidden focus:outline-none focus:ring-2 focus:ring-arva-accent/20"
-            >
-              <div className="w-full h-full bg-neutral-100 flex items-center justify-center text-arva-text-muted text-sm">
-                Atlas 3-Seater
-              </div>
-            </Link>
-            <Link
-              href="/products/atlas-sectional"
-              className="block flex-1 min-h-[200px] sm:min-h-[240px] rounded-lg bg-white border border-arva-border shadow-arva overflow-hidden focus:outline-none focus:ring-2 focus:ring-arva-accent/20"
-            >
-              <div className="w-full h-full bg-neutral-100 flex items-center justify-center text-arva-text-muted text-sm">
-                Atlas Sectional
-              </div>
-            </Link>
+            {HERO_PRODUCTS.map((item) => {
+              const image = imageBySlug.get(item.slug);
+              return (
+                <Link
+                  key={item.slug}
+                  href={`/products/${item.slug}`}
+                  className="block flex-1 min-h-[200px] sm:min-h-[240px] rounded-lg bg-white border border-arva-border shadow-arva overflow-hidden focus:outline-none focus:ring-2 focus:ring-arva-accent/20"
+                >
+                  {image ? (
+                    <img
+                      src={image}
+                      alt={item.label}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full h-full bg-neutral-100 flex items-center justify-center text-arva-text-muted text-sm">
+                      {item.label}
+                    </div>
+                  )}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>

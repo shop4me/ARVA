@@ -1,7 +1,11 @@
 import Link from "next/link";
 import { productLineup } from "@/lib/homepage";
+import { getProducts } from "@/lib/api";
 
-export default function ProductLineup() {
+export default async function ProductLineup() {
+  const products = await getProducts();
+  const imageBySlug = new Map(products.map((product) => [product.slug, product.image]));
+
   return (
     <section className="py-16 sm:py-20 border-b border-arva-border/80 bg-arva-bg" aria-labelledby="product-lineup-heading">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
@@ -27,9 +31,18 @@ export default function ProductLineup() {
                 href={`/products/${item.slug}`}
                 className="block mb-4 min-h-[180px] rounded-lg bg-neutral-50 border border-arva-border overflow-hidden focus:outline-none focus:ring-2 focus:ring-arva-accent/20"
               >
-                <div className="w-full h-full min-h-[180px] flex items-center justify-center text-arva-text-muted text-sm">
-                  {item.name}
-                </div>
+                {imageBySlug.get(item.slug) ? (
+                  <img
+                    src={imageBySlug.get(item.slug)}
+                    alt={item.name}
+                    className="w-full h-full min-h-[180px] object-cover"
+                    loading="lazy"
+                  />
+                ) : (
+                  <div className="w-full h-full min-h-[180px] flex items-center justify-center text-arva-text-muted text-sm">
+                    {item.name}
+                  </div>
+                )}
               </Link>
               <h3 className="text-xl font-semibold text-arva-text mb-1">
                 {item.name}
