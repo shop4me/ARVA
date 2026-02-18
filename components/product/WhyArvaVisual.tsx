@@ -10,8 +10,8 @@ type WhyArvaTile = {
 const WHY_ARVA_TILES: WhyArvaTile[] = [
   {
     image: "/assets/1.webp",
-    headline: "Made to Sit",
-    tagline: "More back support than similar sofas",
+    headline: "Real Back Support",
+    tagline: "Upright comfort that actually supports you",
     icon: (
       <svg
         width="16"
@@ -21,15 +21,15 @@ const WHY_ARVA_TILES: WhyArvaTile[] = [
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <path d="M6 5h12v7H6V5Z" stroke="white" strokeWidth="1.8" />
-        <path d="M4 14h16v5H4v-5Z" stroke="white" strokeWidth="1.8" />
+        <path d="M9 4h6v16H9z" stroke="white" strokeWidth="1.8" />
+        <path d="M6 10h3M6 14h3" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     ),
   },
   {
     image: "/assets/2.webp",
-    headline: "Built to Last",
-    tagline: "High rub count for real daily use",
+    headline: "Made to Sit - Not Just Lounge",
+    tagline: "Comfortable for conversation, work, and long evenings",
     icon: (
       <svg
         width="16"
@@ -39,14 +39,15 @@ const WHY_ARVA_TILES: WhyArvaTile[] = [
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <path d="M12 3l7 3v5c0 4.2-2.6 7.8-7 10-4.4-2.2-7-5.8-7-10V6l7-3Z" stroke="white" strokeWidth="1.8" />
+        <path d="M5 12h14v6H5v-6Z" stroke="white" strokeWidth="1.8" />
+        <path d="M8 9h8v3H8V9Z" stroke="white" strokeWidth="1.8" />
       </svg>
     ),
   },
   {
     image: "/assets/3.webp",
-    headline: "Spill-Resistant",
-    tagline: "Easy cleanup for real life",
+    headline: "Performance-Weave Fabric",
+    tagline: "High rub count for everyday durability",
     icon: (
       <svg
         width="16"
@@ -56,7 +57,8 @@ const WHY_ARVA_TILES: WhyArvaTile[] = [
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        <path d="M12 3c3 4 6 6.8 6 10a6 6 0 1 1-12 0c0-3.2 3-6 6-10Z" stroke="white" strokeWidth="1.8" />
+        <path d="M6 7h12v10H6V7Z" stroke="white" strokeWidth="1.8" />
+        <path d="M9 10h6M9 13h6" stroke="white" strokeWidth="1.8" strokeLinecap="round" />
       </svg>
     ),
   },
