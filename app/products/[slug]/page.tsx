@@ -12,6 +12,7 @@ import ComfortExplainer from "@/components/product/ComfortExplainer";
 import ComparisonTable from "@/components/product/ComparisonTable";
 import DetailsAccordion from "@/components/product/DetailsAccordion";
 import ProofTiles from "@/components/product/ProofTiles";
+import WhyArvaVisual from "@/components/product/WhyArvaVisual";
 import ProductReviews from "@/components/product/ProductReviews";
 import ProductFAQ from "@/components/product/ProductFAQ";
 import FinalCtaPdp from "@/components/product/FinalCtaPdp";
@@ -96,6 +97,7 @@ export default async function ProductPage({ params }: Props) {
           <ComparisonTable />
           <DetailsAccordion detail={detail} />
           <ProofTiles detail={detail} />
+          <WhyArvaVisual />
           <ProductReviews detail={detail} />
           <ProductFAQ items={detail.faq} />
           <FinalCtaPdp product={product} detail={detail} />
