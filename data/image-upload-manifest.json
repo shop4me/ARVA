@@ -310,5 +310,48 @@
       "filename": "alto-sectional-dimensions-diagram.webp",
       "role": "dimensions"
     }
+  ],
+  "alto-loveseat": [
+    {
+      "source": "assets/alto-loveseat/ChatGPT Image Feb 17, 2026, 04_46_12 PM.png",
+      "output": "/images/products/alto-loveseat/alto-loveseat-cloud-couch-ivory-hero-01.webp",
+      "filename": "alto-loveseat-cloud-couch-ivory-hero-01.webp"
+    },
+    {
+      "source": "assets/alto-loveseat/ChatGPT Image Feb 17, 2026, 04_46_08 PM.png",
+      "output": "/images/products/alto-loveseat/alto-loveseat-modular-sofa-oat-angle-02.webp",
+      "filename": "alto-loveseat-modular-sofa-oat-angle-02.webp"
+    },
+    {
+      "source": "assets/alto-loveseat/ChatGPT Image Feb 17, 2026, 04_46_05 PM.png",
+      "output": "/images/products/alto-loveseat/alto-loveseat-cloud-sofa-stone-lifestyle-03.webp",
+      "filename": "alto-loveseat-cloud-sofa-stone-lifestyle-03.webp"
+    },
+    {
+      "source": "assets/alto-loveseat/ChatGPT Image Feb 17, 2026, 04_46_02 PM.png",
+      "output": "/images/products/alto-loveseat/alto-loveseat-modular-couch-mist-fabric-04.webp",
+      "filename": "alto-loveseat-modular-couch-mist-fabric-04.webp"
+    },
+    {
+      "source": "assets/alto-loveseat/ChatGPT Image Feb 17, 2026, 04_43_04 PM.png",
+      "output": "/images/products/alto-loveseat/alto-loveseat-cloud-couch-slate-seam-05.webp",
+      "filename": "alto-loveseat-cloud-couch-slate-seam-05.webp"
+    },
+    {
+      "source": "assets/alto-loveseat/ChatGPT Image Feb 17, 2026, 04_43_01 PM.png",
+      "output": "/images/products/alto-loveseat/alto-loveseat-modular-sofa-charcoal-detail-06.webp",
+      "filename": "alto-loveseat-modular-sofa-charcoal-detail-06.webp"
+    },
+    {
+      "source": "assets/alto-loveseat/ChatGPT Image Feb 17, 2026, 04_42_58 PM.png",
+      "output": "/images/products/alto-loveseat/alto-loveseat-cloud-sofa-sand-room-07.webp",
+      "filename": "alto-loveseat-cloud-sofa-sand-room-07.webp"
+    },
+    {
+      "source": "assets/alto-loveseat/dimensions.png",
+      "output": "/images/products/alto-loveseat/alto-loveseat-dimensions-diagram.webp",
+      "filename": "alto-loveseat-dimensions-diagram.webp",
+      "role": "dimensions"
+    }
   ]
 }
