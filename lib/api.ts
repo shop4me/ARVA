@@ -5,13 +5,26 @@
 import { posts, collections, type Product, type Post, type Collection } from "./content";
 import { readProducts, getProductDetailFromStore } from "./dataStore";
 
+const DISABLED_PRODUCT_SLUGS = new Set([
+  "bellini-sectional",
+  "bellini-3-seater",
+  "bellini-loveseat",
+]);
+
+const DISABLED_COLLECTION_SLUGS = new Set(["bellini"]);
+
+function isProductActive(product: Product): boolean {
+  return !DISABLED_PRODUCT_SLUGS.has(product.slug);
+}
+
 export async function getProducts(): Promise<Product[]> {
-  return readProducts();
+  const products = await readProducts();
+  return products.filter(isProductActive);
 }
 
 export async function getProduct(slug: string): Promise<Product | null> {
   const list = await readProducts();
-  return list.find((p) => p.slug === slug) ?? null;
+  return list.find((p) => p.slug === slug && isProductActive(p)) ?? null;
 }
 
 /** Alias for getProduct; use for product-by-slug in dynamic route. */
@@ -20,18 +33,19 @@ export async function getProductBySlug(slug: string): Promise<Product | null> {
 }
 
 export async function getCollections(): Promise<Collection[]> {
-  return collections;
+  return collections.filter((collection) => !DISABLED_COLLECTION_SLUGS.has(collection.slug));
 }
 
 export async function getCollection(slug: string): Promise<Collection | null> {
   const valid = ["atlas", "alto", "oris", "bellini"];
   if (!valid.includes(slug)) return null;
+  if (DISABLED_COLLECTION_SLUGS.has(slug)) return null;
   return collections.find((c) => c.slug === slug) ?? null;
 }
 
 export async function getProductsByCollection(collectionSlug: string): Promise<Product[]> {
   const list = await readProducts();
-  return list.filter((p) => p.collection === collectionSlug);
+  return list.filter((p) => p.collection === collectionSlug && isProductActive(p));
 }
 
 export async function getPosts(): Promise<Post[]> {
