@@ -34,7 +34,7 @@ export async function generateHeroImageFromReference(opts: {
   form.append("response_format", "b64_json");
   form.append(
     "image",
-    new Blob([pngBuffer], { type: "image/png" }),
+    new Blob([new Uint8Array(pngBuffer)], { type: "image/png" }),
     path.basename(opts.referenceImagePath, ext) + ".png"
   );
 
