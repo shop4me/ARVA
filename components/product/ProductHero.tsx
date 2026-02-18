@@ -119,9 +119,9 @@ export default function ProductHero({
   return (
     <section className="border-b border-arva-border/80 bg-arva-bg">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
-        <div className="space-y-8 lg:space-y-10">
-          {/* Images first, directly below header */}
-          <div className="space-y-4">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          {/* Left on desktop, first on mobile */}
+          <div className="space-y-4 order-1">
             {/* Hero: pure white background */}
             <button
               type="button"
@@ -169,8 +169,8 @@ export default function ProductHero({
             </div>
           </div>
 
-          {/* Product info and CTA below images */}
-          <div>
+          {/* Right on desktop, below images on mobile */}
+          <div className="order-2 lg:sticky lg:top-24">
             <h1 className="text-2xl sm:text-3xl font-semibold text-arva-text mb-1">
               {detail.pdpH1 ?? product.name}
             </h1>
@@ -275,7 +275,6 @@ export default function ProductHero({
                 ))}
               </ul>
             </div>
-          </div>
         </div>
       </div>
       {isLightboxOpen && activeImage && (
