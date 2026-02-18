@@ -43,19 +43,9 @@
   ],
   "alto-3-seater": [
     {
-      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_37_24 PM.png",
-      "output": "/images/products/alto-3-seater/alto-3-seater-v2-cloud-couch-ivory-hero-01.webp",
-      "filename": "alto-3-seater-v2-cloud-couch-ivory-hero-01.webp"
-    },
-    {
-      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_37_21 PM.png",
-      "output": "/images/products/alto-3-seater/alto-3-seater-v2-modular-sofa-oat-angle-02.webp",
-      "filename": "alto-3-seater-v2-modular-sofa-oat-angle-02.webp"
-    },
-    {
-      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_37_18 PM.png",
-      "output": "/images/products/alto-3-seater/alto-3-seater-v2-cloud-sofa-stone-lifestyle-03.webp",
-      "filename": "alto-3-seater-v2-cloud-sofa-stone-lifestyle-03.webp"
+      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_12_05 PM.png",
+      "output": "/images/products/alto-3-seater/alto-3-seater-v2-cloud-couch-slate-seam-05.webp",
+      "filename": "alto-3-seater-v2-cloud-couch-slate-seam-05.webp"
     },
     {
       "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_16_50 PM.png",
@@ -63,9 +53,19 @@
       "filename": "alto-3-seater-v2-modular-couch-mist-fabric-04.webp"
     },
     {
-      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_12_05 PM.png",
-      "output": "/images/products/alto-3-seater/alto-3-seater-v2-cloud-couch-slate-seam-05.webp",
-      "filename": "alto-3-seater-v2-cloud-couch-slate-seam-05.webp"
+      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_37_18 PM.png",
+      "output": "/images/products/alto-3-seater/alto-3-seater-v2-cloud-sofa-stone-lifestyle-03.webp",
+      "filename": "alto-3-seater-v2-cloud-sofa-stone-lifestyle-03.webp"
+    },
+    {
+      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_37_21 PM.png",
+      "output": "/images/products/alto-3-seater/alto-3-seater-v2-modular-sofa-oat-angle-02.webp",
+      "filename": "alto-3-seater-v2-modular-sofa-oat-angle-02.webp"
+    },
+    {
+      "source": "assets/alto-3-seater/ChatGPT Image Feb 16, 2026, 11_37_24 PM.png",
+      "output": "/images/products/alto-3-seater/alto-3-seater-v2-cloud-couch-ivory-hero-01.webp",
+      "filename": "alto-3-seater-v2-cloud-couch-ivory-hero-01.webp"
     },
     {
       "source": "assets/alto-3-seater/dimensions.png",
