@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { getProducts } from "@/lib/api";
+import { getProducts, getReviewSummariesBySlug } from "@/lib/api";
 import { absoluteUrl } from "@/lib/seo";
 import ProductCard from "@/components/ProductCard";
 
@@ -23,6 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function ProductsPage() {
   const products = await getProducts();
+  const reviewSummaries = await getReviewSummariesBySlug(products.map((p) => p.slug));
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
@@ -32,10 +33,10 @@ export default async function ProductsPage() {
       <p className="text-arva-text-muted mb-10">
         Premium sofas and sectionals for every space.
       </p>
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
         {products.map((product) => (
-          <li key={product.slug}>
-            <ProductCard product={product} />
+          <li key={product.slug} className="h-full">
+            <ProductCard product={product} reviewSummary={reviewSummaries[product.slug]} />
           </li>
         ))}
       </ul>

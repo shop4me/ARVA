@@ -3,7 +3,7 @@
  */
 
 import { posts, collections, type Product, type Post, type Collection } from "./content";
-import { readProducts, getProductDetailFromStore } from "./dataStore";
+import { readProducts, getProductDetailFromStore, readProductDetails } from "./dataStore";
 
 const DISABLED_PRODUCT_SLUGS = new Set([
   "bellini-sectional",
@@ -58,4 +58,20 @@ export async function getPost(slug: string): Promise<Post | null> {
 
 export async function getProductDetail(slug: string): Promise<import("./productDetail").ProductDetailData | null> {
   return getProductDetailFromStore(slug);
+}
+
+export type ReviewSummary = { count: number; rating: number };
+
+export async function getReviewSummariesBySlug(slugs: string[]): Promise<Record<string, ReviewSummary>> {
+  const details = await readProductDetails();
+  const map: Record<string, ReviewSummary> = {};
+  for (const slug of slugs) {
+    const reviewList = details[slug]?.reviews ?? [];
+    const count = reviewList.length;
+    if (!count) continue;
+    const total = reviewList.reduce((sum, r) => sum + (r.rating ?? 5), 0);
+    const rating = total / count;
+    map[slug] = { count, rating };
+  }
+  return map;
 }

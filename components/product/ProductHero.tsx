@@ -7,6 +7,7 @@ import FabricSwatches from "./FabricSwatches";
 import AddToCartButton from "./AddToCartButton";
 import ConfigSelector from "./ConfigSelector";
 import { TRUST_ITEMS } from "@/components/TrustIcons";
+import StarsInline from "@/components/StarsInline";
 
 /** Image hierarchy: 1) Hero (white bg), 2) Seam 3) Chamfer 4) Fabric texture 5) Lifestyle 6) Modular. No autoplay; manual thumbnail click only. */
 const THUMBNAIL_LABELS = [
@@ -66,7 +67,6 @@ export default function ProductHero({
   const averageRating = reviewsCount
     ? detail.reviews.reduce((sum, review) => sum + (review.rating ?? 5), 0) / reviewsCount
     : 5;
-  const roundedRating = Math.round(averageRating);
 
   useEffect(() => {
     if (activeIndex >= galleryImages.length) {
@@ -177,28 +177,8 @@ export default function ProductHero({
           {/* Right on desktop, below images on mobile */}
           <div className="order-2 lg:sticky lg:top-24 min-w-0">
             {reviewsCount > 0 && (
-              <div className="mb-3">
-                <div className="inline-flex items-center gap-2 rounded-full border border-arva-border bg-white/85 px-3 py-1 text-xs sm:text-sm">
-                  <div
-                    className="flex items-center gap-0.5"
-                    aria-label={`${averageRating.toFixed(1)} out of 5 stars`}
-                  >
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <span
-                        key={index}
-                        className={index < roundedRating ? "text-amber-500" : "text-neutral-300"}
-                        aria-hidden
-                      >
-                        ★
-                      </span>
-                    ))}
-                  </div>
-                  <span className="font-medium text-arva-text">{averageRating.toFixed(1)}</span>
-                  <span className="text-arva-text-muted" aria-hidden>
-                    ·
-                  </span>
-                  <span className="text-arva-text-muted">{reviewsCount} reviews</span>
-                </div>
+              <div className="mb-3 text-sm">
+                <StarsInline rating={averageRating} count={reviewsCount} />
               </div>
             )}
             <h1 className="text-2xl sm:text-3xl font-semibold text-arva-text mb-1 break-words">

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { getCollection, getProductsByCollection } from "@/lib/api";
+import { getCollection, getProductsByCollection, getReviewSummariesBySlug } from "@/lib/api";
 import { absoluteUrl } from "@/lib/seo";
 import ProductCard from "@/components/ProductCard";
 
@@ -40,6 +40,7 @@ export default async function CollectionPage({ params }: Props) {
   if (!collection) notFound();
 
   const products = await getProductsByCollection(slug);
+  const reviewSummaries = await getReviewSummariesBySlug(products.map((p) => p.slug));
 
   return (
     <article className="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
@@ -52,10 +53,10 @@ export default async function CollectionPage({ params }: Props) {
           {collection.description}
         </p>
       </header>
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
         {products.map((product) => (
-          <li key={product.slug}>
-            <ProductCard product={product} />
+          <li key={product.slug} className="h-full">
+            <ProductCard product={product} reviewSummary={reviewSummaries[product.slug]} />
           </li>
         ))}
       </ul>

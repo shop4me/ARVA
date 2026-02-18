@@ -10,12 +10,28 @@ export default function ComfortFeel({ detail }: { detail: ProductDetailData }) {
         </h2>
         <div className="grid lg:grid-cols-2 gap-10 items-center">
           <div className="space-y-4">
-            <div className="aspect-video rounded-xl bg-white border border-arva-border shadow-arva flex items-center justify-center text-arva-text-muted text-sm">
-              {labels[0]}
-            </div>
-            <div className="aspect-video rounded-xl bg-white border border-arva-border shadow-arva flex items-center justify-center text-arva-text-muted text-sm">
-              {labels[1]}
-            </div>
+            <figure className="aspect-video rounded-xl bg-white border border-arva-border shadow-arva overflow-hidden relative">
+              <img
+                src="/images/pdp/seat-depth.webp"
+                alt={labels[0]}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="absolute left-3 bottom-3 text-xs text-white/95 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
+                {labels[0]}
+              </figcaption>
+            </figure>
+            <figure className="aspect-video rounded-xl bg-white border border-arva-border shadow-arva overflow-hidden relative">
+              <img
+                src="/images/pdp/fabric-texture.webp"
+                alt={labels[1]}
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <figcaption className="absolute left-3 bottom-3 text-xs text-white/95 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
+                {labels[1]}
+              </figcaption>
+            </figure>
           </div>
           <p className="text-arva-text-muted leading-relaxed text-lg">
             {detail.comfortCopy}

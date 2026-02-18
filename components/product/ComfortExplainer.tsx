@@ -34,12 +34,28 @@ export default function ComfortExplainer() {
         </div>
         {/* Optional image row: fabric + seam close-up */}
         <div className="mt-12 grid grid-cols-2 gap-4 max-w-md mx-auto">
-          <div className="aspect-square rounded-xl bg-white border border-arva-border shadow-arva flex items-center justify-center text-arva-text-muted text-xs">
-            Fabric close-up
-          </div>
-          <div className="aspect-square rounded-xl bg-white border border-arva-border shadow-arva flex items-center justify-center text-arva-text-muted text-xs">
-            Seam close-up
-          </div>
+          <figure className="aspect-square rounded-xl bg-white border border-arva-border shadow-arva overflow-hidden relative">
+            <img
+              src="/images/pdp/fabric-texture.webp"
+              alt="Fabric close-up"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <figcaption className="absolute left-3 bottom-3 text-xs text-white/95 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
+              Fabric close-up
+            </figcaption>
+          </figure>
+          <figure className="aspect-square rounded-xl bg-white border border-arva-border shadow-arva overflow-hidden relative">
+            <img
+              src="/images/pdp/precision-seams.webp"
+              alt="Seam close-up"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+            <figcaption className="absolute left-3 bottom-3 text-xs text-white/95 drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]">
+              Seam close-up
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
