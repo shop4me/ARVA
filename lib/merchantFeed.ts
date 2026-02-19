@@ -7,6 +7,11 @@ import path from "path";
 import { imageSize } from "image-size";
 import type { Product } from "./content";
 import type { ProductDetailData, ProductDetailImages } from "./productDetail";
+import {
+  getRegularPrice,
+  getSalePrice,
+  runSafetyCheck,
+} from "./pricing";
 
 export type ConfigType = "Sectional" | "3 Seat" | "Loveseat" | "Sofa";
 
@@ -19,6 +24,8 @@ export interface MerchantItem {
   additional_image_link: string[];
   availability: "in_stock" | "out_of_stock" | "preorder";
   price: string;
+  /** Sale price: same currency as price; derived from LINE+CONFIG map. */
+  sale_price: string;
   condition: "new";
   brand: string;
   mpn: string;
@@ -90,6 +97,16 @@ function getProductDetailForItem(line: string, config: ConfigType): { attribute_
   const detail = DIMENSIONS_BY_LINE_CONFIG[key];
   if (!detail) return [];
   return detail.map((d) => ({ attribute_name: d.attribute_name, attribute_value: d.attribute_value }));
+}
+
+/** Build g:price (regular) and g:sale_price (sale) from shared pricing module. */
+function priceStringsForProduct(product: Product): { price: string; sale_price: string } {
+  const currency = product.currency ?? "USD";
+  const regular = getRegularPrice(product.slug);
+  const sale = getSalePrice(product.slug);
+  const price = regular != null ? `${Number(regular).toFixed(2)} ${currency}` : `${Number(product.price).toFixed(2)} ${currency}`;
+  const sale_price = sale != null ? `${Number(sale).toFixed(2)} ${currency}` : "";
+  return { price, sale_price };
 }
 
 /** Required value for google_product_category (exact spelling and hierarchy). */
@@ -499,6 +516,9 @@ function validateItemFields(item: MerchantItem): string[] {
   if (!item.title.trim()) failures.push(`${item.id}: missing title`);
   if (!item.description.trim()) failures.push(`${item.id}: missing description`);
   if (!/^\d+(\.\d{2})\s[A-Z]{3}$/.test(item.price)) failures.push(`${item.id}: invalid price format (${item.price})`);
+  if (!item.sale_price || !/^\d+(\.\d{2})\s[A-Z]{3}$/.test(item.sale_price)) {
+    failures.push(`${item.id}: missing or invalid sale_price (${item.sale_price})`);
+  }
   if (!["in_stock", "out_of_stock", "preorder"].includes(item.availability)) {
     failures.push(`${item.id}: invalid availability (${item.availability})`);
   }
@@ -514,6 +534,11 @@ export async function buildMerchantItems(
   baseUrl: string,
   productDetails?: Record<string, ProductDetailData>
 ): Promise<MerchantItem[]> {
+  const safety = runSafetyCheck();
+  if (!safety.ok) {
+    throw new Error(safety.message ?? "Price map failed safety check. Fix lib/pricing.ts before generating feed.");
+  }
+
   const items: MerchantItem[] = [];
   const skipped: string[] = [];
 
@@ -539,6 +564,8 @@ export async function buildMerchantItems(
       additionalPaths.map((p) => toAbsoluteUrl(baseUrl, p))
     );
 
+    const { price: priceStr, sale_price: salePriceStr } = priceStringsForProduct(product);
+
     for (const color of FEED_COLORS) {
       const colorSlug = colorToSlug(color);
       const mpn = `ARVA-${lineNameFromSlug(product.slug).toUpperCase()}-${configSlugForMpn(config)}-${colorToMpnSegment(color)}`;
@@ -550,7 +577,8 @@ export async function buildMerchantItems(
         image_link: imageLink,
         additional_image_link: additionalImageLinks,
         availability: toAvailability(product.stockStatus),
-        price: `${Number(product.price).toFixed(2)} ${product.currency ?? "USD"}`,
+        price: priceStr,
+        sale_price: salePriceStr,
         condition: "new",
         brand: "ARVA",
         mpn,
@@ -613,6 +641,7 @@ export function toMerchantXml(items: MerchantItem[], baseUrl: string): string {
         ...item.additional_image_link.map((url) => `  <g:additional_image_link>${escapeXml(url)}</g:additional_image_link>`),
         `  <g:availability>${escapeXml(item.availability)}</g:availability>`,
         `  <g:price>${escapeXml(item.price)}</g:price>`,
+        ...(item.sale_price ? [`  <g:sale_price>${escapeXml(item.sale_price)}</g:sale_price>`] : []),
         `  <g:condition>${escapeXml(item.condition)}</g:condition>`,
         `  <g:brand>${escapeXml(item.brand)}</g:brand>`,
         `  <g:mpn>${escapeXml(item.mpn)}</g:mpn>`,
@@ -675,6 +704,7 @@ export function toMerchantCsv(items: MerchantItem[]): string {
     "additional_image_link",
     "availability",
     "price",
+    "sale_price",
     "condition",
     "brand",
     "mpn",
@@ -704,6 +734,7 @@ export function toMerchantCsv(items: MerchantItem[]): string {
       item.additional_image_link.join(","),
       item.availability,
       item.price,
+      item.sale_price ?? "",
       item.condition,
       item.brand,
       item.mpn,

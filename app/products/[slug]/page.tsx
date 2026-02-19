@@ -9,6 +9,7 @@ import {
   buildMerchantTitle,
   getMerchantHeroImagePath,
 } from "@/lib/merchantFeed";
+import { getEffectiveSalePrice } from "@/lib/pricing";
 import ProductHero from "@/components/product/ProductHero";
 import TrustStrip from "@/components/product/TrustStrip";
 import PdpJumpLinks from "@/components/product/PdpJumpLinks";
@@ -60,7 +61,7 @@ export default async function ProductPage({ params }: Props) {
   if (!product) notFound();
 
   const detail = await getProductDetail(slug);
-  const priceForSchema = detail?.displayPrice ?? product.price;
+  const priceForSchema = getEffectiveSalePrice(slug, detail?.displayPrice ?? product.price);
   const nameForSchema = buildMerchantTitle(product);
   const descriptionForSchema = buildMerchantDescription(product);
   const imageForSchema = getMerchantHeroImagePath(product.slug) ?? product.image;
@@ -125,7 +126,7 @@ export default async function ProductPage({ params }: Props) {
           {product.name}
         </h1>
         <p className="text-2xl text-arva-text mb-6">
-          ${product.price.toLocaleString()} {product.currency}
+          ${getEffectiveSalePrice(slug, product.price).toLocaleString()} {product.currency}
         </p>
         <div className="min-h-[280px] rounded-xl bg-neutral-50 border border-arva-border mb-8 flex items-center justify-center text-arva-text-muted text-sm">
           {product.name}

@@ -75,6 +75,37 @@ async function main() {
   if (withCategory !== items.length || withShipping !== items.length || withHighlights !== items.length) {
     throw new Error("Enrichment validation failed: every item must have category, shipping, and 3 highlights");
   }
+
+  // Sale price summary: every item has sale_price; counts per bucket; example IDs
+  const withSalePrice = items.filter((i) => i.sale_price?.trim()).length;
+  if (withSalePrice !== items.length) throw new Error(`Sale price validation failed: ${withSalePrice}/${items.length} items have sale_price`);
+  const bucketLabels: Record<string, string> = {
+    "atlas-sectional": "Atlas Sectional",
+    "atlas-3-seat": "Atlas 3 Seat",
+    "atlas-loveseat": "Atlas Loveseat",
+    "alto-sectional": "Alto Sectional",
+    "alto-3-seat": "Alto 3 Seat",
+    "alto-loveseat": "Alto Loveseat",
+    "oris-sectional": "Oris Sectional",
+    "oris-3-seat": "Oris 3 Seat",
+    "oris-loveseat": "Oris Loveseat",
+  };
+  console.log("");
+  console.log("--- Sale price summary ---");
+  console.log("Total items processed:", items.length);
+  console.log("Items with sale_price:", withSalePrice);
+  console.log("Count per bucket:");
+  for (const g of expectedGroups) {
+    const count = byGroup[g] ?? 0;
+    const example = items.find((i) => i.item_group_id === g);
+    const ex = example ? `  e.g. ${example.id}  price=${example.price}  sale_price=${example.sale_price}` : "";
+    console.log(`  ${bucketLabels[g] ?? g}: ${count}${ex}`);
+  }
+  console.log("Example IDs per bucket (first item):");
+  for (const g of expectedGroups) {
+    const example = items.find((i) => i.item_group_id === g);
+    if (example) console.log(`  ${bucketLabels[g] ?? g}: ${example.id}  price=${example.price}  sale_price=${example.sale_price}`);
+  }
 }
 
 main().catch((err) => {

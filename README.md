@@ -25,6 +25,13 @@ Open [http://localhost:3000](http://localhost:3000) (or 3001 if 3000 is in use).
 - **Products and PDP details:** `data/products.json` and `data/productDetails.json`
 - **Blog posts:** `data/posts.json`
 
+## How to change promo pricing in future
+
+- **Single source of truth:** `lib/pricing.ts` — edit `REGULAR_PRICE_BY_LINE_CONFIG` (crossed-out price) and `SALE_PRICE_BY_LINE_CONFIG` (price charged). Both the website and the Google Merchant feed use these maps.
+- **Safety:** If any bucket has regular &lt; 100 and sale &gt; 900, the app will not use the promo maps (website falls back to product price; feed script throws). Run `npx tsx scripts/verify_pricing.ts` to print the safety table before deploying.
+- **Website:** PDP shows regular (struck through) and sale as the main price; cart and checkout charge the sale price. No need to edit `data/products.json` for promo prices.
+- **Feed:** Regenerate after changing prices: `npm run feed:merchant`. Output is `public/merchant/feed.xml`; the live route builds the feed from the same code. Keep `g:price` = regular and `g:sale_price` = sale so Google shows the discount and avoids price mismatch disapprovals.
+
 ## Blog generator
 
 Generate and publish the five ARVA blog articles via OpenAI (server only).

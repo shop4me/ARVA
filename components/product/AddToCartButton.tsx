@@ -3,6 +3,7 @@
 import { useCart } from "@/context/CartContext";
 import type { Product } from "@/lib/content";
 import type { ProductDetailData } from "@/lib/productDetail";
+import { getEffectiveSalePrice } from "@/lib/pricing";
 
 interface AddToCartButtonProps {
   product: Product;
@@ -18,7 +19,7 @@ export default function AddToCartButton({
   children,
 }: AddToCartButtonProps) {
   const { addItem } = useCart();
-  const price = detail?.displayPrice ?? product.price;
+  const price = getEffectiveSalePrice(product.slug, detail?.displayPrice ?? product.price);
 
   return (
     <button

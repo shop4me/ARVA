@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState, type TouchEvent } from "react";
 import type { Product } from "@/lib/content";
 import type { ProductDetailData } from "@/lib/productDetail";
+import { getEffectiveSalePrice, getEffectiveCompareAtPrice } from "@/lib/pricing";
 import FabricSwatches from "./FabricSwatches";
 import AddToCartButton from "./AddToCartButton";
 import ConfigSelector from "./ConfigSelector";
@@ -39,7 +40,8 @@ export default function ProductHero({
   relatedProducts?: Product[];
   basePath?: string;
 }) {
-  const price = detail.displayPrice ?? product.price;
+  const price = getEffectiveSalePrice(product.slug, detail?.displayPrice ?? product.price);
+  const compareAt = getEffectiveCompareAtPrice(product.slug);
   const iconSmall = "w-4 h-4 shrink-0 text-arva-accent";
   const IconDelivery = TRUST_ITEMS[4].Icon;
   const IconTrial = TRUST_ITEMS[0].Icon;
@@ -188,7 +190,14 @@ export default function ProductHero({
               {detail.pdpH2 ?? detail.subhead}
             </h2>
             <p className="text-2xl font-semibold text-arva-text mb-1">
-              ${price.toLocaleString()}
+              {compareAt != null ? (
+                <>
+                  <span className="line-through text-arva-text-muted font-normal mr-2">${compareAt.toLocaleString()}</span>
+                  ${price.toLocaleString()}
+                </>
+              ) : (
+                `$${price.toLocaleString()}`
+              )}
             </p>
             <p className="text-sm text-arva-text-muted mb-2">
               Comparable cloud-style sectionals often start at $2,500+.

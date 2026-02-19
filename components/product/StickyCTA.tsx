@@ -5,6 +5,7 @@ import { useCart } from "@/context/CartContext";
 import { Icon100DayTrial } from "@/components/TrustIcons";
 import type { Product } from "@/lib/content";
 import type { ProductDetailData } from "@/lib/productDetail";
+import { getEffectiveSalePrice } from "@/lib/pricing";
 
 export default function StickyCTA({
   product,
@@ -15,7 +16,7 @@ export default function StickyCTA({
 }) {
   const [visible, setVisible] = useState(false);
   const { addItem } = useCart();
-  const price = detail?.displayPrice ?? product.price;
+  const price = getEffectiveSalePrice(product.slug, detail?.displayPrice ?? product.price);
 
   useEffect(() => {
     const el = document.getElementById("pdp-hero-cta");

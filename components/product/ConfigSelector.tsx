@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Product } from "@/lib/content";
+import { getEffectiveSalePrice, getEffectiveCompareAtPrice } from "@/lib/pricing";
 
 const BEST_FOR: Record<string, string> = {
   sectional: "Best for anchoring a living room",
@@ -27,7 +28,8 @@ export default function ConfigSelector({
         {relatedProducts.map((p) => {
           const isCurrent = p.slug === currentProduct.slug;
           const bestFor = BEST_FOR[p.category] ?? "Modular design";
-          const price = p.price;
+          const price = getEffectiveSalePrice(p.slug, p.price);
+          const compareAt = getEffectiveCompareAtPrice(p.slug);
 
           if (isCurrent) {
             return (
@@ -38,7 +40,16 @@ export default function ConfigSelector({
                 <p className="font-medium text-arva-text text-sm sm:text-base break-words">
                   {p.category === "three-seater" ? "3-Seater" : p.category === "sectional" ? "Sectional" : "Loveseat"}
                 </p>
-                <p className="text-arva-text font-semibold mt-0.5">${price.toLocaleString()}</p>
+                <p className="text-arva-text font-semibold mt-0.5">
+                  {compareAt != null ? (
+                    <>
+                      <span className="line-through text-arva-text-muted font-normal mr-1">${compareAt.toLocaleString()}</span>
+                      ${price.toLocaleString()}
+                    </>
+                  ) : (
+                    `$${price.toLocaleString()}`
+                  )}
+                </p>
                 <p className="text-arva-text-muted text-xs mt-1">{bestFor}</p>
               </div>
             );
@@ -53,7 +64,16 @@ export default function ConfigSelector({
               <p className="font-medium text-arva-text text-sm sm:text-base">
                 {p.category === "three-seater" ? "3-Seater" : p.category === "sectional" ? "Sectional" : "Loveseat"}
               </p>
-              <p className="text-arva-text font-semibold mt-0.5">${price.toLocaleString()}</p>
+              <p className="text-arva-text font-semibold mt-0.5">
+                {compareAt != null ? (
+                  <>
+                    <span className="line-through text-arva-text-muted font-normal mr-1">${compareAt.toLocaleString()}</span>
+                    ${price.toLocaleString()}
+                  </>
+                ) : (
+                  `$${price.toLocaleString()}`
+                )}
+              </p>
               <p className="text-arva-text-muted text-xs mt-1 break-words">{bestFor}</p>
             </Link>
           );
