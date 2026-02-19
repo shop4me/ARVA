@@ -8,7 +8,6 @@ import {
   buildMerchantDescription,
   buildMerchantTitle,
   getMerchantHeroImagePath,
-  loadSelectedKeywords,
 } from "@/lib/merchantFeed";
 import ProductHero from "@/components/product/ProductHero";
 import TrustStrip from "@/components/product/TrustStrip";
@@ -35,9 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = await getProductBySlug(slug);
   if (!product) return { title: "Product Not Found" };
 
-  const keywords = await loadSelectedKeywords();
-  const title = buildMerchantTitle(product, keywords);
-  const description = buildMerchantDescription(product, keywords);
+  const title = buildMerchantTitle(product);
+  const description = buildMerchantDescription(product);
   const canonical = absoluteUrl(`/products/${slug}`);
 
   return {
@@ -63,9 +61,8 @@ export default async function ProductPage({ params }: Props) {
 
   const detail = await getProductDetail(slug);
   const priceForSchema = detail?.displayPrice ?? product.price;
-  const keywords = await loadSelectedKeywords();
-  const nameForSchema = buildMerchantTitle(product, keywords);
-  const descriptionForSchema = buildMerchantDescription(product, keywords);
+  const nameForSchema = buildMerchantTitle(product);
+  const descriptionForSchema = buildMerchantDescription(product);
   const imageForSchema = getMerchantHeroImagePath(product.slug) ?? product.image;
   const jsonLd = productJsonLd({
     name: nameForSchema,

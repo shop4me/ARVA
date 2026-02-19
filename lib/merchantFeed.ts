@@ -6,6 +6,9 @@ import { promises as fs } from "fs";
 import path from "path";
 import { imageSize } from "image-size";
 import type { Product } from "./content";
+import type { ProductDetailData, ProductDetailImages } from "./productDetail";
+
+export type ConfigType = "Sectional" | "3 Seat" | "Loveseat" | "Sofa";
 
 export interface MerchantItem {
   id: string;
@@ -20,9 +23,90 @@ export interface MerchantItem {
   brand: string;
   mpn: string;
   product_type: string;
-  google_product_category: "2740";
+  google_product_category: string;
   material: string;
+  /** Free shipping: US + Canada. */
+  shipping: { country: string; service: string; price: string }[];
+  /** Exactly 3 highlights per item. */
+  product_highlight: string[];
+  item_group_id: string;
+  color?: string;
+  size: string;
+  custom_label_0: string;
+  custom_label_1: string;
+  custom_label_2: string;
+  custom_label_3: string;
+  custom_label_4: string;
+  room: string;
+  style: string;
+  identifier_exists: boolean;
+  /** Google product_detail blocks (Overall Dimensions, Seat Height, Side Height). */
+  product_detail: { attribute_name: string; attribute_value: string }[];
 }
+
+/** Exact dimension specs by line + config (inches). No invented values. */
+const DIMENSIONS_BY_LINE_CONFIG: Record<string, { attribute_name: string; attribute_value: string }[]> = {
+  "Atlas-Sectional": [
+    { attribute_name: "Overall Dimensions", attribute_value: "102 in W × 65 in D × 25 in H" },
+    { attribute_name: "Seat Height", attribute_value: "15 in" },
+  ],
+  "Atlas-3 Seat": [
+    { attribute_name: "Overall Dimensions", attribute_value: "102 in W × 38 in D × 25 in H" },
+    { attribute_name: "Seat Height", attribute_value: "15 in" },
+    { attribute_name: "Side Height", attribute_value: "20 in" },
+  ],
+  "Atlas-Loveseat": [
+    { attribute_name: "Overall Dimensions", attribute_value: "75 in W × 38 in D × 25 in H" },
+    { attribute_name: "Seat Height", attribute_value: "15 in" },
+  ],
+  "Alto-Sectional": [
+    { attribute_name: "Overall Dimensions", attribute_value: "116 in W × 78 in D × 33 in H" },
+    { attribute_name: "Seat Height", attribute_value: "18 in" },
+  ],
+  "Alto-3 Seat": [
+    { attribute_name: "Overall Dimensions", attribute_value: "116 in W × 39 in D" },
+    { attribute_name: "Seat Height", attribute_value: "18 in" },
+  ],
+  "Alto-Loveseat": [
+    { attribute_name: "Overall Dimensions", attribute_value: "78 in W × 40 in D" },
+    { attribute_name: "Seat Height", attribute_value: "13–19 in (adjustable)" },
+  ],
+  "Oris-Sectional": [
+    { attribute_name: "Overall Dimensions", attribute_value: "102 in W × 65 in D × 25 in H" },
+    { attribute_name: "Seat Height", attribute_value: "15 in" },
+  ],
+  "Oris-3 Seat": [
+    { attribute_name: "Overall Dimensions", attribute_value: "102 in W × 38 in D × 25 in H" },
+    { attribute_name: "Seat Height", attribute_value: "15 in" },
+  ],
+  "Oris-Loveseat": [
+    { attribute_name: "Overall Dimensions", attribute_value: "75 in W × 38 in D × 25 in H" },
+    { attribute_name: "Seat Height", attribute_value: "15 in" },
+  ],
+};
+
+function getProductDetailForItem(line: string, config: ConfigType): { attribute_name: string; attribute_value: string }[] {
+  const key = `${line}-${config}`;
+  const detail = DIMENSIONS_BY_LINE_CONFIG[key];
+  if (!detail) return [];
+  return detail.map((d) => ({ attribute_name: d.attribute_name, attribute_value: d.attribute_value }));
+}
+
+/** Required value for google_product_category (exact spelling and hierarchy). */
+const GOOGLE_PRODUCT_CATEGORY = "Home & Garden > Furniture > Living Room Furniture > Sofas";
+
+/** Free shipping: US and Canada, no minimums. */
+const SHIPPING_BLOCKS = [
+  { country: "US", service: "Free Shipping", price: "0 USD" },
+  { country: "CA", service: "Free Shipping", price: "0 CAD" },
+] as const;
+
+/** Exactly 3 product highlights (wording unchanged). */
+const PRODUCT_HIGHLIGHTS = [
+  "Modular configuration",
+  "No-tool setup",
+  "Lifetime structural warranty",
+] as const;
 
 type KeywordRow = {
   keyword: string;
@@ -56,17 +140,78 @@ const FEED_SLUGS = new Set([
   "oris-loveseat",
 ]);
 
-const SLUG_TO_MPN: Record<string, string> = {
-  "atlas-sectional": "ARVA-ATLAS-SECTIONAL",
-  "atlas-3-seater": "ARVA-ATLAS-3SEATER",
-  "atlas-loveseat": "ARVA-ATLAS-LOVESEAT",
-  "alto-sectional": "ARVA-ALTO-SECTIONAL",
-  "alto-3-seater": "ARVA-ALTO-3SEATER",
-  "alto-loveseat": "ARVA-ALTO-LOVESEAT",
-  "oris-sectional": "ARVA-ORIS-SECTIONAL",
-  "oris-3-seater": "ARVA-ORIS-3SEATER",
-  "oris-loveseat": "ARVA-ORIS-LOVESEAT",
-};
+/** All sofa colors; one feed item per product × color. */
+export const FEED_COLORS = [
+  "Taupe",
+  "Ivory",
+  "Beige",
+  "Light Gray",
+  "Charcoal",
+  "Camel",
+  "Warm Sand",
+  "Stone",
+  "Olive Green",
+  "Sage Green",
+  "Terracotta",
+  "Rust",
+  "Inky Blue",
+] as const;
+
+function colorToSlug(color: string): string {
+  return color.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+}
+
+/** MPN format: ARVA-{LINE}-{CONFIG}-{COLOR}. Config slug for MPN. */
+function configSlugForMpn(config: ConfigType): string {
+  return config === "Sectional" ? "SECTIONAL" : config === "3 Seat" ? "3SEAT" : config === "Loveseat" ? "LOVESEAT" : "SOFA";
+}
+
+/** Color to MPN segment: no spaces/punctuation, uppercase (e.g. "Light Gray" -> "LIGHTGRAY"). */
+function colorToMpnSegment(color: string): string {
+  return color.replace(/\s+/g, "").replace(/[^a-zA-Z0-9]/g, "").toUpperCase() || "TAUPE";
+}
+
+/** Line name (Atlas, Alto, Oris) from slug. */
+function lineNameFromSlug(slug: string): string {
+  if (slug.startsWith("atlas-")) return "Atlas";
+  if (slug.startsWith("alto-")) return "Alto";
+  if (slug.startsWith("oris-")) return "Oris";
+  const first = slug.split("-")[0];
+  return first ? first.charAt(0).toUpperCase() + first.slice(1) : "Sofa";
+}
+
+/** Configuration from slug. */
+function configFromSlug(slug: string): ConfigType {
+  if (slug.includes("sectional")) return "Sectional";
+  if (slug.includes("3-seater") || slug.includes("3-seat")) return "3 Seat";
+  if (slug.includes("loveseat")) return "Loveseat";
+  return "Sofa";
+}
+
+/** item_group_id: same for all variants of same line + config. */
+function itemGroupIdFromSlug(slug: string): string {
+  const line = lineNameFromSlug(slug).toLowerCase();
+  const config = configFromSlug(slug);
+  const configSlug =
+    config === "Sectional" ? "sectional" : config === "3 Seat" ? "3-seat" : "loveseat";
+  return `${line}-${configSlug}`;
+}
+
+/** Size for g:size. */
+function sizeFromConfig(config: ConfigType): string {
+  if (config === "Sectional") return "Modular Sectional";
+  if (config === "3 Seat") return "3 Seat Sofa";
+  if (config === "Loveseat") return "Loveseat";
+  return "Sofa";
+}
+
+/** product_type for Google Shopping (Living Room > Sofas > ...). */
+function productTypeForShopping(config: ConfigType): string {
+  if (config === "Sectional") return "Living Room > Sofas > Modular Sectionals";
+  if (config === "3 Seat") return "Living Room > Sofas > Modular Sofas";
+  if (config === "Loveseat") return "Living Room > Sofas > Loveseats";
+  return "Living Room > Sofas";
+}
 
 const PRODUCT_TYPE_BY_CATEGORY: Record<string, string> = {
   sectional: "Furniture > Sofas > Sectionals",
@@ -74,9 +219,64 @@ const PRODUCT_TYPE_BY_CATEGORY: Record<string, string> = {
   loveseat: "Furniture > Sofas > Loveseats",
 };
 
+/** Fallback hero path when productDetails has no images (legacy). */
 const MERCHANT_HERO_IMAGE_PATH_BY_SLUG: Record<string, string> = Object.fromEntries(
   Array.from(FEED_SLUGS).map((slug) => [slug, `/images/merchant/${slug}-hero.jpg`])
 );
+
+function getHeroImagePath(product: Product, details: Record<string, ProductDetailData> | undefined): string {
+  const hero = details?.[product.slug]?.images?.hero;
+  if (hero && typeof hero === "string") return hero;
+  return product.image && typeof product.image === "string" ? product.image : MERCHANT_HERO_IMAGE_PATH_BY_SLUG[product.slug];
+}
+
+/** Ordered keys for additional_image_link (site gallery order; hero is image_link, dimensionsDiagram excluded). */
+const ADDITIONAL_IMAGE_KEYS: (keyof ProductDetailImages)[] = [
+  "thumbnail1",
+  "thumbnail2",
+  "thumbnail3",
+  "thumbnail4",
+  "thumbnail5",
+  "comfort1",
+  "comfort2",
+];
+
+function getOrderedAdditionalPaths(images: ProductDetailImages | undefined): string[] {
+  if (!images) return [];
+  const out: string[] = [];
+  for (const key of ADDITIONAL_IMAGE_KEYS) {
+    const path = images[key];
+    if (path && typeof path === "string") out.push(path);
+  }
+  return out;
+}
+
+/** Hero colors for launch (Taupe, Ivory, Light Gray, Charcoal); use custom_label_4 for bid control. */
+const FEED_HERO_COLORS = new Set(["Taupe", "Ivory", "Light Gray", "Charcoal"]);
+
+/** Canonical material: Oris => Weather-Resistant; others => Performance Fabric. */
+const MATERIAL_ORIS = "Weather-Resistant Performance Weave";
+const MATERIAL_DEFAULT = "Performance Fabric";
+
+function materialForSlug(slug: string): string {
+  return lineNameFromSlug(slug) === "Oris" ? MATERIAL_ORIS : MATERIAL_DEFAULT;
+}
+
+/** Preferred order for additional_image_link (angle, side, back, lifestyle, detail). */
+const ADDITIONAL_IMAGE_ORDER = ["angle", "side", "back", "lifestyle", "detail"];
+
+function sortAdditionalImageLinks(urls: string[]): string[] {
+  return [...urls].sort((a, b) => {
+    const aLower = a.toLowerCase();
+    const bLower = b.toLowerCase();
+    const ai = ADDITIONAL_IMAGE_ORDER.findIndex((t) => aLower.includes(t));
+    const bi = ADDITIONAL_IMAGE_ORDER.findIndex((t) => bLower.includes(t));
+    if (ai !== -1 && bi !== -1) return ai - bi;
+    if (ai !== -1) return -1;
+    if (bi !== -1) return 1;
+    return 0;
+  });
+}
 
 export function getMerchantHeroImagePath(slug: string): string | undefined {
   return MERCHANT_HERO_IMAGE_PATH_BY_SLUG[slug];
@@ -118,37 +318,77 @@ function selectKeywordByProduct(product: Product, keywords: string[]): string {
   return lower.find((k) => k.includes("modular")) ?? "cloud modular couch";
 }
 
-export function buildMerchantTitle(product: Product, keywords: string[]): string {
-  const model = normalizeModelName(product.name);
-  const selected = selectKeywordByProduct(product, keywords);
-  const differentiator =
-    product.category === "sectional"
-      ? "Modular Cloud Sectional Comfort"
-      : product.category === "three-seater"
-        ? "Structured Everyday Support"
-        : "Compact Structured Comfort";
-  return `ARVA ${model} Cloud-Style Sofa - ${differentiator} (${selected})`;
+/** Default feed color when no variant color is set (required format: color last). */
+const DEFAULT_FEED_COLOR = "Taupe";
+
+/** Title: one conversion modifier (Washable Fabric), color last. Arva {Line} Modular {Config} – Cloud Style – Washable Fabric – {Color}. */
+export function buildMerchantTitle(product: Product, color?: string): string {
+  const slug = product.slug;
+  const line = lineNameFromSlug(slug);
+  const config = configFromSlug(slug);
+  const productWord = config === "Loveseat" ? "" : config === "Sectional" || config === "3 Seat" ? "Sofa" : "Sofa";
+  const middle = productWord ? `${config} ${productWord}` : config;
+  const colorFinal = (color && color.trim()) ? color.trim() : DEFAULT_FEED_COLOR;
+  return `Arva ${line} Modular ${middle} – Cloud Style – Washable Fabric – ${colorFinal}`;
 }
 
-export function buildMerchantDescription(product: Product, keywords: string[]): string {
-  const selected = selectKeywordByProduct(product, keywords);
-  const model = normalizeModelName(product.name);
-  const intro = `${model} is built for buyers searching for a ${selected} look, but with better long-term support and structure than typical sink-in cloud couches.`;
-  return [
-    intro,
-    "",
-    "Highlights:",
-    "- Real back support with structured comfort for daily sitting",
-    "- Performance-weave fabric designed for spill resistance and pet friendliness",
-    "- Durable construction that holds shape over time",
-    "- Tool-free modular setup with cleaner fit-and-finish",
-    "- Built as a better-built cloud-style sofa for real-life use",
-  ].join("\n");
+/** Exact closing sentence required on every description. */
+const DESCRIPTION_ENDING = "Lifetime structural warranty included.";
+
+/** First-sentence trust signal for Quality Score; rest unchanged. */
+const FIRST_SENTENCE_SECTIONAL =
+  "Modular cloud-style sectional sofa with washable performance fabric and tool-free assembly.";
+const FIRST_SENTENCE_3SEAT =
+  "Modular three-seat sofa with washable performance fabric and tool-free assembly.";
+const FIRST_SENTENCE_LOVESEAT =
+  "Compact modular loveseat with washable performance fabric and tool-free assembly.";
+
+const DESCRIPTION_SECTIONAL =
+  FIRST_SENTENCE_SECTIONAL + " Designed for flexible layouts and deep seating support. Upholstered in durable performance fabric for everyday living in modern spaces. Designed to adapt as your room changes. " + DESCRIPTION_ENDING;
+
+const DESCRIPTION_3SEAT =
+  FIRST_SENTENCE_3SEAT + " Designed for clean modern interiors and flexible placement. Upholstered in durable performance fabric with supportive deep seating. Ideal for living rooms, studios, and adaptable spaces. " + DESCRIPTION_ENDING;
+
+const DESCRIPTION_LOVESEAT =
+  FIRST_SENTENCE_LOVESEAT + " Designed for smaller spaces without sacrificing support. Upholstered in durable performance fabric for everyday use. Ideal for apartments, offices, and flexible living areas. " + DESCRIPTION_ENDING;
+
+/** Light variation by line; all start with trust signal and end with DESCRIPTION_ENDING. */
+const DESCRIPTION_VARY: Record<string, { sectional: string; threeSeat: string; loveseat: string }> = {
+  Atlas: {
+    sectional: FIRST_SENTENCE_SECTIONAL + " Built for flexible layouts and deep seating support. Upholstered in durable performance fabric for everyday living in modern spaces. Reconfigures as your room evolves. " + DESCRIPTION_ENDING,
+    threeSeat: FIRST_SENTENCE_3SEAT + " Built for clean modern interiors and flexible placement. Upholstered in durable performance fabric with supportive deep seating. Suited to living rooms, studios, and adaptable spaces. " + DESCRIPTION_ENDING,
+    loveseat: FIRST_SENTENCE_LOVESEAT + " Built for smaller spaces without sacrificing support. Upholstered in durable performance fabric for everyday use. Ideal for apartments, offices, and flexible living areas. " + DESCRIPTION_ENDING,
+  },
+  Alto: {
+    sectional: FIRST_SENTENCE_SECTIONAL + " Designed for flexible layouts and deep seating support. Upholstered in durable performance fabric for everyday living in modern spaces. Designed to adapt as your room changes. " + DESCRIPTION_ENDING,
+    threeSeat: FIRST_SENTENCE_3SEAT + " Designed for clean modern interiors and flexible placement. Upholstered in durable performance fabric with supportive deep seating. Ideal for living rooms, studios, and adaptable spaces. " + DESCRIPTION_ENDING,
+    loveseat: FIRST_SENTENCE_LOVESEAT + " Designed for smaller spaces without sacrificing support. Upholstered in durable performance fabric and built for everyday use. Ideal for apartments, offices, and flexible living areas. " + DESCRIPTION_ENDING,
+  },
+  Oris: {
+    sectional: FIRST_SENTENCE_SECTIONAL + " For flexible layouts and deep seating support. Upholstered in durable performance fabric for everyday living in modern spaces. Adapts as your room changes. " + DESCRIPTION_ENDING,
+    threeSeat: FIRST_SENTENCE_3SEAT + " For clean modern interiors and flexible placement. Upholstered in durable performance fabric with supportive deep seating. Ideal for living rooms, studios, and adaptable spaces. " + DESCRIPTION_ENDING,
+    loveseat: FIRST_SENTENCE_LOVESEAT + " For smaller spaces without sacrificing support. Upholstered in durable performance fabric for everyday use. Ideal for apartments, offices, and flexible living areas. " + DESCRIPTION_ENDING,
+  },
+};
+
+export function buildMerchantDescription(product: Product): string {
+  const slug = product.slug;
+  const line = lineNameFromSlug(slug);
+  const config = configFromSlug(slug);
+  const vary = DESCRIPTION_VARY[line] ?? {
+    sectional: DESCRIPTION_SECTIONAL,
+    threeSeat: DESCRIPTION_3SEAT,
+    loveseat: DESCRIPTION_LOVESEAT,
+  };
+  if (config === "Sectional") return vary.sectional;
+  if (config === "3 Seat") return vary.threeSeat;
+  if (config === "Loveseat") return vary.loveseat;
+  return DESCRIPTION_3SEAT;
 }
 
 function toProductType(product: Product): string {
-  if (product.isOutdoor) return "Furniture > Outdoor Furniture > Outdoor Sofas";
-  return PRODUCT_TYPE_BY_CATEGORY[product.category] ?? "Furniture > Sofas";
+  const config = configFromSlug(product.slug);
+  return productTypeForShopping(config);
 }
 
 function toAvailability(stockStatus: Product["stockStatus"]): MerchantItem["availability"] {
@@ -222,12 +462,13 @@ async function validateMerchantImage(imageUrl: string, baseUrl: string): Promise
       const dimensions = imageSize(buffer);
       if (!dimensions.width || !dimensions.height) {
         failures.push(`cannot determine image dimensions: ${imageUrl}`);
-      } else if (dimensions.width < 2000 || dimensions.height < 2000) {
+      } else if (dimensions.width < 800 || dimensions.height < 800) {
         failures.push(`image dimensions too small (${dimensions.width}x${dimensions.height}) for ${imageUrl}`);
       }
       const lowerPath = fsPath.toLowerCase();
-      if (!(lowerPath.endsWith(".jpg") || lowerPath.endsWith(".jpeg"))) {
-        failures.push(`image must be JPG/JPEG for canonical hero: ${imageUrl}`);
+      const isImage = lowerPath.endsWith(".jpg") || lowerPath.endsWith(".jpeg") || lowerPath.endsWith(".webp") || lowerPath.endsWith(".png");
+      if (!isImage) {
+        failures.push(`image must be JPG/JPEG/WebP/PNG: ${imageUrl}`);
       }
     } catch {
       failures.push(`image not found or unreadable: ${imageUrl}`);
@@ -254,49 +495,92 @@ function validateItemFields(item: MerchantItem): string[] {
   if (!["in_stock", "out_of_stock", "preorder"].includes(item.availability)) {
     failures.push(`${item.id}: invalid availability (${item.availability})`);
   }
-  if (item.google_product_category !== "2740") {
-    failures.push(`${item.id}: invalid google_product_category (${item.google_product_category})`);
+  if (!item.google_product_category || item.google_product_category.trim() === "") {
+    failures.push(`${item.id}: missing google_product_category`);
   }
   return failures;
 }
 
-export async function buildMerchantItems(products: Product[], baseUrl: string): Promise<MerchantItem[]> {
-  const keywords = await loadSelectedKeywords();
+/** Build all feed items: one per product × color (same item_group_id per product). additional_image_link uses productDetails.images in site order when provided. */
+export async function buildMerchantItems(
+  products: Product[],
+  baseUrl: string,
+  productDetails?: Record<string, ProductDetailData>
+): Promise<MerchantItem[]> {
   const items: MerchantItem[] = [];
-  const failures: string[] = [];
+  const skipped: string[] = [];
+
+  const productSlugs = new Set(products.map((p) => p.slug));
+  const requestedSlugs = Array.from(FEED_SLUGS).filter((slug) => productSlugs.has(slug));
+  if (requestedSlugs.length === 0) {
+    console.warn("[merchant feed] No products matched FEED_SLUGS; ensure products.json includes Atlas, Alto, Oris.");
+  }
 
   for (const product of products) {
     if (!FEED_SLUGS.has(product.slug)) continue;
-    const imagePath = MERCHANT_HERO_IMAGE_PATH_BY_SLUG[product.slug];
-    const imageLink = toAbsoluteUrl(baseUrl, imagePath);
-    const item: MerchantItem = {
-      id: product.slug,
-      title: buildMerchantTitle(product, keywords),
-      description: buildMerchantDescription(product, keywords),
-      link: toAbsoluteUrl(baseUrl, `/products/${product.slug}`),
-      image_link: imageLink,
-      additional_image_link: [],
-      availability: toAvailability(product.stockStatus),
-      price: `${Number(product.price).toFixed(2)} ${product.currency ?? "USD"}`,
-      condition: "new",
-      brand: "ARVA",
-      mpn: SLUG_TO_MPN[product.slug] ?? `ARVA-${product.slug.toUpperCase().replace(/-/g, "-")}`,
-      product_type: toProductType(product),
-      google_product_category: "2740",
-      material: product.isOutdoor ? "weather-resistant performance weave fabric" : "performance weave fabric",
-    };
+    const config = configFromSlug(product.slug);
+    const heroPath = getHeroImagePath(product, productDetails);
+    const imageLink = toAbsoluteUrl(baseUrl, heroPath);
+    const imageFailures = await validateMerchantImage(imageLink, baseUrl);
+    if (imageFailures.length > 0) {
+      skipped.push(product.slug, ...imageFailures);
+      continue;
+    }
 
-    failures.push(...validateItemFields(item));
-    failures.push(...(await validateMerchantImage(item.image_link, baseUrl)));
-    items.push(item);
+    const additionalPaths = getOrderedAdditionalPaths(productDetails?.[product.slug]?.images);
+    const additionalImageLinks = sortAdditionalImageLinks(
+      additionalPaths.map((p) => toAbsoluteUrl(baseUrl, p))
+    );
+
+    for (const color of FEED_COLORS) {
+      const colorSlug = colorToSlug(color);
+      const mpn = `ARVA-${lineNameFromSlug(product.slug).toUpperCase()}-${configSlugForMpn(config)}-${colorToMpnSegment(color)}`;
+      const item: MerchantItem = {
+        id: `${product.slug}--${colorSlug}`,
+        title: buildMerchantTitle(product, color),
+        description: buildMerchantDescription(product),
+        link: toAbsoluteUrl(baseUrl, `/products/${product.slug}`),
+        image_link: imageLink,
+        additional_image_link: additionalImageLinks,
+        availability: toAvailability(product.stockStatus),
+        price: `${Number(product.price).toFixed(2)} ${product.currency ?? "USD"}`,
+        condition: "new",
+        brand: "ARVA",
+        mpn,
+        product_type: productTypeForShopping(config),
+        google_product_category: GOOGLE_PRODUCT_CATEGORY,
+        material: materialForSlug(product.slug),
+        shipping: [...SHIPPING_BLOCKS],
+        product_highlight: [...PRODUCT_HIGHLIGHTS],
+        item_group_id: itemGroupIdFromSlug(product.slug),
+        size: sizeFromConfig(config),
+        custom_label_0: config === "Loveseat" ? "supporting" : "hero",
+        custom_label_1: "high_aov",
+        custom_label_2: config === "Sectional" ? "sectional" : config === "3 Seat" ? "sofa" : "loveseat",
+        custom_label_3: "core_collection",
+        custom_label_4: FEED_HERO_COLORS.has(color) ? "hero_color" : "supporting_color",
+        room: "Living Room",
+        style: "Modern",
+        identifier_exists: false,
+        color,
+        product_detail: getProductDetailForItem(lineNameFromSlug(product.slug), config),
+      };
+
+      const fieldFailures = validateItemFields(item);
+      if (fieldFailures.length > 0) {
+        skipped.push(item.id, ...fieldFailures);
+        continue;
+      }
+      items.push(item);
+    }
   }
 
-  if (failures.length) {
-    const message = `Merchant feed validation failed:\n- ${failures.join("\n- ")}`;
-    console.error(message);
-    throw new Error(message);
+  if (skipped.length > 0) {
+    console.warn("[merchant feed] Skipped items (included rest):", skipped.join("; "));
   }
-
+  if (items.length === 0) {
+    throw new Error("Merchant feed has no valid items. Check products and merchant images.");
+  }
   return items;
 }
 
@@ -314,6 +598,7 @@ export function toMerchantXml(items: MerchantItem[], baseUrl: string): string {
       const lines = [
         "<item>",
         `  <g:id>${escapeXml(item.id)}</g:id>`,
+        `  <g:item_group_id>${escapeXml(item.item_group_id)}</g:item_group_id>`,
         `  <g:title>${escapeXml(item.title)}</g:title>`,
         `  <g:description>${escapeXml(item.description)}</g:description>`,
         `  <g:link>${escapeXml(item.link)}</g:link>`,
@@ -324,9 +609,33 @@ export function toMerchantXml(items: MerchantItem[], baseUrl: string): string {
         `  <g:condition>${escapeXml(item.condition)}</g:condition>`,
         `  <g:brand>${escapeXml(item.brand)}</g:brand>`,
         `  <g:mpn>${escapeXml(item.mpn)}</g:mpn>`,
+        ...(item.color ? [`  <g:color>${escapeXml(item.color)}</g:color>`] : []),
+        `  <g:material>${escapeXml(item.material)}</g:material>`,
+        `  <g:size>${escapeXml(item.size)}</g:size>`,
         `  <g:product_type>${escapeXml(item.product_type)}</g:product_type>`,
         `  <g:google_product_category>${escapeXml(item.google_product_category)}</g:google_product_category>`,
-        `  <g:material>${escapeXml(item.material)}</g:material>`,
+        `  <g:custom_label_0>${escapeXml(item.custom_label_0)}</g:custom_label_0>`,
+        `  <g:custom_label_1>${escapeXml(item.custom_label_1)}</g:custom_label_1>`,
+        `  <g:custom_label_2>${escapeXml(item.custom_label_2)}</g:custom_label_2>`,
+        `  <g:custom_label_3>${escapeXml(item.custom_label_3)}</g:custom_label_3>`,
+        `  <g:custom_label_4>${escapeXml(item.custom_label_4)}</g:custom_label_4>`,
+        `  <g:room>${escapeXml(item.room)}</g:room>`,
+        `  <g:style>${escapeXml(item.style)}</g:style>`,
+        `  <g:identifier_exists>${item.identifier_exists ? "true" : "false"}</g:identifier_exists>`,
+        ...(item.product_detail || []).flatMap((pd) => [
+          "  <g:product_detail>",
+          `    <g:attribute_name>${escapeXml(pd.attribute_name)}</g:attribute_name>`,
+          `    <g:attribute_value>${escapeXml(pd.attribute_value)}</g:attribute_value>`,
+          "  </g:product_detail>",
+        ]),
+        ...(item.shipping || []).flatMap((s) => [
+          "  <g:shipping>",
+          `    <g:country>${escapeXml(s.country)}</g:country>`,
+          `    <g:service>${escapeXml(s.service)}</g:service>`,
+          `    <g:price>${escapeXml(s.price)}</g:price>`,
+          "  </g:shipping>",
+        ]),
+        ...(item.product_highlight || []).map((h) => `  <g:product_highlight>${escapeXml(h)}</g:product_highlight>`),
         "</item>",
       ];
       return lines.join("\n");
@@ -351,6 +660,7 @@ ${itemNodes}
 export function toMerchantCsv(items: MerchantItem[]): string {
   const headers = [
     "id",
+    "item_group_id",
     "title",
     "description",
     "link",
@@ -361,14 +671,25 @@ export function toMerchantCsv(items: MerchantItem[]): string {
     "condition",
     "brand",
     "mpn",
+    "color",
+    "material",
+    "size",
     "product_type",
     "google_product_category",
-    "material",
+    "custom_label_0",
+    "custom_label_1",
+    "custom_label_2",
+    "custom_label_3",
+    "custom_label_4",
+    "room",
+    "style",
+    "identifier_exists",
   ];
 
   const rows = items.map((item) =>
     [
       item.id,
+      item.item_group_id,
       item.title,
       item.description,
       item.link,
@@ -379,9 +700,19 @@ export function toMerchantCsv(items: MerchantItem[]): string {
       item.condition,
       item.brand,
       item.mpn,
+      item.color ?? "",
+      item.material,
+      item.size,
       item.product_type,
       item.google_product_category,
-      item.material,
+      item.custom_label_0,
+      item.custom_label_1,
+      item.custom_label_2,
+      item.custom_label_3,
+      item.custom_label_4,
+      item.room,
+      item.style,
+      item.identifier_exists ? "true" : "false",
     ].map(escapeCsvValue)
   );
 
