@@ -109,13 +109,13 @@ function priceStringsForProduct(product: Product): { price: string; sale_price: 
   return { price, sale_price };
 }
 
-/** Required value for google_product_category (exact spelling and hierarchy). */
-const GOOGLE_PRODUCT_CATEGORY = "Home & Garden > Furniture > Living Room Furniture > Sofas";
+/** Google product category: use numeric ID from official taxonomy (Furniture = 436). */
+const GOOGLE_PRODUCT_CATEGORY = "436";
 
-/** Free shipping: US and Canada, no minimums. */
+/** Free shipping: US and Canada. Single currency (USD) for all price attributes to avoid GMC "Inconsistent currencies". */
 const SHIPPING_BLOCKS = [
   { country: "US", service: "Free Shipping", price: "0 USD" },
-  { country: "CA", service: "Free Shipping", price: "0 CAD" },
+  { country: "CA", service: "Free Shipping", price: "0 USD" },
 ] as const;
 
 /** Exactly 3 product highlights (wording unchanged). */
@@ -242,10 +242,10 @@ const MERCHANT_HERO_IMAGE_PATH_BY_SLUG: Record<string, string> = Object.fromEntr
 );
 
 /**
- * Feed image_link: use canonical hero. For oris-3-seater, use ivory-hero so Google can process
- * (sand-room hero has triggered "Image not processed" in Merchant Center).
+ * Feed image_link: use JPG hero for oris-3-seater so Google Merchant Center can process reliably
+ * (WebP/sand-room heroes have triggered "Image not processed" in GMC).
  */
-const ORIS_3SEATER_FEED_HERO = "/images/products/oris-3-seater/oris-3-seater-cloud-couch-ivory-hero-01.webp";
+const ORIS_3SEATER_FEED_HERO = "/images/merchant/oris-3-seater-hero.jpg";
 
 function getHeroImagePath(product: Product, details: Record<string, ProductDetailData> | undefined): string {
   if (product.slug === "oris-3-seater") return ORIS_3SEATER_FEED_HERO;
