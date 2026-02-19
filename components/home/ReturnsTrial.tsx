@@ -1,10 +1,10 @@
 import { returnsTrial } from "@/lib/homepage";
-import { Icon100DayTrial, IconReturnPickup } from "@/components/TrustIcons";
+import { Icon100DayTrial, IconReturnPickup, IconCheckCircle } from "@/components/TrustIcons";
 
 const RETURNS_LIST = [
   { label: "100-day trial", Icon: Icon100DayTrial },
   { label: "$99 flat pickup fee", Icon: IconReturnPickup },
-  { label: "No restocking fees", Icon: null },
+  { label: "No restocking fees", Icon: IconCheckCircle },
   { label: "Carrier-assisted return", Icon: IconReturnPickup },
 ];
 
@@ -23,7 +23,7 @@ export default function ReturnsTrial() {
         <ul className="mt-8 text-left inline-block space-y-2 text-sm text-arva-text-muted">
           {RETURNS_LIST.map(({ label, Icon }) => (
             <li key={label} className="flex items-center gap-2">
-              {Icon ? <Icon className="w-5 h-5 shrink-0 text-arva-accent" /> : <span className="w-5 h-5 shrink-0 flex items-center justify-center text-arva-accent">•</span>}
+              <Icon className="w-5 h-5 shrink-0 text-arva-accent" />
               <span>{label}</span>
             </li>
           ))}

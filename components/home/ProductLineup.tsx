@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { productLineup } from "@/lib/homepage";
 import { getProducts } from "@/lib/api";
+import { IconBulletCheck } from "@/components/TrustIcons";
 
 export default async function ProductLineup() {
   const products = await getProducts();
@@ -52,8 +53,8 @@ export default async function ProductLineup() {
               </p>
               <ul className="space-y-2 mb-6 flex-1 text-sm text-arva-text-muted">
                 {item.bullets.map((b) => (
-                  <li key={b} className="flex gap-2">
-                    <span className="text-arva-accent shrink-0">—</span>
+                  <li key={b} className="flex gap-2 items-start">
+                    <IconBulletCheck />
                     {b}
                   </li>
                 ))}

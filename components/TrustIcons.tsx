@@ -2,6 +2,25 @@ import React from "react";
 
 const iconClass = "w-5 h-5 shrink-0 text-arva-accent";
 
+/** Minimal checkmark for list bullets (ProductLineup, WhyArva). */
+export function IconBulletCheck({ className = "w-4 h-4 shrink-0 text-arva-accent/80" }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M3 8l3 3 7-7" />
+    </svg>
+  );
+}
+
+/** Check in circle for “no fee” / positive assurance (e.g. No restocking fees). */
+export function IconCheckCircle({ className = iconClass }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <circle cx="12" cy="12" r="10" />
+      <path d="M9 12l2 2 4-4" />
+    </svg>
+  );
+}
+
 export function Icon100DayTrial({ className = iconClass }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>

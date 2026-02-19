@@ -1,4 +1,5 @@
 import { whyArva } from "@/lib/homepage";
+import { IconBulletCheck } from "@/components/TrustIcons";
 
 export default function WhyArva() {
   return (
@@ -11,8 +12,8 @@ export default function WhyArva() {
           <p>{whyArva.intro}</p>
           <ul className="list-none space-y-2 pl-0">
             {whyArva.bullets.map((b, i) => (
-              <li key={i} className="flex gap-2">
-                <span className="text-arva-accent shrink-0">—</span>
+              <li key={i} className="flex gap-2 items-start">
+                <IconBulletCheck />
                 {b}
               </li>
             ))}

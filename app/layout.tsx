@@ -36,6 +36,18 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body className="min-h-screen flex flex-col bg-arva-bg text-arva-text font-sans">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17962701660"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17962701660');
+          `}
+        </Script>
         <Script id="yandex-metrica" strategy="afterInteractive">
           {`(function(m,e,t,r,i,k,a){
               m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
