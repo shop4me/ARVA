@@ -224,7 +224,14 @@ const MERCHANT_HERO_IMAGE_PATH_BY_SLUG: Record<string, string> = Object.fromEntr
   Array.from(FEED_SLUGS).map((slug) => [slug, `/images/merchant/${slug}-hero.jpg`])
 );
 
+/**
+ * Feed image_link: use canonical hero. For oris-3-seater, use ivory-hero so Google can process
+ * (sand-room hero has triggered "Image not processed" in Merchant Center).
+ */
+const ORIS_3SEATER_FEED_HERO = "/images/products/oris-3-seater/oris-3-seater-cloud-couch-ivory-hero-01.webp";
+
 function getHeroImagePath(product: Product, details: Record<string, ProductDetailData> | undefined): string {
+  if (product.slug === "oris-3-seater") return ORIS_3SEATER_FEED_HERO;
   const hero = details?.[product.slug]?.images?.hero;
   if (hero && typeof hero === "string") return hero;
   return product.image && typeof product.image === "string" ? product.image : MERCHANT_HERO_IMAGE_PATH_BY_SLUG[product.slug];
