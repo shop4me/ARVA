@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements, PaymentElement, useStripe, useElements } from "@stripe/react-stripe-js";
@@ -288,10 +288,17 @@ function CheckoutForm({
   );
 }
 
+declare global {
+  interface Window {
+    gtag_report_conversion?: (url?: string) => boolean;
+  }
+}
+
 export default function CheckoutPage() {
   const { items, clearCart } = useCart();
   const [clientSecret, setClientSecret] = useState<string | null>(null);
   const [placed, setPlaced] = useState(false);
+  const conversionFired = useRef(false);
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.location.search.includes("placed=1")) {
@@ -299,6 +306,14 @@ export default function CheckoutPage() {
       clearCart();
     }
   }, [clearCart]);
+
+  useEffect(() => {
+    if (!placed || conversionFired.current) return;
+    if (typeof window.gtag_report_conversion === "function") {
+      window.gtag_report_conversion();
+      conversionFired.current = true;
+    }
+  }, [placed]);
 
   useEffect(() => {
     if (items.length === 0) return;

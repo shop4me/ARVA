@@ -46,6 +46,22 @@ export default function RootLayout({
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'AW-17962701660');
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17962701660/1MhkCLmGgfsbENympPVC',
+                'value': 1.0,
+                'currency': 'USD',
+                'transaction_id': '',
+                'event_callback': callback
+              });
+              return false;
+            }
+            window.gtag_report_conversion = gtag_report_conversion;
           `}
         </Script>
         <Script id="yandex-metrica" strategy="afterInteractive">
