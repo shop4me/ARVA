@@ -12,6 +12,7 @@ import {
   getSalePrice,
   runSafetyCheck,
 } from "./pricing";
+import { getColorVariantHeroPath } from "./colorVariantImages";
 
 export type ConfigType = "Sectional" | "3 Seat" | "Loveseat" | "Sofa";
 
@@ -145,7 +146,7 @@ const KEYWORD_CSV_CANDIDATE_PATHS = [
   path.join(process.cwd(), "data", "keywords.csv"),
 ];
 
-const FEED_SLUGS = new Set([
+export const FEED_SLUGS = new Set([
   "atlas-sectional",
   "atlas-3-seater",
   "atlas-loveseat",
@@ -242,13 +243,21 @@ const MERCHANT_HERO_IMAGE_PATH_BY_SLUG: Record<string, string> = Object.fromEntr
 );
 
 /**
- * Feed image_link: use JPG hero for oris-3-seater so Google Merchant Center can process reliably
- * (WebP/sand-room heroes have triggered "Image not processed" in GMC).
+ * Feed image_link: use color-variant image when available (per variant).
+ * Fallback: oris-3-seater uses JPG hero; others use detail hero or product.image.
  */
-const ORIS_3SEATER_FEED_HERO = "/images/merchant/oris-3-seater-hero.jpg";
+const ORIS_3SEATER_FALLBACK_HERO = "/images/merchant/oris-3-seater-hero.jpg";
+
+function getHeroImagePathForFeed(
+  product: Product,
+  details: Record<string, ProductDetailData> | undefined,
+  color: string
+): string {
+  return getColorVariantHeroPath(product.slug, color);
+}
 
 function getHeroImagePath(product: Product, details: Record<string, ProductDetailData> | undefined): string {
-  if (product.slug === "oris-3-seater") return ORIS_3SEATER_FEED_HERO;
+  if (product.slug === "oris-3-seater") return ORIS_3SEATER_FALLBACK_HERO;
   const hero = details?.[product.slug]?.images?.hero;
   if (hero && typeof hero === "string") return hero;
   return product.image && typeof product.image === "string" ? product.image : MERCHANT_HERO_IMAGE_PATH_BY_SLUG[product.slug];
@@ -551,23 +560,29 @@ export async function buildMerchantItems(
   for (const product of products) {
     if (!FEED_SLUGS.has(product.slug)) continue;
     const config = configFromSlug(product.slug);
-    const heroPath = getHeroImagePath(product, productDetails);
-    const imageLink = toAbsoluteUrl(baseUrl, heroPath);
-    const imageFailures = await validateMerchantImage(imageLink, baseUrl);
-    if (imageFailures.length > 0) {
-      skipped.push(product.slug, ...imageFailures);
-      continue;
-    }
-
     const additionalPaths = getOrderedAdditionalPaths(productDetails?.[product.slug]?.images);
     const additionalImageLinks = sortAdditionalImageLinks(
       additionalPaths.map((p) => toAbsoluteUrl(baseUrl, p))
     );
-
     const { price: priceStr, sale_price: salePriceStr } = priceStringsForProduct(product);
 
     for (const color of FEED_COLORS) {
       const colorSlug = colorToSlug(color);
+      let heroPath = getHeroImagePathForFeed(product, productDetails, color);
+      let imageLink = toAbsoluteUrl(baseUrl, heroPath);
+      let imageFailures = await validateMerchantImage(imageLink, baseUrl);
+      if (imageFailures.length > 0) {
+        const fallbackPath = getHeroImagePath(product, productDetails);
+        const fallbackLink = toAbsoluteUrl(baseUrl, fallbackPath);
+        const fallbackFailures = await validateMerchantImage(fallbackLink, baseUrl);
+        if (fallbackFailures.length > 0) {
+          skipped.push(`${product.slug}--${colorSlug}`, ...fallbackFailures);
+          continue;
+        }
+        heroPath = fallbackPath;
+        imageLink = fallbackLink;
+      }
+
       const mpn = `ARVA-${lineNameFromSlug(product.slug).toUpperCase()}-${configSlugForMpn(config)}-${colorToMpnSegment(color)}`;
       const item: MerchantItem = {
         id: `${product.slug}--${colorSlug}`,

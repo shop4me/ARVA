@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, type TouchEvent } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, type TouchEvent } from "react";
 import type { Product } from "@/lib/content";
 import type { ProductDetailData } from "@/lib/productDetail";
 import { getEffectiveSalePrice, getEffectiveCompareAtPrice } from "@/lib/pricing";
+import { getColorVariantHeroPath } from "@/lib/colorVariantImages";
 import FabricSwatches from "./FabricSwatches";
 import AddToCartButton from "./AddToCartButton";
 import ConfigSelector from "./ConfigSelector";
@@ -47,8 +48,14 @@ export default function ProductHero({
   const IconTrial = TRUST_ITEMS[0].Icon;
   const IconWarranty = TRUST_ITEMS[3].Icon;
   const imageSet = detail.images;
+  const defaultHero = imageSet?.hero ?? product.image ?? "";
+  const [selectedFabric, setSelectedFabric] = useState(detail.fabricDefault ?? "");
+  const [heroFallback, setHeroFallback] = useState(false);
+  const colorVariantHero =
+    selectedFabric && !heroFallback ? getColorVariantHeroPath(product.slug, selectedFabric) : null;
+  const effectiveHero = colorVariantHero ?? defaultHero;
   const imageCandidates = [
-    imageSet?.hero ?? product.image,
+    effectiveHero,
     imageSet?.thumbnail1,
     imageSet?.thumbnail2,
     imageSet?.thumbnail3,
@@ -57,12 +64,21 @@ export default function ProductHero({
   ];
   const galleryImages = useMemo(
     () => imageCandidates.filter((img): img is string => Boolean(img)),
-    [imageSet?.hero, product.image, imageSet?.thumbnail1, imageSet?.thumbnail2, imageSet?.thumbnail3, imageSet?.thumbnail4, imageSet?.thumbnail5]
+    [effectiveHero, imageSet?.thumbnail1, imageSet?.thumbnail2, imageSet?.thumbnail3, imageSet?.thumbnail4, imageSet?.thumbnail5]
   );
   const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleFabricSelect = useCallback((name: string) => {
+    setSelectedFabric(name);
+    setHeroFallback(false);
+  }, []);
+  const handleHeroError = useCallback(() => {
+    setHeroFallback(true);
+  }, []);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [isDimensionsOpen, setIsDimensionsOpen] = useState(false);
   const touchStartX = useRef<number | null>(null);
+  const heroImgRef = useRef<HTMLImageElement | null>(null);
   const activeImage = galleryImages[activeIndex];
   const dimensionsImage = imageSet?.dimensionsDiagram;
   const reviewsCount = detail.reviews?.length ?? 0;
@@ -75,6 +91,19 @@ export default function ProductHero({
       setActiveIndex(0);
     }
   }, [activeIndex, galleryImages.length]);
+
+  // Fallback when color-variant image fails: onError may not fire in some environments (e.g. headless).
+  // Timeout is not cleared in cleanup so it still fires under React Strict Mode (double mount).
+  useEffect(() => {
+    if (!colorVariantHero || heroFallback || activeIndex !== 0) return;
+    const t = setTimeout(() => {
+      const img = heroImgRef.current;
+      if (img ? img.naturalWidth === 0 : true) {
+        setHeroFallback(true);
+      }
+    }, 2500);
+    return () => { /* intentional: do not clear so fallback runs under Strict Mode */ };
+  }, [colorVariantHero, heroFallback, activeIndex]);
 
   useEffect(() => {
     if (!isLightboxOpen) return;
@@ -139,10 +168,13 @@ export default function ProductHero({
             >
               {activeImage ? (
                 <img
+                  ref={activeIndex === 0 ? (el) => { heroImgRef.current = el; } : undefined}
+                  key={activeIndex === 0 ? effectiveHero : activeImage}
                   src={activeImage}
                   alt={`${product.name} image ${activeIndex + 1}`}
                   className="w-full h-full object-cover"
                   loading="eager"
+                  onError={activeIndex === 0 && colorVariantHero ? handleHeroError : undefined}
                 />
               ) : (
                 <span className="text-arva-text-muted text-sm">
@@ -261,6 +293,8 @@ export default function ProductHero({
               <FabricSwatches
                 options={detail.fabricOptions}
                 defaultName={detail.fabricDefault}
+                selected={selectedFabric || detail.fabricDefault}
+                onSelect={handleFabricSelect}
               />
             ) : (
               <div className="mb-6">

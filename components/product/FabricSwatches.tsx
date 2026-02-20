@@ -8,21 +8,31 @@ const VISIBLE_COUNT = 4;
 export default function FabricSwatches({
   options,
   defaultName,
+  selected: controlledSelected,
+  onSelect,
 }: {
   options: FabricOption[];
   defaultName: string;
+  /** When provided, component is controlled (caller manages selected fabric for hero image swap). */
+  selected?: string;
+  onSelect?: (fabricName: string) => void;
 }) {
-  const [selected, setSelected] = useState(defaultName);
+  const [internalSelected, setInternalSelected] = useState(defaultName);
   const [modalOpen, setModalOpen] = useState(false);
+  const selected = controlledSelected ?? internalSelected;
 
   const selectedOption = options.find((o) => o.name === selected) ?? options[0];
   const visible = options.slice(0, VISIBLE_COUNT);
   const hasMore = options.length > VISIBLE_COUNT;
 
-  const selectColor = useCallback((name: string) => {
-    setSelected(name);
-    setModalOpen(false);
-  }, []);
+  const selectColor = useCallback(
+    (name: string) => {
+      if (onSelect) onSelect(name);
+      else setInternalSelected(name);
+      setModalOpen(false);
+    },
+    [onSelect]
+  );
 
   if (!options.length) return null;
 
@@ -36,7 +46,7 @@ export default function FabricSwatches({
           <button
             key={opt.name}
             type="button"
-            onClick={() => setSelected(opt.name)}
+            onClick={() => selectColor(opt.name)}
             className={`w-10 h-10 rounded border-2 flex-shrink-0 transition ${
               selected === opt.name
                 ? "border-arva-accent ring-2 ring-arva-accent/20"

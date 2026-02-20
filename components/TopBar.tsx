@@ -18,7 +18,7 @@ function formatCountdown(seconds: number): string {
 }
 
 export default function TopBar() {
-  const [countdown, setCountdown] = useState(() => formatCountdown(getSecondsUntilMidnight()));
+  const [countdown, setCountdown] = useState("00:00:00");
 
   useEffect(() => {
     const tick = () => setCountdown(formatCountdown(getSecondsUntilMidnight()));
@@ -43,9 +43,11 @@ export default function TopBar() {
           ))}
         </div>
       </div>
-      {/* Countdown row — taller, different color */}
+      {/* Countdown row — taller, different color; same initial value on server/client to avoid hydration mismatch */}
       <div className="bg-arva-topbar text-white flex flex-wrap items-center justify-center gap-2 sm:gap-3 py-3 sm:py-4 px-4 text-center">
-        <span className="font-semibold tabular-nums text-2xl sm:text-3xl">{countdown}</span>
+        <span className="font-semibold tabular-nums text-2xl sm:text-3xl" suppressHydrationWarning>
+          {countdown}
+        </span>
         <span className="text-white/90 text-sm sm:text-xl">Sale ends today</span>
       </div>
     </div>
