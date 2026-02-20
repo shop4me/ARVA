@@ -58,3 +58,61 @@ export async function generateHeroImageFromReference(opts: {
   return { buffer: Buffer.from(b64, "base64"), mime: "image/png" };
 }
 
+/**
+ * Masked edit: only the masked region (upholstery) is edited.
+ * maskPath: PNG with white = upholstery, black = else. Converted to API format (transparent = edit).
+ */
+export async function generateHeroImageFromReferenceWithMask(opts: {
+  referenceImagePath: string;
+  maskPath: string;
+  prompt: string;
+  size: string;
+}): Promise<{ buffer: Buffer; mime: "image/png" }> {
+  const apiKey = await getOpenAiApiKey();
+  if (!apiKey) throw new Error("Missing OPENAI_API_KEY in server environment.");
+
+  const { maskToApiFormat } = await import("./maskUtils");
+  const referenceBuffer = await readFile(opts.referenceImagePath);
+  const ext = path.extname(opts.referenceImagePath).toLowerCase();
+  const pngBuffer =
+    ext === ".png"
+      ? await sharp(referenceBuffer).ensureAlpha().png().toBuffer()
+      : await sharp(referenceBuffer).ensureAlpha().png().toBuffer();
+
+  const apiMaskBuffer = await maskToApiFormat(opts.maskPath);
+
+  const form = new FormData();
+  form.append("model", "dall-e-2");
+  form.append("prompt", opts.prompt);
+  form.append("size", opts.size);
+  form.append("response_format", "b64_json");
+  form.append(
+    "image",
+    new Blob([new Uint8Array(pngBuffer)], { type: "image/png" }),
+    path.basename(opts.referenceImagePath, ext) + ".png"
+  );
+  form.append(
+    "mask",
+    new Blob([new Uint8Array(apiMaskBuffer)], { type: "image/png" }),
+    "mask.png"
+  );
+
+  const res = await fetch("https://api.openai.com/v1/images/edits", {
+    method: "POST",
+    headers: { Authorization: `Bearer ${apiKey}` },
+    body: form,
+  });
+
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`OpenAI images request failed (${res.status}). ${text.slice(0, 220)}`);
+  }
+
+  const json = (await res.json()) as any;
+  const b64 = json?.data?.[0]?.b64_json;
+  if (!b64 || typeof b64 !== "string") {
+    throw new Error("OpenAI images response missing b64_json.");
+  }
+
+  return { buffer: Buffer.from(b64, "base64"), mime: "image/png" };
+}

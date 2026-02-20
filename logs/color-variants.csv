@@ -1,0 +1,16 @@
+slug,colorName,hex,output_url,qa_pass,deltaE,outsideMaskDiff,timestamp
+atlas-sectional,Charcoal,#374151,,false,0.00,0.00,2026-02-20T07:54:43.604Z
+atlas-sectional,Charcoal,#374151,,false,0.00,0.00,2026-02-20T08:19:29.522Z
+atlas-sectional,Charcoal,#374151,/images/products/atlas-sectional/atlas-sectional-charcoal.jpg,true,45.43,0.59,2026-02-20T08:21:13.099Z
+atlas-sectional,Warm Ivory,#f5f0e8,/images/products/atlas-sectional/atlas-sectional-warm-ivory.jpg,true,16.98,0.68,2026-02-20T08:26:59.514Z
+atlas-sectional,Slate Gray,#6b7280,/images/products/atlas-sectional/atlas-sectional-slate-gray.jpg,true,33.58,0.97,2026-02-20T08:27:56.069Z
+atlas-sectional,Charcoal,#374151,/images/products/atlas-sectional/atlas-sectional-charcoal.jpg,true,0.00,0.00,2026-02-20T08:28:00.418Z
+atlas-sectional,Soft White,#fafaf8,/images/products/atlas-sectional/atlas-sectional-soft-white.jpg,true,21.10,0.61,2026-02-20T08:28:51.935Z
+atlas-sectional,Stone,#9ca3af,/images/products/atlas-sectional/atlas-sectional-stone.jpg,true,21.42,0.56,2026-02-20T08:29:49.873Z
+atlas-sectional,Mist,#d1d5db,/images/products/atlas-sectional/atlas-sectional-mist.jpg,true,14.34,0.67,2026-02-20T08:30:44.169Z
+atlas-sectional,Oatmeal,#e5e0d8,/images/products/atlas-sectional/atlas-sectional-oatmeal.jpg,true,12.89,0.57,2026-02-20T08:31:43.045Z
+atlas-sectional,Graphite,#4b5563,/images/products/atlas-sectional/atlas-sectional-graphite.jpg,true,41.18,0.54,2026-02-20T08:32:39.501Z
+atlas-3-seater,Warm Ivory,#f5f0e8,/images/products/atlas-3-seater/atlas-3-seater-warm-ivory.jpg,true,14.69,0.59,2026-02-20T08:33:34.572Z
+atlas-3-seater,Slate Gray,#6b7280,/images/products/atlas-3-seater/atlas-3-seater-slate-gray.jpg,true,27.09,0.68,2026-02-20T08:34:30.053Z
+atlas-3-seater,Charcoal,#374151,/images/products/atlas-3-seater/atlas-3-seater-charcoal.jpg,true,42.80,0.74,2026-02-20T08:35:19.915Z
+atlas-3-seater,Soft White,#fafaf8,/images/products/atlas-3-seater/atlas-3-seater-soft-white.jpg,true,18.70,0.57,2026-02-20T08:36:20.019Z

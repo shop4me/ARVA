@@ -25,6 +25,14 @@ Open [http://localhost:3000](http://localhost:3000) (or 3001 if 3000 is in use).
 - **Products and PDP details:** `data/products.json` and `data/productDetails.json`
 - **Blog posts:** `data/posts.json`
 
+## Color-variant hero images (PDP + Google Shopping)
+
+One photo-real hero image per sofa color; only upholstery color changes. Pipeline is mask-based and QA-gated. See **[docs/COLOR_VARIANTS.md](docs/COLOR_VARIANTS.md)** for:
+
+- **How to add a new color** (productDetails + masks + generator)
+- Scripts: `scripts/mask_preview.ts`, `scripts/generate_color_variants.ts`
+- Output: `public/images/products/{slug}/{slug}-{colorSlug}.jpg` (only if QA passes); previews in `/tmp/variant-previews/`; log in `logs/color-variants.csv`
+
 ## How to change promo pricing in future
 
 - **Single source of truth:** `lib/pricing.ts` — edit `REGULAR_PRICE_BY_LINE_CONFIG` (crossed-out price) and `SALE_PRICE_BY_LINE_CONFIG` (price charged). Both the website and the Google Merchant feed use these maps.
