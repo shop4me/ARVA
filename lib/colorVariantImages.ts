@@ -12,8 +12,12 @@ export function colorToSlug(color: string): string {
 /**
  * Path for a product's color-variant hero image (static file).
  * Use this for website hero swap and feed image_link.
+ * Atlas Sectional uses Cloud Couch hero WebPs: atlas-sectional-cloud-couch-{colorSlug}-hero-01.webp
  */
 export function getColorVariantHeroPath(slug: string, colorName: string): string {
   const colorSlug = colorToSlug(colorName);
+  if (slug === "atlas-sectional") {
+    return `/images/products/atlas-sectional/atlas-sectional-cloud-couch-${colorSlug}-hero-01.webp`;
+  }
   return `/images/products/${slug}/${slug}-${colorSlug}.jpg`;
 }

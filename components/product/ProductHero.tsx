@@ -51,9 +51,9 @@ export default function ProductHero({
   const defaultHero = imageSet?.hero ?? product.image ?? "";
   const [selectedFabric, setSelectedFabric] = useState(detail.fabricDefault ?? "");
   const [heroFallback, setHeroFallback] = useState(false);
-  // Only Atlas Sectional + Slate Gray uses a variant hero; all others use default hero when color selected.
+  // Atlas Sectional uses a per-color variant hero (WebP); other products use default hero when color selected.
   const colorVariantHero =
-    product.slug === "atlas-sectional" && selectedFabric === "Slate Gray" && !heroFallback
+    product.slug === "atlas-sectional" && selectedFabric && !heroFallback
       ? getColorVariantHeroPath(product.slug, selectedFabric)
       : null;
   const fabricFallbackHero =

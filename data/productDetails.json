@@ -259,11 +259,14 @@
       "comfort1": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-sand-room-07.webp",
       "comfort2": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-ash-modular-08.webp",
       "fabricHeroFallbacks": {
-        "Slate Gray": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-seam-05.webp",
-        "Charcoal": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-charcoal-detail-06.webp",
-        "Stone": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-stone-lifestyle-03.webp",
-        "Mist": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-mist-fabric-04.webp",
-        "Oatmeal": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-oat-angle-02.webp"
+        "Warm Ivory": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-warm-ivory-hero-01.webp",
+        "Slate Gray": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-gray-hero-01.webp",
+        "Charcoal": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-charcoal-hero-01.webp",
+        "Soft White": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-soft-white-hero-01.webp",
+        "Stone": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-stone-hero-01.webp",
+        "Mist": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-mist-hero-01.webp",
+        "Oatmeal": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-oatmeal-hero-01.webp",
+        "Graphite": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-graphite-hero-01.webp"
       }
     }
   },
