@@ -51,9 +51,10 @@ export default function ProductHero({
   const defaultHero = imageSet?.hero ?? product.image ?? "";
   const [selectedFabric, setSelectedFabric] = useState(detail.fabricDefault ?? "");
   const [heroFallback, setHeroFallback] = useState(false);
-  // Atlas Sectional uses a per-color variant hero (WebP); other products use default hero when color selected.
+  // Atlas Sectional: one hero image per fabric; use that URL directly for the main image when a fabric is selected.
+  const isAtlasSectional = product.slug === "atlas-sectional";
   const colorVariantHero =
-    product.slug === "atlas-sectional" && selectedFabric && !heroFallback
+    isAtlasSectional && selectedFabric && !heroFallback
       ? getColorVariantHeroPath(product.slug, selectedFabric)
       : null;
   const fabricFallbackHero =
@@ -73,10 +74,15 @@ export default function ProductHero({
   );
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // When fabric changes on Atlas Sectional, always show the main hero (index 0) so the color hero is visible.
+  useEffect(() => {
+    if (isAtlasSectional && selectedFabric) setActiveIndex(0);
+  }, [isAtlasSectional, selectedFabric]);
+
   const handleFabricSelect = useCallback((name: string) => {
     setSelectedFabric(name);
     setHeroFallback(false);
-    setActiveIndex(0); // show hero for the selected color, not a thumbnail
+    setActiveIndex(0);
   }, []);
   const handleHeroError = useCallback(() => {
     setHeroFallback(true);
@@ -86,6 +92,11 @@ export default function ProductHero({
   const touchStartX = useRef<number | null>(null);
   const heroImgRef = useRef<HTMLImageElement | null>(null);
   const activeImage = galleryImages[activeIndex];
+  // Main hero slot: for Atlas Sectional with a selected fabric, use the color-variant URL with cache-bust so the correct image always loads.
+  const mainHeroSrc =
+    activeIndex === 0 && isAtlasSectional && selectedFabric && colorVariantHero
+      ? `${colorVariantHero}?v=${encodeURIComponent(selectedFabric)}`
+      : activeImage;
   const dimensionsImage = imageSet?.dimensionsDiagram;
   const reviewsCount = detail.reviews?.length ?? 0;
   const averageRating = reviewsCount
@@ -175,8 +186,8 @@ export default function ProductHero({
               {activeImage ? (
                 <img
                   ref={activeIndex === 0 ? (el) => { heroImgRef.current = el; } : undefined}
-                  key={activeIndex === 0 ? `hero-${selectedFabric}-${effectiveHero}` : activeImage}
-                  src={activeImage}
+                  key={activeIndex === 0 ? `hero-${selectedFabric}-${colorVariantHero ?? effectiveHero}` : activeImage}
+                  src={mainHeroSrc}
                   alt={`${product.name} ${activeIndex === 0 && selectedFabric ? selectedFabric : ""} image ${activeIndex + 1}`.trim()}
                   className="w-full h-full object-cover"
                   loading="eager"
