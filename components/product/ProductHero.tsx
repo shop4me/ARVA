@@ -4,7 +4,6 @@ import { useCallback, useEffect, useMemo, useRef, useState, type TouchEvent } fr
 import type { Product } from "@/lib/content";
 import type { ProductDetailData } from "@/lib/productDetail";
 import { getEffectiveSalePrice, getEffectiveCompareAtPrice } from "@/lib/pricing";
-import { getColorVariantHeroPath, colorToSlug } from "@/lib/colorVariantImages";
 import FabricSwatches from "./FabricSwatches";
 import AddToCartButton from "./AddToCartButton";
 import ConfigSelector from "./ConfigSelector";
@@ -51,8 +50,8 @@ export default function ProductHero({
   const defaultHero = imageSet?.hero ?? product.image ?? "";
   const [selectedFabric, setSelectedFabric] = useState(detail.fabricDefault ?? "");
   const [heroFallback, setHeroFallback] = useState(false);
-  const colorVariantHero =
-    selectedFabric && !heroFallback ? getColorVariantHeroPath(product.slug, selectedFabric) : null;
+  // Color-variant hero disabled: always show original hero (restored pre–variant behavior).
+  const colorVariantHero = null;
   const fabricFallbackHero =
     heroFallback && selectedFabric ? imageSet?.fabricHeroFallbacks?.[selectedFabric] : undefined;
   const effectiveHero = colorVariantHero ?? fabricFallbackHero ?? defaultHero;
@@ -172,11 +171,7 @@ export default function ProductHero({
                 <img
                   ref={activeIndex === 0 ? (el) => { heroImgRef.current = el; } : undefined}
                   key={activeIndex === 0 ? `hero-${selectedFabric}-${effectiveHero}` : activeImage}
-                  src={
-                    activeIndex === 0 && colorVariantHero && selectedFabric
-                      ? `${activeImage}?_cb=${colorToSlug(selectedFabric)}`
-                      : activeImage
-                  }
+                  src={activeImage}
                   alt={`${product.name} ${activeIndex === 0 && selectedFabric ? selectedFabric : ""} image ${activeIndex + 1}`.trim()}
                   className="w-full h-full object-cover"
                   loading="eager"
