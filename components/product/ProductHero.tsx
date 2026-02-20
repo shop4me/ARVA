@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type TouchEvent } fr
 import type { Product } from "@/lib/content";
 import type { ProductDetailData } from "@/lib/productDetail";
 import { getEffectiveSalePrice, getEffectiveCompareAtPrice } from "@/lib/pricing";
+import { getColorVariantHeroPath } from "@/lib/colorVariantImages";
 import FabricSwatches from "./FabricSwatches";
 import AddToCartButton from "./AddToCartButton";
 import ConfigSelector from "./ConfigSelector";
@@ -50,8 +51,11 @@ export default function ProductHero({
   const defaultHero = imageSet?.hero ?? product.image ?? "";
   const [selectedFabric, setSelectedFabric] = useState(detail.fabricDefault ?? "");
   const [heroFallback, setHeroFallback] = useState(false);
-  // Color-variant hero disabled: always show original hero (restored pre–variant behavior).
-  const colorVariantHero = null;
+  // Only Atlas Sectional + Slate Gray uses a variant hero; all others use default hero when color selected.
+  const colorVariantHero =
+    product.slug === "atlas-sectional" && selectedFabric === "Slate Gray" && !heroFallback
+      ? getColorVariantHeroPath(product.slug, selectedFabric)
+      : null;
   const fabricFallbackHero =
     heroFallback && selectedFabric ? imageSet?.fabricHeroFallbacks?.[selectedFabric] : undefined;
   const effectiveHero = colorVariantHero ?? fabricFallbackHero ?? defaultHero;
