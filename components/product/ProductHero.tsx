@@ -76,6 +76,7 @@ export default function ProductHero({
   const handleFabricSelect = useCallback((name: string) => {
     setSelectedFabric(name);
     setHeroFallback(false);
+    setActiveIndex(0); // show hero for the selected color, not a thumbnail
   }, []);
   const handleHeroError = useCallback(() => {
     setHeroFallback(true);
