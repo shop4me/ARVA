@@ -30,8 +30,8 @@ const DELAY_MS = 3000; // Rate limit between OpenAI calls
 function getColorsForSlug(slug: string, details: Record<string, { fabricOptions?: { name: string }[] }>): string[] {
   const feedSet = new Set(FEED_COLORS);
   const fabricNames = details[slug]?.fabricOptions?.map((o) => o.name).filter(Boolean) ?? [];
-  const combined = new Set([...feedSet, ...fabricNames]);
-  return Array.from(combined);
+  fabricNames.forEach((name) => feedSet.add(name));
+  return Array.from(feedSet);
 }
 
 function sleep(ms: number): Promise<void> {
