@@ -4,7 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type TouchEvent } fr
 import type { Product } from "@/lib/content";
 import type { ProductDetailData } from "@/lib/productDetail";
 import { getEffectiveSalePrice, getEffectiveCompareAtPrice } from "@/lib/pricing";
-import { getColorVariantHeroPath } from "@/lib/colorVariantImages";
+import { getColorVariantHeroPath, colorToSlug } from "@/lib/colorVariantImages";
 import FabricSwatches from "./FabricSwatches";
 import AddToCartButton from "./AddToCartButton";
 import ConfigSelector from "./ConfigSelector";
@@ -171,9 +171,13 @@ export default function ProductHero({
               {activeImage ? (
                 <img
                   ref={activeIndex === 0 ? (el) => { heroImgRef.current = el; } : undefined}
-                  key={activeIndex === 0 ? effectiveHero : activeImage}
-                  src={activeImage}
-                  alt={`${product.name} image ${activeIndex + 1}`}
+                  key={activeIndex === 0 ? `hero-${selectedFabric}-${effectiveHero}` : activeImage}
+                  src={
+                    activeIndex === 0 && colorVariantHero && selectedFabric
+                      ? `${activeImage}?_cb=${colorToSlug(selectedFabric)}`
+                      : activeImage
+                  }
+                  alt={`${product.name} ${activeIndex === 0 && selectedFabric ? selectedFabric : ""} image ${activeIndex + 1}`.trim()}
                   className="w-full h-full object-cover"
                   loading="eager"
                   onError={activeIndex === 0 && colorVariantHero ? handleHeroError : undefined}
