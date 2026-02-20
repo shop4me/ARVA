@@ -28,7 +28,7 @@ const DELAY_MS = 3000; // Rate limit between OpenAI calls
 
 /** All colors to generate: feed colors + PDP fabric option names (for website swatch images). */
 function getColorsForSlug(slug: string, details: Record<string, { fabricOptions?: { name: string }[] }>): string[] {
-  const feedSet = new Set(FEED_COLORS);
+  const feedSet = new Set<string>(FEED_COLORS);
   const fabricNames = details[slug]?.fabricOptions?.map((o) => o.name).filter(Boolean) ?? [];
   fabricNames.forEach((name) => feedSet.add(name));
   return Array.from(feedSet);
