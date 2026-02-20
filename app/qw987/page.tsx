@@ -278,7 +278,8 @@ export default function AdminPage() {
               </p>
               <div className="space-y-4">
                 {IMAGE_LABELS.map(({ key, label }) => {
-                  const url = detail.images?.[key] ?? "";
+                  const raw = detail.images?.[key];
+                  const url = typeof raw === "string" ? raw : "";
                   return (
                     <div key={key} className="flex flex-col sm:flex-row sm:items-start gap-3 p-3 border border-arva-border/60 rounded-lg">
                       <div className="sm:w-32 shrink-0">
