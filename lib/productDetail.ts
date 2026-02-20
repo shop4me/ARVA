@@ -18,6 +18,8 @@ export interface ProductDetailImages {
   comfort1?: string;
   comfort2?: string;
   dimensionsDiagram?: string;
+  /** Optional: fabric name → image path when color-variant hero 404s (e.g. "Slate Gray" → slate seam image). */
+  fabricHeroFallbacks?: Record<string, string>;
 }
 
 export interface ProductDetailData {

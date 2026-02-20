@@ -53,7 +53,9 @@ export default function ProductHero({
   const [heroFallback, setHeroFallback] = useState(false);
   const colorVariantHero =
     selectedFabric && !heroFallback ? getColorVariantHeroPath(product.slug, selectedFabric) : null;
-  const effectiveHero = colorVariantHero ?? defaultHero;
+  const fabricFallbackHero =
+    heroFallback && selectedFabric ? imageSet?.fabricHeroFallbacks?.[selectedFabric] : undefined;
+  const effectiveHero = colorVariantHero ?? fabricFallbackHero ?? defaultHero;
   const imageCandidates = [
     effectiveHero,
     imageSet?.thumbnail1,
