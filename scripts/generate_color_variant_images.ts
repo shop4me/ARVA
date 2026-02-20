@@ -23,6 +23,10 @@ const SLUG_FILTER = (() => {
   const i = process.argv.indexOf("--slug");
   return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : null;
 })();
+const COLOR_FILTER = (() => {
+  const i = process.argv.indexOf("--color");
+  return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : null;
+})();
 
 const DELAY_MS = 3000; // Rate limit between OpenAI calls
 
@@ -71,7 +75,8 @@ async function main() {
       continue;
     }
 
-    const colors = getColorsForSlug(slug, details);
+    let colors = getColorsForSlug(slug, details);
+    if (COLOR_FILTER) colors = colors.filter((c) => c.toLowerCase() === COLOR_FILTER.toLowerCase());
     for (const color of colors) {
       const colorSlug = colorToSlug(color);
       const relPath = getColorVariantHeroPath(slug, color).replace(/^\//, "");
