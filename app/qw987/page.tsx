@@ -54,6 +54,8 @@ export default function AdminPage() {
   const [colorHeroCacheBust, setColorHeroCacheBust] = useState<Record<string, number>>({});
   /** Same for main product image fields (hero, thumbnails, etc.). */
   const [imageFieldCacheBust, setImageFieldCacheBust] = useState<Record<string, number>>({});
+  /** Brief confirmation after "Set as main image" */
+  const [mainImageConfirm, setMainImageConfirm] = useState<string | null>(null);
 
   const checkAuth = useCallback(async () => {
     const res = await fetch("/api/admin/me");
@@ -384,6 +386,7 @@ export default function AdminPage() {
                   <div className="space-y-4">
                     {detail.fabricOptions.map((opt) => {
                       const url = detail.images?.colorVariantHeros?.[opt.name] ?? "";
+                      const pathForColor = detail.images?.colorVariantHeros?.[opt.name] ?? detail.images?.fabricHeroFallbacks?.[opt.name];
                       return (
                         <div
                           key={opt.name}
@@ -411,7 +414,7 @@ export default function AdminPage() {
                               </div>
                             )}
                           </div>
-                          <div className="flex-1 min-w-0">
+                          <div className="flex-1 min-w-0 flex flex-wrap items-center gap-2">
                             <input
                               type="file"
                               accept="image/*"
@@ -429,6 +432,29 @@ export default function AdminPage() {
                             >
                               {uploadingColor === opt.name ? "Uploading…" : "Upload hero"}
                             </label>
+                            {pathForColor ? (
+                              <>
+                                <button
+                                  type="button"
+                                  onClick={() => {
+                                    setDetail((d) =>
+                                      d ? { ...d, images: { ...d.images, hero: pathForColor } } : null
+                                    );
+                                    setImageFieldCacheBust((prev) => ({ ...prev, hero: (prev?.hero ?? 0) + 1 }));
+                                    setMainImageConfirm("Main image has been set.");
+                                    setTimeout(() => setMainImageConfirm(null), 3000);
+                                  }}
+                                  className="px-3 py-1.5 border border-arva-accent text-arva-accent rounded-lg text-sm font-medium hover:bg-arva-accent/10"
+                                >
+                                  Set as main image
+                                </button>
+                                {detail.images?.hero === pathForColor ? (
+                                  <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-arva-accent/15 text-arva-accent border border-arva-accent/50">
+                                    Current main image
+                                  </span>
+                                ) : null}
+                              </>
+                            ) : null}
                           </div>
                         </div>
                       );

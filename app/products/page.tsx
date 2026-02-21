@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getProducts, getReviewSummariesBySlug } from "@/lib/api";
+import { readProductDetails } from "@/lib/dataStore";
 import { absoluteUrl } from "@/lib/seo";
 import ProductCard from "@/components/ProductCard";
 
@@ -22,7 +23,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default async function ProductsPage() {
-  const products = await getProducts();
+  const [products, productDetails] = await Promise.all([getProducts(), readProductDetails()]);
   const reviewSummaries = await getReviewSummariesBySlug(products.map((p) => p.slug));
 
   return (
@@ -34,11 +35,25 @@ export default async function ProductsPage() {
         Premium sofas and sectionals for every space.
       </p>
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
-        {products.map((product) => (
-          <li key={product.slug} className="h-full">
-            <ProductCard product={product} reviewSummary={reviewSummaries[product.slug]} />
-          </li>
-        ))}
+        {products.map((product) => {
+          const ribbon =
+            product.slug === "atlas-sectional" ||
+            product.slug === "alto-3-seater" ||
+            product.slug === "oris-sectional"
+              ? "Most popular"
+              : undefined;
+          return (
+            <li key={product.slug} className="h-full">
+              <ProductCard
+                product={product}
+                reviewSummary={reviewSummaries[product.slug]}
+                imageOverride={productDetails[product.slug]?.images?.hero}
+                colorOptions={productDetails[product.slug]?.fabricOptions}
+                ribbon={ribbon}
+              />
+            </li>
+          );
+        })}
       </ul>
     </div>
   );

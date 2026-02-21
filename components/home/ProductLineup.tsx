@@ -1,11 +1,18 @@
 import Link from "next/link";
 import { productLineup } from "@/lib/homepage";
 import { getProducts } from "@/lib/api";
+import { readProductDetails } from "@/lib/dataStore";
 import { IconBulletCheck } from "@/components/TrustIcons";
 
 export default async function ProductLineup() {
-  const products = await getProducts();
-  const imageBySlug = new Map(products.map((product) => [product.slug, product.image]));
+  const [products, productDetails] = await Promise.all([getProducts(), readProductDetails()]);
+  const imageBySlug = new Map(
+    productLineup.map((item) => {
+      const product = products.find((p) => p.slug === item.slug);
+      const hero = productDetails[item.slug]?.images?.hero;
+      return [item.slug, hero ?? product?.image ?? ""];
+    })
+  );
 
   return (
     <section className="py-16 sm:py-20 border-b border-arva-border/80 bg-arva-bg" aria-labelledby="product-lineup-heading">

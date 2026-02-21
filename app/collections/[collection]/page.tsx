@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getCollection, getProductsByCollection, getReviewSummariesBySlug } from "@/lib/api";
+import { readProductDetails } from "@/lib/dataStore";
 import { absoluteUrl } from "@/lib/seo";
 import ProductCard from "@/components/ProductCard";
 
@@ -39,7 +40,10 @@ export default async function CollectionPage({ params }: Props) {
   const collection = await getCollection(slug);
   if (!collection) notFound();
 
-  const products = await getProductsByCollection(slug);
+  const [products, productDetails] = await Promise.all([
+    getProductsByCollection(slug),
+    readProductDetails(),
+  ]);
   const reviewSummaries = await getReviewSummariesBySlug(products.map((p) => p.slug));
 
   return (
@@ -54,11 +58,25 @@ export default async function CollectionPage({ params }: Props) {
         </p>
       </header>
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 items-stretch">
-        {products.map((product) => (
-          <li key={product.slug} className="h-full">
-            <ProductCard product={product} reviewSummary={reviewSummaries[product.slug]} />
-          </li>
-        ))}
+        {products.map((product) => {
+          const ribbon =
+            product.slug === "atlas-sectional" ||
+            product.slug === "alto-3-seater" ||
+            product.slug === "oris-sectional"
+              ? "Most popular"
+              : undefined;
+          return (
+            <li key={product.slug} className="h-full">
+              <ProductCard
+                product={product}
+                reviewSummary={reviewSummaries[product.slug]}
+                imageOverride={productDetails[product.slug]?.images?.hero}
+                colorOptions={productDetails[product.slug]?.fabricOptions}
+                ribbon={ribbon}
+              />
+            </li>
+          );
+        })}
       </ul>
     </article>
   );

@@ -575,15 +575,24 @@ export async function buildMerchantItems(
       let imageLink = toAbsoluteUrl(baseUrl, heroPath);
       let imageFailures = await validateMerchantImage(imageLink, baseUrl);
       if (imageFailures.length > 0) {
-        const fallbackPath = getHeroImagePath(product, productDetails);
-        const fallbackLink = toAbsoluteUrl(baseUrl, fallbackPath);
-        const fallbackFailures = await validateMerchantImage(fallbackLink, baseUrl);
-        if (fallbackFailures.length > 0) {
-          skipped.push(`${product.slug}--${colorSlug}`, ...fallbackFailures);
-          continue;
+        const colorFallbackPath = productDetails?.[product.slug]?.images?.fabricHeroFallbacks?.[color];
+        const colorFallbackLink = colorFallbackPath ? toAbsoluteUrl(baseUrl, colorFallbackPath) : null;
+        const colorFallbackOk =
+          colorFallbackLink && (await validateMerchantImage(colorFallbackLink, baseUrl)).length === 0;
+        if (colorFallbackOk) {
+          heroPath = colorFallbackPath!;
+          imageLink = colorFallbackLink;
+        } else {
+          const fallbackPath = getHeroImagePath(product, productDetails);
+          const fallbackLink = toAbsoluteUrl(baseUrl, fallbackPath);
+          const fallbackFailures = await validateMerchantImage(fallbackLink, baseUrl);
+          if (fallbackFailures.length > 0) {
+            skipped.push(`${product.slug}--${colorSlug}`, ...imageFailures);
+            continue;
+          }
+          heroPath = fallbackPath;
+          imageLink = fallbackLink;
         }
-        heroPath = fallbackPath;
-        imageLink = fallbackLink;
       }
 
       const mpn = `ARVA-${lineNameFromSlug(product.slug).toUpperCase()}-${configSlugForMpn(config)}-${colorToMpnSegment(color)}`;

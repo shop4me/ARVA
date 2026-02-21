@@ -251,7 +251,7 @@
     ],
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
     "images": {
-      "hero": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-ivory-hero-01.webp",
+      "hero": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-gray-hero-01.webp",
       "thumbnail1": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-oat-angle-02.webp",
       "thumbnail2": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-stone-lifestyle-03.webp",
       "thumbnail3": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-mist-fabric-04.webp",
@@ -556,7 +556,7 @@
     ],
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
     "images": {
-      "hero": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-sand-room-07.webp",
+      "hero": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-stone-hero-01.webp",
       "thumbnail1": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-charcoal-detail-06.webp",
       "thumbnail2": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-seam-05.webp",
       "thumbnail3": "/images/products/atlas-3-seater/atlas-3-seater-modular-couch-mist-fabric-04.webp",
@@ -841,7 +841,7 @@
     ],
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
     "images": {
-      "hero": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-ivory-hero-01.webp",
+      "hero": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-mist-hero-01.webp",
       "thumbnail1": "/images/products/atlas-loveseat/atlas-loveseat-modular-sofa-oat-angle-02.webp",
       "thumbnail2": "/images/products/atlas-loveseat/atlas-loveseat-cloud-sofa-stone-lifestyle-03.webp",
       "thumbnail3": "/images/products/atlas-loveseat/atlas-loveseat-modular-couch-mist-fabric-04.webp",
@@ -1467,7 +1467,7 @@
     ],
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
     "images": {
-      "hero": "/images/products/alto-3-seater/alto-3-seater-v2-cloud-couch-slate-seam-05.webp",
+      "hero": "/images/products/alto-3-seater/alto-3-seater-cloud-couch-charcoal-hero-01.webp",
       "thumbnail1": "/images/products/alto-3-seater/alto-3-seater-v2-modular-couch-mist-fabric-04.webp",
       "thumbnail2": "/images/products/alto-3-seater/alto-3-seater-v2-cloud-sofa-stone-lifestyle-03.webp",
       "thumbnail3": "/images/products/alto-3-seater/alto-3-seater-v2-modular-sofa-oat-angle-02.webp",
@@ -1481,6 +1481,11 @@
         "Mist": "/images/products/alto-3-seater/alto-3-seater-cloud-couch-mist-hero-01.webp",
         "Oatmeal": "/images/products/alto-3-seater/alto-3-seater-cloud-couch-oatmeal-hero-01.webp",
         "Graphite": "/images/products/alto-3-seater/alto-3-seater-cloud-couch-graphite-hero-01.webp"
+      },
+      "fabricHeroFallbacks": {
+        "Mist": "/images/products/alto-3-seater/alto-3-seater-v2-modular-couch-mist-fabric-04.webp",
+        "Stone": "/images/products/alto-3-seater/alto-3-seater-v2-cloud-sofa-stone-lifestyle-03.webp",
+        "Oatmeal": "/images/products/alto-3-seater/alto-3-seater-v2-modular-sofa-oat-angle-02.webp"
       }
     }
   },
@@ -1751,7 +1756,7 @@
     ],
     "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
     "images": {
-      "hero": "/images/products/alto-loveseat/alto-loveseat-v2-cloud-couch-ivory-hero-01.webp",
+      "hero": "/images/products/alto-loveseat/alto-loveseat-cloud-couch-stone-hero-01.webp",
       "thumbnail1": "/images/products/alto-loveseat/alto-loveseat-v2-modular-sofa-oat-angle-02.webp",
       "thumbnail2": "/images/products/alto-loveseat/alto-loveseat-v2-cloud-sofa-stone-lifestyle-03.webp",
       "thumbnail3": "/images/products/alto-loveseat/alto-loveseat-v2-modular-couch-mist-fabric-04.webp",
@@ -1771,8 +1776,7 @@
     }
   },
   "oris-sectional": {
-    "pdpH1": "ARVA Oris Outdoor Sectional – Modular Outdoor Sectional Sofa",
-    "pdpH2": "Refined outdoor seating designed for lasting comfort.",
+    "displayPrice": 0,
     "subhead": "Modern modular comfort. Built to last.",
     "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
@@ -1786,40 +1790,6 @@
       "🛠 Tool-Free Assembly\nNo tools required—assemble or reconfigure in minutes."
     ],
     "fabricDefault": "Warm Ivory",
-    "fabricOptions": [
-      {
-        "name": "Warm Ivory",
-        "hex": "#f5f0e8"
-      },
-      {
-        "name": "Slate Gray",
-        "hex": "#6b7280"
-      },
-      {
-        "name": "Charcoal",
-        "hex": "#374151"
-      },
-      {
-        "name": "Soft White",
-        "hex": "#fafaf8"
-      },
-      {
-        "name": "Stone",
-        "hex": "#9ca3af"
-      },
-      {
-        "name": "Mist",
-        "hex": "#d1d5db"
-      },
-      {
-        "name": "Oatmeal",
-        "hex": "#e5e0d8"
-      },
-      {
-        "name": "Graphite",
-        "hex": "#4b5563"
-      }
-    ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
       "100-Day Trial",
@@ -1828,10 +1798,6 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": [
-      "Seat depth",
-      "Fabric texture"
-    ],
     "comparisonTable": {
       "rows": [
         {
@@ -1883,8 +1849,8 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
-      "maxWeightPerPiece": "1102 lbs"
+      "maxWeightPerPiece": "1102 lbs",
+      "ottoman": "27.5\" × 27.5\" × 15\""
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
     "deliveryHeadline": "Try It at Home. Decide With Confidence.",
@@ -2026,66 +1992,8 @@
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": [
-      "Modular sectional seating pieces",
-      "Ottoman",
-      "Hidden connectors for secure configuration",
-      "Care guide"
-    ],
-    "careAndDurability": [
-      "Weather-resistant fabric designed for outdoor use.",
-      "Spot clean with a damp cloth and mild soap.",
-      "Avoid harsh chemicals and abrasive brushes.",
-      "For best results, treat spills promptly and cover or store in harsh weather."
-    ],
-    "warrantyClarity": "Lifetime structural warranty on frame components.",
-    "images": {
-      "hero": "/images/products/oris-sectional/oris-sectional-cloud-couch-ivory-hero-01.webp",
-      "thumbnail1": "/images/products/oris-sectional/oris-sectional-modular-sectional-oat-angle-02.webp",
-      "thumbnail2": "/images/products/oris-sectional/oris-sectional-cloud-sectional-stone-lifestyle-03.webp",
-      "thumbnail3": "/images/products/oris-sectional/oris-sectional-modular-sofa-mist-fabric-04.webp",
-      "thumbnail4": "/images/products/oris-sectional/oris-sectional-cloud-couch-slate-seam-05.webp",
-      "thumbnail5": "/images/products/oris-sectional/oris-sectional-modular-sectional-charcoal-detail-06.webp",
-      "comfort1": "/images/products/oris-sectional/oris-sectional-cloud-sectional-sand-room-07.webp",
-      "comfort2": "/images/products/oris-sectional/oris-sectional-modular-sofa-ash-modular-08.webp",
-      "fabricHeroFallbacks": {
-        "Warm Ivory": "/images/products/oris-sectional/oris-sectional-cloud-couch-warm-ivory-hero-01.webp",
-        "Slate Gray": "/images/products/oris-sectional/oris-sectional-cloud-couch-slate-gray-hero-01.webp",
-        "Charcoal": "/images/products/oris-sectional/oris-sectional-cloud-couch-charcoal-hero-01.webp",
-        "Soft White": "/images/products/oris-sectional/oris-sectional-cloud-couch-soft-white-hero-01.webp",
-        "Stone": "/images/products/oris-sectional/oris-sectional-cloud-couch-stone-hero-01.webp",
-        "Mist": "/images/products/oris-sectional/oris-sectional-cloud-couch-mist-hero-01.webp",
-        "Oatmeal": "/images/products/oris-sectional/oris-sectional-cloud-couch-oatmeal-hero-01.webp",
-        "Graphite": "/images/products/oris-sectional/oris-sectional-cloud-couch-graphite-hero-01.webp"
-      },
-      "colorVariantHeros": {
-        "Warm Ivory": "/images/products/oris-sectional/oris-sectional-cloud-couch-warm-ivory-hero-01.webp",
-        "Slate Gray": "/images/products/oris-sectional/oris-sectional-cloud-couch-slate-gray-hero-01.webp",
-        "Charcoal": "/images/products/oris-sectional/oris-sectional-cloud-couch-charcoal-hero-01.webp",
-        "Soft White": "/images/products/oris-sectional/oris-sectional-cloud-couch-soft-white-hero-01.webp",
-        "Stone": "/images/products/oris-sectional/oris-sectional-cloud-couch-stone-hero-01.webp",
-        "Mist": "/images/products/oris-sectional/oris-sectional-cloud-couch-mist-hero-01.webp",
-        "Oatmeal": "/images/products/oris-sectional/oris-sectional-cloud-couch-oatmeal-hero-01.webp",
-        "Graphite": "/images/products/oris-sectional/oris-sectional-cloud-couch-graphite-hero-01.webp"
-      }
-    }
-  },
-  "oris-3-seater": {
-    "pdpH1": "ARVA Oris Outdoor 3-Seater – Modular Outdoor Sofa",
-    "pdpH2": "Clean-lined outdoor comfort with durable construction.",
-    "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
-    "valueStack": [
-      "🧩 Modular by Design\nConfigure, expand, or rearrange to fit any outdoor space.",
-      "☀️ UV-Resistant Fabric\nEngineered to resist fading, stains, and daily exposure.",
-      "💧 Fast-Dry Cushions\nMoisture-releasing foam dries quickly and keeps its shape.",
-      "🔒 Secure Connections\nHidden connectors keep sections locked in place.",
-      "🌬 Elevated Base\nImproves airflow while enhancing stability.",
-      "🌦 All-Weather Build\nDesigned for sun, moisture, and daily outdoor living.",
-      "📦 Compact Delivery\nShips in manageable boxes for easy access and setup.",
-      "🛠 Tool-Free Assembly\nNo tools required—assemble or reconfigure in minutes."
-    ],
-    "fabricDefault": "Warm Ivory",
+    "pdpH1": "ARVA Oris Outdoor Sectional – Modular Outdoor Sectional Sofa",
+    "pdpH2": "Refined outdoor seating designed for lasting comfort.",
     "fabricOptions": [
       {
         "name": "Warm Ivory",
@@ -2120,6 +2028,69 @@
         "hex": "#4b5563"
       }
     ],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
+    "whatsIncluded": [
+      "Modular sectional seating pieces",
+      "Ottoman",
+      "Hidden connectors for secure configuration",
+      "Care guide"
+    ],
+    "careAndDurability": [
+      "Weather-resistant fabric designed for outdoor use.",
+      "Spot clean with a damp cloth and mild soap.",
+      "Avoid harsh chemicals and abrasive brushes.",
+      "For best results, treat spills promptly and cover or store in harsh weather."
+    ],
+    "warrantyClarity": "Lifetime structural warranty on frame components.",
+    "images": {
+      "hero": "/images/products/oris-sectional/oris-sectional-cloud-couch-mist-hero-01.webp",
+      "thumbnail1": "/images/products/oris-sectional/oris-sectional-modular-sectional-oat-angle-02.webp",
+      "thumbnail2": "/images/products/oris-sectional/oris-sectional-cloud-sectional-stone-lifestyle-03.webp",
+      "thumbnail3": "/images/products/oris-sectional/oris-sectional-modular-sofa-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/oris-sectional/oris-sectional-cloud-couch-slate-seam-05.webp",
+      "thumbnail5": "/images/products/oris-sectional/oris-sectional-modular-sectional-charcoal-detail-06.webp",
+      "comfort1": "/images/products/oris-sectional/oris-sectional-cloud-sectional-sand-room-07.webp",
+      "comfort2": "/images/products/oris-sectional/oris-sectional-modular-sofa-ash-modular-08.webp",
+      "fabricHeroFallbacks": {
+        "Warm Ivory": "/images/products/oris-sectional/oris-sectional-cloud-couch-warm-ivory-hero-01.webp",
+        "Slate Gray": "/images/products/oris-sectional/oris-sectional-cloud-couch-slate-gray-hero-01.webp",
+        "Charcoal": "/images/products/oris-sectional/oris-sectional-cloud-couch-charcoal-hero-01.webp",
+        "Soft White": "/images/products/oris-sectional/oris-sectional-cloud-couch-soft-white-hero-01.webp",
+        "Stone": "/images/products/oris-sectional/oris-sectional-cloud-couch-stone-hero-01.webp",
+        "Mist": "/images/products/oris-sectional/oris-sectional-cloud-couch-mist-hero-01.webp",
+        "Oatmeal": "/images/products/oris-sectional/oris-sectional-cloud-couch-oatmeal-hero-01.webp",
+        "Graphite": "/images/products/oris-sectional/oris-sectional-cloud-couch-graphite-hero-01.webp"
+      },
+      "colorVariantHeros": {
+        "Warm Ivory": "/images/products/oris-sectional/oris-sectional-cloud-couch-warm-ivory-hero-01.webp",
+        "Slate Gray": "/images/products/oris-sectional/oris-sectional-cloud-couch-slate-gray-hero-01.webp",
+        "Charcoal": "/images/products/oris-sectional/oris-sectional-cloud-couch-charcoal-hero-01.webp",
+        "Soft White": "/images/products/oris-sectional/oris-sectional-cloud-couch-soft-white-hero-01.webp",
+        "Stone": "/images/products/oris-sectional/oris-sectional-cloud-couch-stone-hero-01.webp",
+        "Mist": "/images/products/oris-sectional/oris-sectional-cloud-couch-mist-hero-01.webp",
+        "Oatmeal": "/images/products/oris-sectional/oris-sectional-cloud-couch-oatmeal-hero-01.webp",
+        "Graphite": "/images/products/oris-sectional/oris-sectional-cloud-couch-graphite-hero-01.webp"
+      }
+    }
+  },
+  "oris-3-seater": {
+    "displayPrice": 0,
+    "subhead": "Modern modular comfort. Built to last.",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "valueStack": [
+      "🧩 Modular by Design\nConfigure, expand, or rearrange to fit any outdoor space.",
+      "☀️ UV-Resistant Fabric\nEngineered to resist fading, stains, and daily exposure.",
+      "💧 Fast-Dry Cushions\nMoisture-releasing foam dries quickly and keeps its shape.",
+      "🔒 Secure Connections\nHidden connectors keep sections locked in place.",
+      "🌬 Elevated Base\nImproves airflow while enhancing stability.",
+      "🌦 All-Weather Build\nDesigned for sun, moisture, and daily outdoor living.",
+      "📦 Compact Delivery\nShips in manageable boxes for easy access and setup.",
+      "🛠 Tool-Free Assembly\nNo tools required—assemble or reconfigure in minutes."
+    ],
+    "fabricDefault": "Warm Ivory",
     "trustStrip": [
       "Delivered in 2-4 Weeks",
       "100-Day Trial",
@@ -2128,10 +2099,6 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": [
-      "Seat depth",
-      "Fabric texture"
-    ],
     "comparisonTable": {
       "rows": [
         {
@@ -2183,8 +2150,8 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
-      "maxWeightPerPiece": "1102 lbs"
+      "maxWeightPerPiece": "1102 lbs",
+      "ottoman": "27.5\" × 27.5\" × 15\""
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
     "deliveryHeadline": "Try It at Home. Decide With Confidence.",
@@ -2342,61 +2309,8 @@
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": [
-      "3-seater sofa",
-      "Hidden connectors",
-      "Care guide"
-    ],
-    "careAndDurability": [
-      "Weather-resistant fabric designed for outdoor use.",
-      "Spot clean with a damp cloth and mild soap.",
-      "Avoid harsh chemicals and abrasive brushes.",
-      "For best results, treat spills promptly and cover or store in harsh weather."
-    ],
-    "warrantyClarity": "Lifetime structural warranty on frame components.",
-    "images": {
-      "hero": "/images/products/oris-3-seater/oris-3-seater-cloud-sofa-sand-room-07.webp",
-      "thumbnail1": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-charcoal-detail-06.webp",
-      "thumbnail2": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-slate-seam-05.webp",
-      "thumbnail3": "/images/products/oris-3-seater/oris-3-seater-modular-couch-mist-fabric-04.webp",
-      "thumbnail4": "/images/products/oris-3-seater/oris-3-seater-cloud-sofa-stone-lifestyle-03.webp",
-      "thumbnail5": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-oat-angle-02.webp",
-      "comfort1": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-ivory-hero-01.webp",
-      "dimensionsDiagram": "/images/products/oris-3-seater/oris-3-seater-dimensions-diagram.webp",
-      "fabricHeroFallbacks": {
-        "Slate Gray": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-slate-seam-05.webp",
-        "Charcoal": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-charcoal-detail-06.webp",
-        "Stone": "/images/products/oris-3-seater/oris-3-seater-cloud-sofa-stone-lifestyle-03.webp",
-        "Mist": "/images/products/oris-3-seater/oris-3-seater-modular-couch-mist-fabric-04.webp",
-        "Oatmeal": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-oat-angle-02.webp"
-      },
-      "colorVariantHeros": {
-        "Slate Gray": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-slate-gray-hero-01.webp",
-        "Charcoal": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-charcoal-hero-01.webp",
-        "Soft White": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-soft-white-hero-01.webp",
-        "Stone": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-stone-hero-01.webp",
-        "Mist": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-mist-hero-01.webp",
-        "Oatmeal": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-oatmeal-hero-01.webp",
-        "Graphite": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-graphite-hero-01.webp"
-      }
-    }
-  },
-  "oris-loveseat": {
-    "pdpH1": "ARVA Oris Outdoor Loveseat – Modular Outdoor Loveseat Sofa",
-    "pdpH2": "Compact outdoor seating with modern architectural design.",
-    "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
-    "valueStack": [
-      "🧩 Modular by Design\nConfigure, expand, or rearrange to fit any outdoor space.",
-      "☀️ UV-Resistant Fabric\nEngineered to resist fading, stains, and daily exposure.",
-      "💧 Fast-Dry Cushions\nMoisture-releasing foam dries quickly and keeps its shape.",
-      "🔒 Secure Connections\nHidden connectors keep sections locked in place.",
-      "🌬 Elevated Base\nImproves airflow while enhancing stability.",
-      "🌦 All-Weather Build\nDesigned for sun, moisture, and daily outdoor living.",
-      "📦 Compact Delivery\nShips in manageable boxes for easy access and setup.",
-      "🛠 Tool-Free Assembly\nNo tools required—assemble or reconfigure in minutes."
-    ],
-    "fabricDefault": "Warm Ivory",
+    "pdpH1": "ARVA Oris Outdoor 3-Seater – Modular Outdoor Sofa",
+    "pdpH2": "Clean-lined outdoor comfort with durable construction.",
     "fabricOptions": [
       {
         "name": "Warm Ivory",
@@ -2431,6 +2345,64 @@
         "hex": "#4b5563"
       }
     ],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
+    "whatsIncluded": [
+      "3-seater sofa",
+      "Hidden connectors",
+      "Care guide"
+    ],
+    "careAndDurability": [
+      "Weather-resistant fabric designed for outdoor use.",
+      "Spot clean with a damp cloth and mild soap.",
+      "Avoid harsh chemicals and abrasive brushes.",
+      "For best results, treat spills promptly and cover or store in harsh weather."
+    ],
+    "warrantyClarity": "Lifetime structural warranty on frame components.",
+    "images": {
+      "hero": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-slate-gray-hero-01.webp",
+      "thumbnail1": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-charcoal-detail-06.webp",
+      "thumbnail2": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-slate-seam-05.webp",
+      "thumbnail3": "/images/products/oris-3-seater/oris-3-seater-modular-couch-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/oris-3-seater/oris-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+      "thumbnail5": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-oat-angle-02.webp",
+      "comfort1": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-ivory-hero-01.webp",
+      "dimensionsDiagram": "/images/products/oris-3-seater/oris-3-seater-dimensions-diagram.webp",
+      "fabricHeroFallbacks": {
+        "Slate Gray": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-slate-seam-05.webp",
+        "Charcoal": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-charcoal-detail-06.webp",
+        "Stone": "/images/products/oris-3-seater/oris-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+        "Mist": "/images/products/oris-3-seater/oris-3-seater-modular-couch-mist-fabric-04.webp",
+        "Oatmeal": "/images/products/oris-3-seater/oris-3-seater-modular-sofa-oat-angle-02.webp"
+      },
+      "colorVariantHeros": {
+        "Slate Gray": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-slate-gray-hero-01.webp",
+        "Charcoal": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-charcoal-hero-01.webp",
+        "Soft White": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-soft-white-hero-01.webp",
+        "Stone": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-stone-hero-01.webp",
+        "Mist": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-mist-hero-01.webp",
+        "Oatmeal": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-oatmeal-hero-01.webp",
+        "Graphite": "/images/products/oris-3-seater/oris-3-seater-cloud-couch-graphite-hero-01.webp"
+      }
+    }
+  },
+  "oris-loveseat": {
+    "displayPrice": 0,
+    "subhead": "Modern modular comfort. Built to last.",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "valueStack": [
+      "🧩 Modular by Design\nConfigure, expand, or rearrange to fit any outdoor space.",
+      "☀️ UV-Resistant Fabric\nEngineered to resist fading, stains, and daily exposure.",
+      "💧 Fast-Dry Cushions\nMoisture-releasing foam dries quickly and keeps its shape.",
+      "🔒 Secure Connections\nHidden connectors keep sections locked in place.",
+      "🌬 Elevated Base\nImproves airflow while enhancing stability.",
+      "🌦 All-Weather Build\nDesigned for sun, moisture, and daily outdoor living.",
+      "📦 Compact Delivery\nShips in manageable boxes for easy access and setup.",
+      "🛠 Tool-Free Assembly\nNo tools required—assemble or reconfigure in minutes."
+    ],
+    "fabricDefault": "Warm Ivory",
     "trustStrip": [
       "Delivered in 2-4 Weeks",
       "100-Day Trial",
@@ -2439,10 +2411,6 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": [
-      "Seat depth",
-      "Fabric texture"
-    ],
     "comparisonTable": {
       "rows": [
         {
@@ -2494,8 +2462,8 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
-      "maxWeightPerPiece": "1102 lbs"
+      "maxWeightPerPiece": "1102 lbs",
+      "ottoman": "27.5\" × 27.5\" × 15\""
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
     "deliveryHeadline": "Try It at Home. Decide With Confidence.",
@@ -2653,6 +2621,46 @@
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
+    "pdpH1": "ARVA Oris Outdoor Loveseat – Modular Outdoor Loveseat Sofa",
+    "pdpH2": "Compact outdoor seating with modern architectural design.",
+    "fabricOptions": [
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
+    ],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "whatsIncluded": [
       "Loveseat",
       "Hidden connectors",
@@ -2666,7 +2674,7 @@
     ],
     "warrantyClarity": "Lifetime structural warranty on frame components.",
     "images": {
-      "hero": "/images/products/oris-loveseat/oris-loveseat-cloud-couch-ivory-hero-01.webp",
+      "hero": "/images/products/oris-loveseat/oris-loveseat-cloud-couch-soft-white-hero-01.webp",
       "thumbnail1": "/images/products/oris-loveseat/oris-loveseat-modular-sofa-oat-angle-02.webp",
       "thumbnail2": "/images/products/oris-loveseat/oris-loveseat-cloud-sofa-stone-lifestyle-03.webp",
       "thumbnail3": "/images/products/oris-loveseat/oris-loveseat-modular-couch-mist-fabric-04.webp",
