@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getProducts, getReviewSummariesBySlug } from "@/lib/api";
 import { readProductDetails } from "@/lib/dataStore";
+import { getEffectiveCompareAtPrice, getEffectiveSalePrice } from "@/lib/pricing";
 import { absoluteUrl } from "@/lib/seo";
 import ProductCard from "@/components/ProductCard";
 
@@ -44,13 +45,15 @@ export default async function ProductsPage() {
               : undefined;
           return (
             <li key={product.slug} className="h-full">
-              <ProductCard
-                product={product}
-                reviewSummary={reviewSummaries[product.slug]}
-                imageOverride={productDetails[product.slug]?.images?.hero}
-                colorOptions={productDetails[product.slug]?.fabricOptions}
-                ribbon={ribbon}
-              />
+            <ProductCard
+              product={product}
+              reviewSummary={reviewSummaries[product.slug]}
+              imageOverride={productDetails[product.slug]?.images?.hero}
+              colorOptions={productDetails[product.slug]?.fabricOptions}
+              ribbon={ribbon}
+              priceDisplay={getEffectiveSalePrice(product.slug, product.price)}
+              compareAtPrice={getEffectiveCompareAtPrice(product.slug)}
+            />
             </li>
           );
         })}

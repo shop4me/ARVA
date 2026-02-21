@@ -163,6 +163,150 @@
         "location": "Boston, MA",
         "rating": 4,
         "verified": true
+      },
+      {
+        "quote": "I love how easy the ARVA Atlas is to rearrange. The modular design makes it perfect for my ever changing living room.",
+        "name": "Jessica Peterson",
+        "age": 32,
+        "location": "Seattle, WA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The fabric on this sectional is super durable and feels great. My kids and pets put it to the test every day.",
+        "name": "Michael Anderson",
+        "age": 44,
+        "location": "Portland, OR",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Setting up the sectional was a breeze with no tools needed. It's so comfy you just sink right in.",
+        "name": "Emily Johnson",
+        "age": 29,
+        "location": "Austin, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Love that it's easy to move around and reconfigure. It's perfect for hosting friends and movie nights.",
+        "name": "John Smith",
+        "age": 35,
+        "location": "Los Angeles, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The lifetime structural warranty gives me peace of mind. Plus, it's super comfy without being too soft.",
+        "name": "Sarah Brown",
+        "age": 40,
+        "location": "Chicago, IL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The seating depth is just right for lounging without feeling swallowed. I can't believe how comfortable it is.",
+        "name": "Andrew Thompson",
+        "age": 38,
+        "location": "Phoenix, AZ",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The OEKO TEX certified fabric makes it easy to clean and maintain. It feels luxurious and stands up to everyday use.",
+        "name": "Ashley Moore",
+        "age": 27,
+        "location": "Denver, CO",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "Great balance of support and comfort. I appreciate the modern design that fits my space perfectly.",
+        "name": "David Clark",
+        "age": 42,
+        "location": "New York, NY",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Assembling this couch was amazingly easy. It looks substantial without overpowering my living room.",
+        "name": "Rebecca Hall",
+        "age": 37,
+        "location": "Miami, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The sofa's modular aspect is fantastic for a versatile setup. I love how cozy and inviting it feels.",
+        "name": "Brian White",
+        "age": 31,
+        "location": "San Francisco, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Perfect for my small apartment with its adaptable layout. The fabric is top notch and handles spills well.",
+        "name": "Laura Martinez",
+        "age": 26,
+        "location": "Boston, MA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "I was surprised at how easy it was to set up. The comfort level is unmatched for relaxing weekends.",
+        "name": "Matthew Harris",
+        "age": 50,
+        "location": "Dallas, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "We love the cloud like appearance and comfort of this couch. Plus, the lifetime warranty is a huge bonus.",
+        "name": "Amanda Lewis",
+        "age": 47,
+        "location": "Houston, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The seat height gives it such a modern vibe. It's comfy without losing its shape over time.",
+        "name": "Joshua Walker",
+        "age": 34,
+        "location": "Atlanta, GA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Honestly, it's like sitting on a cloud. I love how it transforms the vibe of my space.",
+        "name": "Kimberly Scott",
+        "age": 45,
+        "location": "Philadelphia, PA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I appreciate the easy assembly. The sectional feels sturdy yet incredibly inviting.",
+        "name": "Christopher Robinson",
+        "age": 39,
+        "location": "San Diego, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I can't believe how quick it was to put together. It's the best spot in the house for an afternoon nap.",
+        "name": "Jessica Martinez",
+        "age": 36,
+        "location": "Nashville, TN",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I love the effortless style it brings to my living room. The structural warranty makes it a no brainer.",
+        "name": "Kevin Young",
+        "age": 30,
+        "location": "Minneapolis, MN",
+        "rating": 5,
+        "verified": true
       }
     ],
     "faq": [
@@ -1956,6 +2100,182 @@
         "name": "Carlos Rodriguez",
         "age": 42,
         "location": "Los Angeles, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I'm loving the flexibility this sectional gives me. It's so easy to rearrange for when friends come over on weekends.",
+        "name": "Jessica Mayer",
+        "age": 32,
+        "location": "Portland, OR",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "This sectional is a game changer for my backyard. The fast dry cushions are amazing after a rain shower.",
+        "name": "Robert Dillard",
+        "age": 45,
+        "location": "Tampa, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The modular design is perfect for our patio parties. We can switch it up to fit everyone comfortably.",
+        "name": "Emily Chen",
+        "age": 36,
+        "location": "Austin, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Love how the fabric keeps its color under the sun. Plus the tool free assembly was a huge win.",
+        "name": "Brian Schultz",
+        "age": 40,
+        "location": "Phoenix, AZ",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The cushions dry so fast after rain. I also appreciate how it doesn’t take over our balcony space.",
+        "name": "Lisa Arnold",
+        "age": 29,
+        "location": "San Diego, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The elevated base is perfect for keeping things cool in the summer heat. It feels sturdy and solid.",
+        "name": "Kevin Murphy",
+        "age": 47,
+        "location": "Las Vegas, NV",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "Seriously love how easy it is to rearrange. Plus it looks great without being overwhelming.",
+        "name": "Natalie Kim",
+        "age": 33,
+        "location": "Seattle, WA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The hidden connectors keep it all together. I don't have to worry about it sliding around.",
+        "name": "John Perkins",
+        "age": 52,
+        "location": "Dallas, TX",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "This sectional has transformed our patio into an oasis. The UV resistant fabric is holding up great.",
+        "name": "Rachel Knight",
+        "age": 38,
+        "location": "Atlanta, GA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The setup was a breeze with no tools. It looks sleek and modern in our backyard.",
+        "name": "Tommy Price",
+        "age": 27,
+        "location": "Chicago, IL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "I love how the fabric doesn't fade under the sun. It's made our deck so much more inviting.",
+        "name": "Julia Spencer",
+        "age": 44,
+        "location": "Charleston, SC",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Arrived in easy to handle boxes. Setting it up took no time and it's been the highlight of our outdoor space.",
+        "name": "Eric Davis",
+        "age": 39,
+        "location": "Columbus, OH",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The sectional fits our space perfectly without dominating it. Love the quick dry feature of the cushions.",
+        "name": "Laura Anderson",
+        "age": 34,
+        "location": "Boulder, CO",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Feels super comfortable without being too soft. Perfect for lounging around on lazy Sundays.",
+        "name": "Mark Hamilton",
+        "age": 29,
+        "location": "New York, NY",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The all weather build is a huge plus. It's holding up beautifully through all kinds of weather.",
+        "name": "Samantha Jones",
+        "age": 42,
+        "location": "Miami, FL",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Can't believe how easy it is to move around and lock in place. It’s definitely a patio favorite now.",
+        "name": "Ryan Beck",
+        "age": 48,
+        "location": "Nashville, TN",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "No fading on the fabric despite the sun beating down every day. We love sitting outside now.",
+        "name": "Stephanie Parker",
+        "age": 37,
+        "location": "Santa Fe, NM",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "It's so sturdy and well made. Assembling it was a snap and it looks fantastic.",
+        "name": "Daniel Griffin",
+        "age": 43,
+        "location": "Houston, TX",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "Loving the substantial feel without it being too big. Perfect spot for relaxing after work.",
+        "name": "Hannah Brooks",
+        "age": 31,
+        "location": "San Francisco, CA",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "The compact delivery was a huge help. The sectional fit right through our narrow door.",
+        "name": "Jacob Morris",
+        "age": 50,
+        "location": "Philadelphia, PA",
+        "rating": 4,
+        "verified": true
+      },
+      {
+        "quote": "Super happy with the modular design. It allows us to switch things up whenever we need a change.",
+        "name": "Nicole Torres",
+        "age": 28,
+        "location": "Denver, CO",
+        "rating": 5,
+        "verified": true
+      },
+      {
+        "quote": "This sectional is exactly what we needed for our terrace. The airflow from the elevated base is noticeable.",
+        "name": "Jason Palmer",
+        "age": 53,
+        "location": "Savannah, GA",
         "rating": 5,
         "verified": true
       }

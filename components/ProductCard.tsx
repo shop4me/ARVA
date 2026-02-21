@@ -9,6 +9,8 @@ export default function ProductCard({
   imageOverride,
   colorOptions,
   ribbon,
+  priceDisplay,
+  compareAtPrice,
 }: {
   product: Product;
   reviewSummary?: { count: number; rating: number };
@@ -18,15 +20,35 @@ export default function ProductCard({
   colorOptions?: FabricOption[];
   /** Optional label shown as a small ribbon on the top-right of the card (e.g. "Most popular"). Does not affect card dimensions. */
   ribbon?: string;
+  /** Price to show as main (sale price when on promo). */
+  priceDisplay?: number;
+  /** When set and greater than priceDisplay, shown crossed out next to the main price. */
+  compareAtPrice?: number | null;
 }) {
   const count = reviewSummary?.count ?? 0;
   const rating = reviewSummary?.rating ?? 5;
   const imageSrc = imageOverride ?? product.image;
+  const mainPrice = priceDisplay ?? product.price;
+  const showCompareAt = compareAtPrice != null && compareAtPrice > mainPrice;
+  const isOris = product.collection === "oris";
   return (
     <Link
       href={`/products/${product.slug}`}
-      className="relative h-full flex flex-col border border-arva-border rounded-xl p-6 hover:border-arva-accent/20 transition bg-white shadow-arva"
+      className={`relative h-full flex flex-col border border-arva-border rounded-xl p-6 hover:border-arva-accent/20 transition bg-white overflow-hidden ${
+        isOris
+          ? "shadow-[0_4px_20px_rgba(55,45,35,0.09)]"
+          : "shadow-arva"
+      }`}
     >
+      {isOris && (
+        <div
+          className="pointer-events-none absolute inset-0 rounded-xl z-[1]"
+          style={{
+            background: "radial-gradient(ellipse 100% 80% at 100% 0%, rgba(255,235,200,0.5) 0%, rgba(253,230,200,0.18) 45%, transparent 72%)",
+          }}
+          aria-hidden
+        />
+      )}
       <div className="relative h-56 rounded-lg bg-neutral-50 border border-arva-border overflow-hidden mb-2">
         {ribbon ? (
           <div
@@ -68,7 +90,14 @@ export default function ProductCard({
 
       <h2 className="font-semibold text-arva-text line-clamp-2">{product.name}</h2>
       <p className="text-arva-text-muted mt-1 text-sm line-clamp-3">{product.description}</p>
-      <p className="mt-auto pt-3 font-medium text-arva-text">${product.price.toLocaleString()}</p>
+      <p className="mt-auto pt-3 font-medium text-arva-text flex flex-wrap items-baseline gap-2">
+        <span>${mainPrice.toLocaleString()}</span>
+        {showCompareAt && (
+          <span className="text-arva-text-muted text-sm font-normal line-through">
+            ${compareAtPrice!.toLocaleString()}
+          </span>
+        )}
+      </p>
     </Link>
   );
 }

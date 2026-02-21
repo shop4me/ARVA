@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { getCollection, getProductsByCollection, getReviewSummariesBySlug } from "@/lib/api";
 import { readProductDetails } from "@/lib/dataStore";
+import { getEffectiveCompareAtPrice, getEffectiveSalePrice } from "@/lib/pricing";
 import { absoluteUrl } from "@/lib/seo";
 import ProductCard from "@/components/ProductCard";
 
@@ -67,13 +68,15 @@ export default async function CollectionPage({ params }: Props) {
               : undefined;
           return (
             <li key={product.slug} className="h-full">
-              <ProductCard
-                product={product}
-                reviewSummary={reviewSummaries[product.slug]}
-                imageOverride={productDetails[product.slug]?.images?.hero}
-                colorOptions={productDetails[product.slug]?.fabricOptions}
-                ribbon={ribbon}
-              />
+            <ProductCard
+              product={product}
+              reviewSummary={reviewSummaries[product.slug]}
+              imageOverride={productDetails[product.slug]?.images?.hero}
+              colorOptions={productDetails[product.slug]?.fabricOptions}
+              ribbon={ribbon}
+              priceDisplay={getEffectiveSalePrice(product.slug, product.price)}
+              compareAtPrice={getEffectiveCompareAtPrice(product.slug)}
+            />
             </li>
           );
         })}
