@@ -49,6 +49,11 @@ export default function AdminPage() {
   const [addProductOpen, setAddProductOpen] = useState(false);
   const [newProduct, setNewProduct] = useState({ slug: "", name: "", price: 0 });
   const [uploadingField, setUploadingField] = useState<keyof ProductDetailImages | null>(null);
+  const [uploadingColor, setUploadingColor] = useState<string | null>(null);
+  /** Bump per color so img src gets a new query param and browser shows the newly uploaded file immediately. */
+  const [colorHeroCacheBust, setColorHeroCacheBust] = useState<Record<string, number>>({});
+  /** Same for main product image fields (hero, thumbnails, etc.). */
+  const [imageFieldCacheBust, setImageFieldCacheBust] = useState<Record<string, number>>({});
 
   const checkAuth = useCallback(async () => {
     const res = await fetch("/api/admin/me");
@@ -146,6 +151,20 @@ export default function AdminPage() {
     setDetail((d) => (d ? { ...d, images: { ...d.images, [key]: value || undefined } } : null));
   };
 
+  const updateColorVariantHero = (colorName: string, url: string) => {
+    setDetail((d) =>
+      d
+        ? {
+            ...d,
+            images: {
+              ...d.images,
+              colorVariantHeros: { ...(d.images?.colorVariantHeros ?? {}), [colorName]: url },
+            },
+          }
+        : null
+    );
+  };
+
   const handleImageUpload = async (key: keyof ProductDetailImages, file: File) => {
     if (!selectedSlug) return;
     setUploadingField(key);
@@ -156,12 +175,35 @@ export default function AdminPage() {
     try {
       const res = await fetch("/api/admin/upload", { method: "POST", body: formData });
       const data = await res.json().catch(() => ({}));
-      if (res.ok && data.url) updateImages(key, data.url);
-      else alert(data.error || "Upload failed");
+      if (res.ok && data.url) {
+        updateImages(key, data.url);
+        setImageFieldCacheBust((prev) => ({ ...prev, [key]: Date.now() }));
+      } else {
+        alert(data.error || "Upload failed");
+      }
     } catch {
       alert("Upload failed");
     } finally {
       setUploadingField(null);
+    }
+  };
+
+  const handleColorHeroUpload = async (colorName: string, file: File) => {
+    if (!selectedSlug) return;
+    setUploadingColor(colorName);
+    const formData = new FormData();
+    formData.set("file", file);
+    formData.set("slug", selectedSlug);
+    formData.set("colorName", colorName);
+    try {
+      const res = await fetch("/api/admin/upload-color-hero", { method: "POST", body: formData });
+      const data = await res.json().catch(() => ({}));
+      if (res.ok && data.url) updateColorVariantHero(colorName, data.url);
+      else alert(data.error || "Upload failed");
+    } catch {
+      alert("Upload failed");
+    } finally {
+      setUploadingColor(null);
     }
   };
 
@@ -286,7 +328,8 @@ export default function AdminPage() {
                         <label className="block text-sm font-medium text-arva-text mb-1">{label}</label>
                         {url ? (
                           <img
-                            src={url}
+                            key={`${key}-${imageFieldCacheBust[key] ?? 0}`}
+                            src={`${url}${url.includes("?") ? "&" : "?"}t=${imageFieldCacheBust[key] ?? 0}`}
                             alt=""
                             className="w-full max-w-[120px] aspect-square object-cover rounded border border-arva-border"
                           />
@@ -307,7 +350,7 @@ export default function AdminPage() {
                         <div className="flex items-center gap-2">
                           <input
                             type="file"
-                            accept="image/jpeg,image/png,image/webp,image/gif"
+                            accept="image/*"
                             className="hidden"
                             id={`file-${key}`}
                             onChange={(e) => {
@@ -328,6 +371,71 @@ export default function AdminPage() {
                   );
                 })}
               </div>
+
+              {/* Color variant heroes: one image per fabric; shown as main hero when customer picks that color */}
+              {detail.fabricOptions && detail.fabricOptions.length > 0 && (
+                <div className="mt-6 pt-6 border-t border-arva-border">
+                  <h3 className="text-sm font-semibold text-arva-text-muted uppercase tracking-wide mb-2">
+                    Color variant heroes
+                  </h3>
+                  <p className="text-sm text-arva-text-muted mb-4">
+                    Upload one image per color. When a customer selects that color on the product page, this image is shown as the main hero. Converted to WebP automatically.
+                  </p>
+                  <div className="space-y-4">
+                    {detail.fabricOptions.map((opt) => {
+                      const url = detail.images?.colorVariantHeros?.[opt.name] ?? "";
+                      return (
+                        <div
+                          key={opt.name}
+                          className="flex flex-col sm:flex-row sm:items-start gap-3 p-3 border border-arva-border/60 rounded-lg"
+                        >
+                          <div className="sm:w-32 shrink-0 flex items-center gap-2">
+                            <div
+                              className="w-8 h-8 rounded border border-arva-border shrink-0"
+                              style={{ backgroundColor: opt.hex ?? "#f5f0e8" }}
+                              title={opt.name}
+                            />
+                            <span className="text-sm font-medium text-arva-text">{opt.name}</span>
+                          </div>
+                          <div className="sm:w-24 shrink-0">
+                            {url ? (
+                              <img
+                                key={`${opt.name}-${colorHeroCacheBust[opt.name] ?? 0}`}
+                                src={`${url}${url.includes("?") ? "&" : "?"}t=${colorHeroCacheBust[opt.name] ?? 0}`}
+                                alt=""
+                                className="w-full max-w-[96px] aspect-square object-cover rounded border border-arva-border"
+                              />
+                            ) : (
+                              <div className="w-full max-w-[96px] aspect-square rounded border border-arva-border bg-arva-bg flex items-center justify-center text-arva-text-muted text-xs">
+                                No image
+                              </div>
+                            )}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <input
+                              type="file"
+                              accept="image/*"
+                              className="hidden"
+                              id={`color-hero-${opt.name}`}
+                              onChange={(e) => {
+                                const f = e.target.files?.[0];
+                                if (f) handleColorHeroUpload(opt.name, f);
+                                e.target.value = "";
+                              }}
+                            />
+                            <label
+                              htmlFor={`color-hero-${opt.name}`}
+                              className="inline-block px-3 py-1.5 border border-arva-border rounded-lg text-sm font-medium cursor-pointer hover:bg-arva-bg"
+                            >
+                              {uploadingColor === opt.name ? "Uploading…" : "Upload hero"}
+                            </label>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </section>
 
             {/* Section: Hero & price */}

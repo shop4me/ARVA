@@ -20,6 +20,8 @@ export interface ProductDetailImages {
   dimensionsDiagram?: string;
   /** Optional: fabric name → image path when color-variant hero 404s (e.g. "Slate Gray" → slate seam image). */
   fabricHeroFallbacks?: Record<string, string>;
+  /** Admin-uploaded hero per fabric: when user selects a color, this image is shown as the main hero. Key = fabric name (e.g. "Slate Gray"). */
+  colorVariantHeros?: Record<string, string>;
 }
 
 export interface ProductDetailData {

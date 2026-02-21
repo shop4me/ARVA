@@ -253,6 +253,8 @@ function getHeroImagePathForFeed(
   details: Record<string, ProductDetailData> | undefined,
   color: string
 ): string {
+  const adminHero = details?.[product.slug]?.images?.colorVariantHeros?.[color];
+  if (adminHero) return adminHero;
   return getColorVariantHeroPath(product.slug, color);
 }
 

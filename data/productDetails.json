@@ -1,7 +1,6 @@
 {
   "atlas-sectional": {
-    "pdpH1": "ARVA Atlas Sectional – Modular Cloud-Style Sectional Couch",
-    "pdpH2": "A modular cloud-style sectional designed for modern living, priced under $1,000.",
+    "displayPrice": 0,
     "subhead": "Modern modular comfort. Built to last.",
     "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
     "valueStack": [
@@ -12,40 +11,6 @@
       "Lifetime structural warranty"
     ],
     "fabricDefault": "Warm Ivory",
-    "fabricOptions": [
-      {
-        "name": "Warm Ivory",
-        "hex": "#f5f0e8"
-      },
-      {
-        "name": "Slate Gray",
-        "hex": "#6b7280"
-      },
-      {
-        "name": "Charcoal",
-        "hex": "#374151"
-      },
-      {
-        "name": "Soft White",
-        "hex": "#fafaf8"
-      },
-      {
-        "name": "Stone",
-        "hex": "#9ca3af"
-      },
-      {
-        "name": "Mist",
-        "hex": "#d1d5db"
-      },
-      {
-        "name": "Oatmeal",
-        "hex": "#e5e0d8"
-      },
-      {
-        "name": "Graphite",
-        "hex": "#4b5563"
-      }
-    ],
     "trustStrip": [
       "Delivered in 2-4 Weeks",
       "100-Day Trial",
@@ -54,10 +19,6 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": [
-      "Seat depth",
-      "Fabric texture"
-    ],
     "comparisonTable": {
       "rows": [
         {
@@ -109,8 +70,8 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
-      "maxWeightPerPiece": "1102 lbs"
+      "maxWeightPerPiece": "1102 lbs",
+      "ottoman": "27.5\" × 27.5\" × 15\""
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
     "deliveryHeadline": "Try It at Home. Decide With Confidence.",
@@ -236,53 +197,8 @@
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": [
-      "Modular sectional modules",
-      "Ottoman",
-      "Connectors/clips (for secure configuration)",
-      "Care guide"
-    ],
-    "careAndDurability": [
-      "Designed for everyday use with a durable performance weave.",
-      "Spot clean with a damp cloth and mild soap.",
-      "Avoid harsh chemicals and abrasive brushes.",
-      "For best results, treat spills promptly."
-    ],
-    "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
-    "images": {
-      "hero": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-ivory-hero-01.webp",
-      "thumbnail1": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-oat-angle-02.webp",
-      "thumbnail2": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-stone-lifestyle-03.webp",
-      "thumbnail3": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-mist-fabric-04.webp",
-      "thumbnail4": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-seam-05.webp",
-      "thumbnail5": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-charcoal-detail-06.webp",
-      "comfort1": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-sand-room-07.webp",
-      "comfort2": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-ash-modular-08.webp",
-      "fabricHeroFallbacks": {
-        "Warm Ivory": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-warm-ivory-hero-01.webp",
-        "Slate Gray": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-gray-hero-01.webp",
-        "Charcoal": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-charcoal-hero-01.webp",
-        "Soft White": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-soft-white-hero-01.webp",
-        "Stone": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-stone-hero-01.webp",
-        "Mist": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-mist-hero-01.webp",
-        "Oatmeal": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-oatmeal-hero-01.webp",
-        "Graphite": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-graphite-hero-01.webp"
-      }
-    }
-  },
-  "atlas-3-seater": {
-    "pdpH1": "ARVA Atlas 3-Seater – Modular Cloud-Style Sofa",
-    "pdpH2": "Clean architectural design with balanced, everyday comfort.",
-    "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
-    "valueStack": [
-      "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
-      "Tool-free assembly in minutes",
-      "100-Day Trial with $99 flat return pickup",
-      "Lifetime structural warranty"
-    ],
-    "fabricDefault": "Warm Ivory",
+    "pdpH1": "ARVA Atlas Sectional – Modular Cloud-Style Sectional Couch",
+    "pdpH2": "A modular cloud-style sectional designed for modern living, priced under $1,000.",
     "fabricOptions": [
       {
         "name": "Warm Ivory",
@@ -317,6 +233,66 @@
         "hex": "#4b5563"
       }
     ],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
+    "whatsIncluded": [
+      "Modular sectional modules",
+      "Ottoman",
+      "Connectors/clips (for secure configuration)",
+      "Care guide"
+    ],
+    "careAndDurability": [
+      "Designed for everyday use with a durable performance weave.",
+      "Spot clean with a damp cloth and mild soap.",
+      "Avoid harsh chemicals and abrasive brushes.",
+      "For best results, treat spills promptly."
+    ],
+    "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
+    "images": {
+      "hero": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-ivory-hero-01.webp",
+      "thumbnail1": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-oat-angle-02.webp",
+      "thumbnail2": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-stone-lifestyle-03.webp",
+      "thumbnail3": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-seam-05.webp",
+      "thumbnail5": "/images/products/atlas-sectional/atlas-sectional-modular-sectional-charcoal-detail-06.webp",
+      "comfort1": "/images/products/atlas-sectional/atlas-sectional-cloud-sectional-sand-room-07.webp",
+      "comfort2": "/images/products/atlas-sectional/atlas-sectional-modular-sofa-ash-modular-08.webp",
+      "fabricHeroFallbacks": {
+        "Warm Ivory": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-warm-ivory-hero-01.webp",
+        "Slate Gray": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-gray-hero-01.webp",
+        "Charcoal": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-charcoal-hero-01.webp",
+        "Soft White": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-soft-white-hero-01.webp",
+        "Stone": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-stone-hero-01.webp",
+        "Mist": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-mist-hero-01.webp",
+        "Oatmeal": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-oatmeal-hero-01.webp",
+        "Graphite": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-graphite-hero-01.webp"
+      },
+      "colorVariantHeros": {
+        "Warm Ivory": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-warm-ivory-hero-01.webp",
+        "Slate Gray": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-slate-gray-hero-01.webp",
+        "Charcoal": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-charcoal-hero-01.webp",
+        "Soft White": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-soft-white-hero-01.webp",
+        "Stone": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-stone-hero-01.webp",
+        "Mist": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-mist-hero-01.webp",
+        "Oatmeal": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-oatmeal-hero-01.webp",
+        "Graphite": "/images/products/atlas-sectional/atlas-sectional-cloud-couch-graphite-hero-01.webp"
+      }
+    }
+  },
+  "atlas-3-seater": {
+    "displayPrice": 0,
+    "subhead": "Modern modular comfort. Built to last.",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "valueStack": [
+      "Modular design - reconfigure anytime",
+      "OEKO-TEX® certified performance fabric",
+      "Tool-free assembly in minutes",
+      "100-Day Trial with $99 flat return pickup",
+      "Lifetime structural warranty"
+    ],
+    "fabricDefault": "Warm Ivory",
     "trustStrip": [
       "Delivered in 2-4 Weeks",
       "100-Day Trial",
@@ -325,10 +301,6 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": [
-      "Seat depth",
-      "Fabric texture"
-    ],
     "comparisonTable": {
       "rows": [
         {
@@ -380,8 +352,8 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
-      "maxWeightPerPiece": "1102 lbs"
+      "maxWeightPerPiece": "1102 lbs",
+      "ottoman": "27.5\" × 27.5\" × 15\""
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
     "deliveryHeadline": "Try It at Home. Decide With Confidence.",
@@ -531,49 +503,8 @@
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
-    "whatsIncluded": [
-      "3-seater sofa",
-      "Hidden connectors",
-      "Care guide"
-    ],
-    "careAndDurability": [
-      "Designed for everyday use with a durable performance weave.",
-      "Spot clean with a damp cloth and mild soap.",
-      "Avoid harsh chemicals and abrasive brushes.",
-      "For best results, treat spills promptly."
-    ],
-    "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
-    "images": {
-      "hero": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-sand-room-07.webp",
-      "thumbnail1": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-charcoal-detail-06.webp",
-      "thumbnail2": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-seam-05.webp",
-      "thumbnail3": "/images/products/atlas-3-seater/atlas-3-seater-modular-couch-mist-fabric-04.webp",
-      "thumbnail4": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp",
-      "thumbnail5": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-oat-angle-02.webp",
-      "comfort1": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-ivory-hero-01.webp",
-      "dimensionsDiagram": "/images/products/atlas-3-seater/atlas-3-seater-dimensions-diagram.webp",
-      "fabricHeroFallbacks": {
-        "Slate Gray": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-seam-05.webp",
-        "Charcoal": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-charcoal-detail-06.webp",
-        "Stone": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp",
-        "Mist": "/images/products/atlas-3-seater/atlas-3-seater-modular-couch-mist-fabric-04.webp",
-        "Oatmeal": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-oat-angle-02.webp"
-      }
-    }
-  },
-  "atlas-loveseat": {
-    "pdpH1": "ARVA Atlas Loveseat – Modular Cloud-Style Loveseat Sofa",
-    "pdpH2": "Compact, structured comfort with a refined modern profile.",
-    "subhead": "Modern modular comfort. Built to last.",
-    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
-    "valueStack": [
-      "Modular design - reconfigure anytime",
-      "OEKO-TEX® certified performance fabric",
-      "Tool-free assembly in minutes",
-      "100-Day Trial with $99 flat return pickup",
-      "Lifetime structural warranty"
-    ],
-    "fabricDefault": "Warm Ivory",
+    "pdpH1": "ARVA Atlas 3-Seater – Modular Cloud-Style Sofa",
+    "pdpH2": "Clean architectural design with balanced, everyday comfort.",
     "fabricOptions": [
       {
         "name": "Warm Ivory",
@@ -608,6 +539,61 @@
         "hex": "#4b5563"
       }
     ],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
+    "whatsIncluded": [
+      "3-seater sofa",
+      "Hidden connectors",
+      "Care guide"
+    ],
+    "careAndDurability": [
+      "Designed for everyday use with a durable performance weave.",
+      "Spot clean with a damp cloth and mild soap.",
+      "Avoid harsh chemicals and abrasive brushes.",
+      "For best results, treat spills promptly."
+    ],
+    "warrantyClarity": "Lifetime structural warranty covers frame/structural components.",
+    "images": {
+      "hero": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-sand-room-07.webp",
+      "thumbnail1": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-charcoal-detail-06.webp",
+      "thumbnail2": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-seam-05.webp",
+      "thumbnail3": "/images/products/atlas-3-seater/atlas-3-seater-modular-couch-mist-fabric-04.webp",
+      "thumbnail4": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+      "thumbnail5": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-oat-angle-02.webp",
+      "comfort1": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-ivory-hero-01.webp",
+      "dimensionsDiagram": "/images/products/atlas-3-seater/atlas-3-seater-dimensions-diagram.webp",
+      "fabricHeroFallbacks": {
+        "Slate Gray": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-seam-05.webp",
+        "Charcoal": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-charcoal-detail-06.webp",
+        "Stone": "/images/products/atlas-3-seater/atlas-3-seater-cloud-sofa-stone-lifestyle-03.webp",
+        "Mist": "/images/products/atlas-3-seater/atlas-3-seater-modular-couch-mist-fabric-04.webp",
+        "Oatmeal": "/images/products/atlas-3-seater/atlas-3-seater-modular-sofa-oat-angle-02.webp"
+      },
+      "colorVariantHeros": {
+        "Slate Gray": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-slate-gray-hero-01.webp",
+        "Charcoal": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-charcoal-hero-01.webp",
+        "Soft White": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-soft-white-hero-01.webp",
+        "Stone": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-stone-hero-01.webp",
+        "Mist": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-mist-hero-01.webp",
+        "Oatmeal": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-oatmeal-hero-01.webp",
+        "Graphite": "/images/products/atlas-3-seater/atlas-3-seater-cloud-couch-graphite-hero-01.webp"
+      }
+    }
+  },
+  "atlas-loveseat": {
+    "displayPrice": 0,
+    "subhead": "Modern modular comfort. Built to last.",
+    "reassuranceText": "Delivered in 2-4 weeks · 100-Day Trial · Lifetime Structural Warranty",
+    "valueStack": [
+      "Modular design - reconfigure anytime",
+      "OEKO-TEX® certified performance fabric",
+      "Tool-free assembly in minutes",
+      "100-Day Trial with $99 flat return pickup",
+      "Lifetime structural warranty"
+    ],
+    "fabricDefault": "Warm Ivory",
     "trustStrip": [
       "Delivered in 2-4 Weeks",
       "100-Day Trial",
@@ -616,10 +602,6 @@
     ],
     "comfortHeadline": "Designed to Feel Substantial - Not Overwhelming",
     "comfortCopy": "37.7\" seat depth for real lounging. 15\" seat height for a modern silhouette that feels open and relaxed. Balanced support - not overly soft, not stiff - so you can sink in without the room swallowing you. Structured comfort built for daily use.",
-    "comfortImageLabels": [
-      "Seat depth",
-      "Fabric texture"
-    ],
     "comparisonTable": {
       "rows": [
         {
@@ -671,8 +653,8 @@
       "depth": "37.7\"",
       "height": "24.8\"",
       "seatHeight": "15\"",
-      "ottoman": "27.5\" × 27.5\" × 15\"",
-      "maxWeightPerPiece": "1102 lbs"
+      "maxWeightPerPiece": "1102 lbs",
+      "ottoman": "27.5\" × 27.5\" × 15\""
     },
     "dimensionsReassurance": "Designed to feel substantial without dominating your space.",
     "deliveryHeadline": "Try It at Home. Decide With Confidence.",
@@ -806,6 +788,46 @@
     ],
     "finalCtaHeadline": "Upgrade Your Living Space.",
     "finalCtaSubhead": "Designed to look expensive. Priced to make sense.",
+    "pdpH1": "ARVA Atlas Loveseat – Modular Cloud-Style Loveseat Sofa",
+    "pdpH2": "Compact, structured comfort with a refined modern profile.",
+    "fabricOptions": [
+      {
+        "name": "Warm Ivory",
+        "hex": "#f5f0e8"
+      },
+      {
+        "name": "Slate Gray",
+        "hex": "#6b7280"
+      },
+      {
+        "name": "Charcoal",
+        "hex": "#374151"
+      },
+      {
+        "name": "Soft White",
+        "hex": "#fafaf8"
+      },
+      {
+        "name": "Stone",
+        "hex": "#9ca3af"
+      },
+      {
+        "name": "Mist",
+        "hex": "#d1d5db"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#e5e0d8"
+      },
+      {
+        "name": "Graphite",
+        "hex": "#4b5563"
+      }
+    ],
+    "comfortImageLabels": [
+      "Seat depth",
+      "Fabric texture"
+    ],
     "whatsIncluded": [
       "Loveseat",
       "Hidden connectors",
@@ -830,6 +852,16 @@
         "Stone": "/images/products/atlas-loveseat/atlas-loveseat-cloud-sofa-stone-lifestyle-03.webp",
         "Mist": "/images/products/atlas-loveseat/atlas-loveseat-modular-couch-mist-fabric-04.webp",
         "Oatmeal": "/images/products/atlas-loveseat/atlas-loveseat-modular-sofa-oat-angle-02.webp"
+      },
+      "colorVariantHeros": {
+        "Warm Ivory": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-warm-ivory-hero-01.webp",
+        "Slate Gray": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-slate-gray-hero-01.webp",
+        "Charcoal": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-charcoal-hero-01.webp",
+        "Soft White": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-soft-white-hero-01.webp",
+        "Stone": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-stone-hero-01.webp",
+        "Mist": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-mist-hero-01.webp",
+        "Oatmeal": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-oatmeal-hero-01.webp",
+        "Graphite": "/images/products/atlas-loveseat/atlas-loveseat-cloud-couch-graphite-hero-01.webp"
       }
     }
   },

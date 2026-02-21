@@ -51,11 +51,13 @@ export default function ProductHero({
   const defaultHero = imageSet?.hero ?? product.image ?? "";
   const [selectedFabric, setSelectedFabric] = useState(detail.fabricDefault ?? "");
   const [heroFallback, setHeroFallback] = useState(false);
-  // Atlas Sectional: one hero image per fabric; use that URL directly for the main image when a fabric is selected.
+  // Prefer admin-uploaded color hero; else Atlas Sectional uses built-in path. When customer picks a color, this is the main hero.
   const isAtlasSectional = product.slug === "atlas-sectional";
+  const adminColorHero = selectedFabric ? imageSet?.colorVariantHeros?.[selectedFabric] : undefined;
+  const builtinColorHero = isAtlasSectional && selectedFabric ? getColorVariantHeroPath(product.slug, selectedFabric) : null;
   const colorVariantHero =
-    isAtlasSectional && selectedFabric && !heroFallback
-      ? getColorVariantHeroPath(product.slug, selectedFabric)
+    selectedFabric && !heroFallback && (adminColorHero ?? builtinColorHero)
+      ? (adminColorHero ?? builtinColorHero ?? null)
       : null;
   const fabricFallbackHero =
     heroFallback && selectedFabric ? imageSet?.fabricHeroFallbacks?.[selectedFabric] : undefined;
@@ -74,10 +76,10 @@ export default function ProductHero({
   );
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // When fabric changes on Atlas Sectional, always show the main hero (index 0) so the color hero is visible.
+  // When fabric changes, show the main hero (index 0) so the color-variant hero is visible.
   useEffect(() => {
-    if (isAtlasSectional && selectedFabric) setActiveIndex(0);
-  }, [isAtlasSectional, selectedFabric]);
+    if (selectedFabric) setActiveIndex(0);
+  }, [selectedFabric]);
 
   const handleFabricSelect = useCallback((name: string) => {
     setSelectedFabric(name);
