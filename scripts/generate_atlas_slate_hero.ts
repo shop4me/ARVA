@@ -1,33 +1,48 @@
 /**
- * One-off: generate Slate Gray hero for Atlas Sectional via OpenAI edit.
+ * One-off: generate Slate Gray hero for Atlas Sectional via high-fidelity edit.
+ * Uses scripts/_oneoffs/atlas_slate_high_fidelity_edit.ts (Responses API, action: edit, input_fidelity: high).
  * Saves to same path as other product images: public/images/products/atlas-sectional/atlas-sectional-slate-gray.jpg
+ *
+ * Run: npx tsx scripts/generate_atlas_slate_hero.ts
+ * Optional: npx tsx scripts/generate_atlas_slate_hero.ts --dry-run
+ *
+ * Expected output (success): model used, request id, output path + bytes written, then "OK /images/products/atlas-sectional/atlas-sectional-slate-gray.jpg"
  */
 
-import { readFile } from "fs/promises";
+import { unlink } from "fs/promises";
 import path from "path";
 import sharp from "sharp";
-import { generateHeroImageFromReference } from "../lib/openaiImagesServer";
+import {
+  generateAtlasSlateHeroHighFidelityEdit,
+} from "./_oneoffs/atlas_slate_high_fidelity_edit";
 
-const SLUG = "atlas-sectional";
 const HERO_REL = "/images/products/atlas-sectional/atlas-sectional-cloud-couch-ivory-hero-01.webp";
-const PROMPT =
-  "Slate Gray - can you change this color to Slate Gray - fabric is OEKO TEX, do not change anything else, only color.";
 const OUT_REL = "/images/products/atlas-sectional/atlas-sectional-slate-gray.jpg";
 
 async function main() {
   const basePath = path.join(process.cwd(), "public", HERO_REL.replace(/^\//, ""));
-  await readFile(basePath); // ensure exists
+  const outPath = path.join(process.cwd(), "public", OUT_REL.replace(/^\//, ""));
+  const outPngPath = path.join(
+    path.dirname(outPath),
+    path.basename(outPath, path.extname(outPath)) + ".png"
+  );
 
-  const result = await generateHeroImageFromReference({
-    referenceImagePath: basePath,
-    prompt: PROMPT,
-    size: "1024x1024",
+  await generateAtlasSlateHeroHighFidelityEdit({
+    inputImagePath: basePath,
+    outputImagePath: outPngPath,
+    colorName: "Slate Gray",
+    dryRun: process.argv.includes("--dry-run"),
   });
 
-  const outPath = path.join(process.cwd(), "public", OUT_REL.replace(/^\//, ""));
-  await sharp(result.buffer)
+  if (process.argv.includes("--dry-run")) {
+    console.log("[dry-run] Skip conversion to JPG.");
+    return;
+  }
+
+  await sharp(outPngPath)
     .jpeg({ quality: 92 })
     .toFile(outPath);
+  await unlink(outPngPath).catch(() => {});
 
   console.log("OK", OUT_REL);
 }

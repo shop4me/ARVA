@@ -19,12 +19,17 @@ const EXPECTED_HERO_PATTERNS: Record<string, RegExp> = {
   "Graphite": /atlas-sectional-cloud-couch-graphite-hero-01\.webp/,
 };
 
+const HEADLESS = process.env.HEADLESS === "1";
+const PAUSE_MS = HEADLESS ? 600 : 2500; // longer pauses when browser is visible so you can see updates
+
 async function main() {
   const browser = await puppeteer.launch({
-    headless: true,
+    headless: HEADLESS,
+    slowMo: HEADLESS ? 0 : 150,
     args: ["--no-sandbox", "--disable-setuid-sandbox"],
   });
   const page = await browser.newPage();
+  await page.setViewport({ width: 1280, height: 800 });
 
   try {
     const response = await page.goto(PDP, { waitUntil: "networkidle0", timeout: 15000 });
@@ -62,7 +67,7 @@ async function main() {
       return;
     }
     await slateGrayButton.click();
-    await new Promise((r) => setTimeout(r, 600)); // allow React state update and img src change
+    await new Promise((r) => setTimeout(r, PAUSE_MS));
 
     let srcAfter = await getHeroSrc();
     if (!EXPECTED_HERO_PATTERNS["Slate Gray"].test(srcAfter)) {
@@ -73,10 +78,10 @@ async function main() {
     }
 
     // Click Charcoal
-    const charcoalButton = await page.$('button[title="Charcoal"]');
+    const charcoalButton =       await page.$('button[title="Charcoal"]');
     if (charcoalButton) {
       await charcoalButton.click();
-      await new Promise((r) => setTimeout(r, 600));
+      await new Promise((r) => setTimeout(r, PAUSE_MS));
       srcAfter = await getHeroSrc();
       if (!EXPECTED_HERO_PATTERNS["Charcoal"].test(srcAfter)) {
         console.error("FAIL: After Charcoal, hero should be charcoal WebP. Got:", srcAfter);
@@ -90,7 +95,7 @@ async function main() {
     const warmIvoryButton = await page.$('button[title="Warm Ivory"]');
     if (warmIvoryButton) {
       await warmIvoryButton.click();
-      await new Promise((r) => setTimeout(r, 600));
+      await new Promise((r) => setTimeout(r, PAUSE_MS));
       srcAfter = await getHeroSrc();
       if (!EXPECTED_HERO_PATTERNS["Warm Ivory"].test(srcAfter)) {
         console.error("FAIL: After Warm Ivory, hero should be warm-ivory WebP. Got:", srcAfter);
@@ -103,9 +108,14 @@ async function main() {
     if (process.exitCode !== 1) {
       console.log("All hero-by-color checks passed.");
     }
+    if (!HEADLESS) {
+      console.log("(Browser will close in 5 seconds...)");
+      await new Promise((r) => setTimeout(r, 5000));
+    }
   } catch (e) {
     console.error("Error:", e);
     process.exitCode = 1;
+    if (!HEADLESS) await new Promise((r) => setTimeout(r, 8000));
   } finally {
     await browser.close();
   }
