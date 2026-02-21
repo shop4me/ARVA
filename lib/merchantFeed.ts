@@ -567,8 +567,9 @@ export async function buildMerchantItems(
       additionalPaths.map((p) => toAbsoluteUrl(baseUrl, p))
     );
     const { price: priceStr, sale_price: salePriceStr } = priceStringsForProduct(product);
+    const colors = productDetails?.[product.slug]?.fabricOptions?.map((o) => o.name) ?? [...FEED_COLORS];
 
-    for (const color of FEED_COLORS) {
+    for (const color of colors) {
       const colorSlug = colorToSlug(color);
       let heroPath = getHeroImagePathForFeed(product, productDetails, color);
       let imageLink = toAbsoluteUrl(baseUrl, heroPath);
