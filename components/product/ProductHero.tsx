@@ -94,9 +94,9 @@ export default function ProductHero({
   const touchStartX = useRef<number | null>(null);
   const heroImgRef = useRef<HTMLImageElement | null>(null);
   const activeImage = galleryImages[activeIndex];
-  // Main hero slot: for Atlas Sectional with a selected fabric, use the color-variant URL with cache-bust so the correct image always loads.
+  // Main hero slot: when showing a color-variant hero, use cache-bust so the correct image loads.
   const mainHeroSrc =
-    activeIndex === 0 && isAtlasSectional && selectedFabric && colorVariantHero
+    activeIndex === 0 && selectedFabric && colorVariantHero
       ? `${colorVariantHero}?v=${encodeURIComponent(selectedFabric)}`
       : activeImage;
   const dimensionsImage = imageSet?.dimensionsDiagram;

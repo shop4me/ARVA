@@ -26,7 +26,7 @@ import StickyCTA from "@/components/product/StickyCTA";
 
 const CONFIG_ORDER: ProductCategory[] = ["sectional", "three-seater", "loveseat"];
 
-export const revalidate = 300; // 5 minutes
+export const revalidate = 0; // always fresh so color-variant heroes and productDetails show immediately after deploy/admin updates
 
 type Props = { params: Promise<{ slug: string }> };
 
